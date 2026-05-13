@@ -1,0 +1,58 @@
+{# Renderiza um item do feed de acordo com post.data.type #}
+
+<article class="feed-item post-type-{{ post.data.type }}">
+
+  <div class="post-meta">
+    <span class="post-type">{{ post.data.type }}</span>
+    <time datetime="{{ post.date | dateISO }}">{{ post.date | dateReadable }}</time>
+  </div>
+
+  {# ── LINK ─────────────────────────────────────────────────── #}
+  {% if post.data.type == "link" %}
+    <p class="link-title">
+      <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.title }}</a>
+    </p>
+    <p class="link-url">{{ post.data.url }}</p>
+    {% if post.templateContent %}
+      <div class="post-content">{{ post.templateContent | safe }}</div>
+    {% endif %}
+
+  {# ── QUOTE ────────────────────────────────────────────────── #}
+  {% elif post.data.type == "quote" %}
+    <blockquote>{{ post.data.quote }}</blockquote>
+    {% if post.data.source %}
+      <p class="quote-source">{{ post.data.source }}</p>
+    {% endif %}
+    {% if post.templateContent %}
+      <div class="post-content">{{ post.templateContent | safe }}</div>
+    {% endif %}
+
+  {# ── IMAGE ────────────────────────────────────────────────── #}
+  {% elif post.data.type == "image" %}
+    <figure>
+      <img src="{{ post.data.image }}" alt="{{ post.data.alt if post.data.alt else post.data.title }}">
+      {% if post.data.caption %}
+        <figcaption>{{ post.data.caption }}</figcaption>
+      {% endif %}
+    </figure>
+    {% if post.templateContent %}
+      <div class="post-content">{{ post.templateContent | safe }}</div>
+    {% endif %}
+
+  {# ── NOTE (post curto, sem título) ────────────────────────── #}
+  {% elif post.data.type == "note" %}
+    <div class="post-content">{{ post.templateContent | safe }}</div>
+
+  {# ── POST (longo, com título e permalink) ─────────────────── #}
+  {% elif post.data.type == "post" %}
+    <h2 class="post-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h2>
+    {% if post.data.description %}
+      <p class="post-content">{{ post.data.description }}</p>
+    {% endif %}
+    <a href="{{ post.url }}" class="read-more">ler</a>
+
+  {% endif %}
+
+</article>

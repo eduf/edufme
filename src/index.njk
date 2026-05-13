@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: false
+---
+
+<div class="container">
+  <div class="feed">
+    {% for post in collections.feed %}
+      {% set post = post %}
+      {% include "partials/feed-item.njk" %}
+    {% endfor %}
+  </div>
+</div>

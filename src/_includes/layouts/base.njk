@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — {% endif %}eduf.me</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Eduardo Fernandes — tecnologia e cultura pelo viés do autoconhecimento.{% endif %}">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="alternate" type="application/rss+xml" title="eduf.me" href="/feed.xml">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-title">eduf.me</a>
+      <nav aria-label="navegação principal">
+        <ul class="site-nav">
+          <li><a href="/">feed</a></li>
+          <li><a href="/sobre">sobre</a></li>
+          <li><a href="/feed.xml">rss</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© {{ build.generated | dateReadable if build else "" }} Eduardo Fernandes</span>
+      <a href="https://textosobretela.com" target="_blank" rel="noopener">Texto Sobre Tela ↗</a>
+    </div>
+  </footer>
+
+</body>
+</html>

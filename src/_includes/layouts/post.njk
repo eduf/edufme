@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+
+<div class="container">
+  <article class="post-single post-type-{{ type }}">
+
+    {% if title %}
+      <h1 class="post-title">{{ title }}</h1>
+    {% endif %}
+
+    <div class="post-meta">
+      <span class="post-type">{{ type }}</span>
+      <time datetime="{{ page.date | dateISO }}">{{ page.date | dateReadable }}</time>
+    </div>
+
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+
+  </article>
+</div>
