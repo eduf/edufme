@@ -34,5 +34,13 @@
     </div>
   </footer>
 
+<script>
+  document.querySelectorAll('a[href^="/"]').forEach(link => {
+    const prefetch = document.createElement('link');
+    prefetch.rel = 'prefetch';
+    prefetch.href = link.href;
+    document.head.appendChild(prefetch);
+  });
+</script>
 </body>
 </html>

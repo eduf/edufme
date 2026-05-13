@@ -1,0 +1,25 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>eduf.me</title>
+  <subtitle>Eduardo Fernandes — tecnologia e cultura pelo viés do autoconhecimento.</subtitle>
+  <link href="https://eduf.me/feed.xml" rel="self"/>
+  <link href="https://eduf.me/"/>
+  <updated>{{ collections.feed | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://eduf.me/</id>
+  <author>
+    <name>Eduardo Fernandes</name>
+  </author>
+  {% for post in collections.feed | head(20) %}
+  <entry>
+    <title>{% if post.data.title %}{{ post.data.title }}{% elif post.data.type == "note" %}nota — {{ post.date | dateReadable }}{% elif post.data.type == "link" %}link — {{ post.data.url }}{% elif post.data.type == "quote" %}citação{% elif post.data.type == "image" %}imagem{% endif %}</title>
+    <link href="https://eduf.me{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://eduf.me{{ post.url }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls("https://eduf.me") | safe }}</content>
+  </entry>
+  {% endfor %}
+</feed>

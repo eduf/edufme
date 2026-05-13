@@ -18,6 +18,12 @@ module.exports = function(eleventyConfig) {
       .reverse();
   });
 
+  // Filtro para limitar itens de uma collection
+  eleventyConfig.addFilter("head", (array, n) => {
+    if (!Array.isArray(array) || array.length === 0) return [];
+    return array.slice(0, n);
+  });
+
   // Filtro de data legível
   eleventyConfig.addFilter("dateReadable", (date) => {
     return new Date(date).toLocaleDateString("pt-BR", {
@@ -28,9 +34,26 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Filtro de data para datetime attribute
+  // Filtro de data ISO (datetime attribute)
   eleventyConfig.addFilter("dateISO", (date) => {
     return new Date(date).toISOString();
+  });
+
+  // Filtros RSS (sem plugin externo)
+  eleventyConfig.addFilter("dateToRfc3339", (date) => {
+    return new Date(date).toISOString();
+  });
+
+  eleventyConfig.addFilter("getNewestCollectionItemDate", (collection) => {
+    if (!collection || !collection.length) return new Date();
+    return new Date(Math.max(...collection.map(item => new Date(item.date))));
+  });
+
+  eleventyConfig.addFilter("htmlToAbsoluteUrls", (html, base) => {
+    if (!html) return "";
+    return html
+      .replace(/href="\//g, `href="${base}/`)
+      .replace(/src="\//g, `src="${base}/`);
   });
 
   return {
