@@ -144,6 +144,13 @@ body {
   letter-spacing: 0.03em;
 }
 
+.post-author {
+  color: var(--accent-link);
+  text-decoration: none;
+}
+
+.post-author:hover { text-decoration: underline; }
+
 .post-type {
   font-size: 0.7rem;
   letter-spacing: 0.08em;

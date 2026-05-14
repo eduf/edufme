@@ -55,14 +55,29 @@ async function processImage(srcPath) {
   return { cached, filename };
 }
 
+function findInSrc(filename) {
+  // Busca recursiva por nome de arquivo dentro de src/
+  function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) { const found = walk(full); if (found) return found; }
+      else if (entry.name === filename) return full;
+    }
+    return null;
+  }
+  return walk("src");
+}
+
 function resolveImagePath(src, inputPath) {
-  // Tenta resolver o caminho da imagem com múltiplas estratégias
   const candidates = [
-    path.join(path.dirname(inputPath), src),           // relativo ao arquivo fonte
-    path.join("src", src.replace(/^\//, "")),           // absoluto do input dir
-    path.join("src", path.dirname(inputPath).replace(/^src\/?/, ""), src), // fallback
+    path.join(path.dirname(inputPath), src),  // relativo ao arquivo fonte
+    path.join("src", src.replace(/^\//, "")), // absoluto do input dir
   ];
-  return candidates.find(p => fs.existsSync(p)) || null;
+  const found = candidates.find(p => fs.existsSync(p));
+  if (found) return found;
+  // Fallback: busca pelo nome do arquivo em qualquer lugar dentro de src/
+  if (!src.includes("/")) return findInSrc(path.basename(src));
+  return null;
 }
 
 // ─── Eleventy config ──────────────────────────────────────────────────────────

@@ -15,7 +15,16 @@ layout: base.njk
     </div>
 
     <div class="post-content">
-      {{ content | safe }}
+      {% if type == "quote" %}
+        <blockquote>{{ quote }}</blockquote>
+        {% if source %}<p class="quote-source">{{ source }}</p>{% endif %}
+        {% if content %}{{ content | safe }}{% endif %}
+      {% elif type == "link" %}
+        <p class="link-title"><a href="{{ url }}" target="_blank" rel="noopener">{{ title }}</a></p>
+        {% if content %}{{ content | safe }}{% endif %}
+      {% else %}
+        {{ content | safe }}
+      {% endif %}
     </div>
 
   </article>
