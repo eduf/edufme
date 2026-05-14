@@ -306,6 +306,27 @@ body {
 
 .site-footer a:hover { color: var(--fg); }
 
+/* ─── Imagens dithered ──────────────────────────────────────── */
+.post-content img,
+.feed-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-block: 1.25rem;
+}
+
+/* ─── Permalink do feed ─────────────────────────────────────── */
+.post-permalink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent-link);
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.post-permalink:hover { opacity: 1; }
+
 /* ─── Responsivo ────────────────────────────────────────────── */
 @media (max-width: 600px) {
   :root { --size-base: 16px; }

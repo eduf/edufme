@@ -3,8 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% set pageTitle = title if title else site.name %}
+  {% set pageDescription = description if description else site.description %}
+  {% set pageUrl = site.url + page.url %}
+
   <title>{% if title %}{{ title }} — {% endif %}eduf.me</title>
-  <meta name="description" content="{% if description %}{{ description }}{% else %}Eduardo Fernandes — tecnologia e cultura pelo viés do autoconhecimento.{% endif %}">
+  <meta name="description" content="{{ pageDescription }}">
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ pageUrl }}">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="{{ 'article' if type == 'post' else 'website' }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ pageUrl }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+
+  <!-- JSON-LD -->
+  {% if type == "post" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ title | dump }},
+    "description": {{ pageDescription | dump }},
+    "url": "{{ pageUrl }}",
+    "datePublished": "{{ page.date | dateISO }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "url": "{{ site.url }}/sobre"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "url": "{{ site.url }}"
+    }
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "url": "{{ site.url }}/sobre"
+    }
+  }
+  </script>
+  {% endif %}
+
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="eduf.me" href="/feed.xml">
 </head>
@@ -15,7 +74,6 @@
       <a href="/" class="site-title">eduf.me</a>
       <nav aria-label="navegação principal">
         <ul class="site-nav">
-          <li><a href="/">feed</a></li>
           <li><a href="/sobre">sobre</a></li>
           <li><a href="/feed.xml">rss</a></li>
         </ul>

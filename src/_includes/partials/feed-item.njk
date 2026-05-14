@@ -3,7 +3,6 @@
 <article class="feed-item post-type-{{ post.data.type }}">
 
   <div class="post-meta">
-    <span class="post-type">{{ post.data.type }}</span>
     <time datetime="{{ post.date | dateISO }}">{{ post.date | dateReadable }}</time>
   </div>
 
@@ -53,6 +52,10 @@
     {% endif %}
     <a href="{{ post.url }}" class="read-more">ler</a>
 
+  {% endif %}
+
+  {% if post.data.type != "post" %}
+    <a href="{{ post.url }}" class="post-permalink" aria-label="link permanente">#</a>
   {% endif %}
 
 </article>

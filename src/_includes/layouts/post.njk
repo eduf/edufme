@@ -10,8 +10,8 @@ layout: base.njk
     {% endif %}
 
     <div class="post-meta">
-      <span class="post-type">{{ type }}</span>
       <time datetime="{{ page.date | dateISO }}">{{ page.date | dateReadable }}</time>
+      <a href="/sobre" class="post-author">{{ site.author }}</a>
     </div>
 
     <div class="post-content">
