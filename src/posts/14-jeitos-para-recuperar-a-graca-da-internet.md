@@ -8,8 +8,6 @@ tags:
   - "midializacao-da-vida"
 ---
 
-_Podcast em 1948, em foto de Sakari Pälsi._
-
 Nesta semana, viralizou [o texto “Por que a Internet não é mais divertida”, de Kyle Chayka](https://www.newyorker.com/culture/infinite-scroll/why-the-internet-isnt-fun-anymore). Ele descreve uma sensação que se espalha rapidamente: a de que a Internet virou um fardo.
 
 Segundo o autor, as razões dessa mudança seriam:

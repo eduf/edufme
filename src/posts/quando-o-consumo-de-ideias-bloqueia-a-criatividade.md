@@ -9,8 +9,6 @@ tags:
   - "redes-sociais"
 ---
 
-_Foto de [Tim De Pauw](https://unsplash.com/@tmdpw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash), via Unsplash._
-
 Semana passada, Lalai Persson, da newsletter [Espiral](https://lalai.substack.com/), [comentou](https://substack.com/@mentaland/note/c-42985282) o seguinte:
 
 > Talvez o nosso cansaço contínuo aconteça porque estamos o tempo todo consumindo conteúdo. Saio para dar aquela voltinha na rua? Coloco o fone de ouvido e ouço música, podcast ou até mesmo um audiobook. Vou tomar banho? Ouço um podcast enquanto isso.

@@ -8,8 +8,6 @@ tags:
   - "midializacao-da-vida"
 ---
 
-_Baseado numa foto de [Valeria Zoncoll](https://unsplash.com/@zoncoll?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash), via Unsplash._
-
 Hoje uma amiga me mandou um vídeo que me deixou intrigado.
 
 Ela teve uma filha há cerca de um mês. E, com todas as boas intenções do universo, pegou seu celular e filmou a bebê. No vídeo, só o rosto da criança aparece. Olhos gigantes, boca entreaberta e uma expressão de curiosidade.
