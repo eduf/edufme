@@ -513,6 +513,7 @@ body {
 /* ─── Seletor de tema ───────────────────────────────────────── */
 .tui-theme-picker {
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding: 0.6rem 1.25rem;
   display: flex;
   align-items: center;
