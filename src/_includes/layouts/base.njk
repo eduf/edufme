@@ -66,6 +66,7 @@
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <script>(function(){var t=localStorage.getItem('eduf-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <link rel="alternate" type="application/rss+xml" title="eduf.me" href="/feed.xml">
 </head>
 <body>
@@ -92,6 +93,14 @@
         <li><a href="/feed.xml">rss</a></li>
       </ul>
       </nav>
+      <div class="tui-theme-picker" aria-label="Escolher tema de cores">
+        <div class="tui-theme-label">tema</div>
+        <button class="theme-btn" data-set-theme="gruvbox-light">gruvbox·light</button>
+        <button class="theme-btn" data-set-theme="gruvbox-dark">gruvbox·dark</button>
+        <button class="theme-btn" data-set-theme="dracula">dracula</button>
+        <button class="theme-btn" data-set-theme="solarized">solarized·dark</button>
+        <button class="theme-btn" data-set-theme="claude-code">claude·code ✦</button>
+      </div>
     </div>
 
     <main class="tui-main">
@@ -107,12 +116,30 @@
 </div>
 
 <script>
+  // Prefetch de links internos
   document.querySelectorAll('a[href^="/"]').forEach(link => {
     const prefetch = document.createElement('link');
     prefetch.rel = 'prefetch';
     prefetch.href = link.href;
     document.head.appendChild(prefetch);
   });
+
+  // Seletor de tema
+  const themeButtons = document.querySelectorAll('.theme-btn');
+  const savedTheme   = localStorage.getItem('eduf-theme');
+
+  function applyTheme(name) {
+    document.documentElement.setAttribute('data-theme', name);
+    localStorage.setItem('eduf-theme', name);
+    themeButtons.forEach(b => b.classList.toggle('is-active', b.dataset.setTheme === name));
+  }
+
+  // Marca o tema ativo ao carregar
+  if (savedTheme) {
+    themeButtons.forEach(b => b.classList.toggle('is-active', b.dataset.setTheme === savedTheme));
+  }
+
+  themeButtons.forEach(btn => btn.addEventListener('click', () => applyTheme(btn.dataset.setTheme)));
 </script>
 </body>
 </html>

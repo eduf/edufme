@@ -21,8 +21,18 @@
   font-display: swap;
 }
 
-/* ─── Tokens: light (Gruvbox Light) ─────────────────────────── */
+/* ─── Tokens base (estrutura, sem cores) ────────────────────── */
 :root {
+  --font-mono:  "iA Writer Duo", "IBM Plex Mono", monospace;
+  --size-base:  18px;
+  --line:       1.75;
+  --measure:    62ch;
+  --sidebar:    14rem;
+}
+
+/* ─── Tema: Gruvbox Light (padrão) ──────────────────────────── */
+:root,
+[data-theme="gruvbox-light"] {
   --bg:             #fbf1c7;
   --bg-alt:         #ebdbb2;
   --fg:             #3c3836;
@@ -33,17 +43,67 @@
   --accent-visited: #928374;
   --border:         #d5c4a1;
   --cursor:         #d65d0e;
-
-  --font-mono:  "iA Writer Duo", "IBM Plex Mono", monospace;
-  --size-base:  18px;
-  --line:       1.75;
-  --measure:    62ch;
-  --sidebar:    14rem;
 }
 
-/* ─── Tokens: dark (Gruvbox Dark) ───────────────────────────── */
+/* ─── Tema: Gruvbox Dark ─────────────────────────────────────── */
+[data-theme="gruvbox-dark"] {
+  --bg:             #282828;
+  --bg-alt:         #3c3836;
+  --fg:             #ebdbb2;
+  --fg-muted:       #a89984;
+  --fg-faint:       #7c6f64;
+  --accent:         #ebdbb2;
+  --accent-link:    #83a598;
+  --accent-visited: #928374;
+  --border:         #504945;
+  --cursor:         #fe8019;
+}
+
+/* ─── Tema: Dracula ──────────────────────────────────────────── */
+[data-theme="dracula"] {
+  --bg:             #282a36;
+  --bg-alt:         #44475a;
+  --fg:             #f8f8f2;
+  --fg-muted:       #6272a4;
+  --fg-faint:       #44475a;
+  --accent:         #f8f8f2;
+  --accent-link:    #8be9fd;
+  --accent-visited: #6272a4;
+  --border:         #44475a;
+  --cursor:         #ff79c6;
+}
+
+/* ─── Tema: Solarized Dark ───────────────────────────────────── */
+[data-theme="solarized"] {
+  --bg:             #002b36;
+  --bg-alt:         #073642;
+  --fg:             #93a1a1;
+  --fg-muted:       #657b83;
+  --fg-faint:       #586e75;
+  --accent:         #93a1a1;
+  --accent-link:    #268bd2;
+  --accent-visited: #6c71c4;
+  --border:         #073642;
+  --cursor:         #cb4b16;
+}
+
+/* ─── Tema: Claude Code ✦ ────────────────────────────────────── */
+[data-theme="claude-code"] {
+  --bg:             #1a1b1e;
+  --bg-alt:         #26272b;
+  --fg:             #f0ede6;
+  --fg-muted:       #a09898;
+  --fg-faint:       #5c5558;
+  --accent:         #f0ede6;
+  --accent-link:    #e07c54;
+  --accent-visited: #c4a099;
+  --border:         #38363a;
+  --cursor:         #e07c54;
+}
+
+/* ─── Auto dark mode (quando nenhum tema explícito está ativo) ─ */
 @media (prefers-color-scheme: dark) {
-  :root {
+  html:not([data-theme]) {
     --bg:             #282828;
     --bg-alt:         #3c3836;
     --fg:             #ebdbb2;
@@ -450,6 +510,49 @@ body {
 
 .post-permalink:hover { opacity: 1; }
 
+/* ─── Seletor de tema ───────────────────────────────────────── */
+.tui-theme-picker {
+  border-top: 1px solid var(--border);
+}
+
+.tui-theme-label {
+  font-size: 0.65rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.25rem 0.2rem;
+  user-select: none;
+}
+
+.theme-btn {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--fg-muted);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.theme-btn:hover {
+  color: var(--fg);
+  background: var(--bg-alt);
+}
+
+.theme-btn.is-active {
+  color: var(--fg);
+  background: var(--bg-alt);
+}
+
+.theme-btn.is-active::before {
+  content: "> ";
+  color: var(--cursor);
+}
+
 /* ─── Responsivo ────────────────────────────────────────────── */
 @media (max-width: 640px) {
   :root {
@@ -484,6 +587,10 @@ body {
 
   .site-logo {
     display: none; /* logo ASCII oculto no mobile */
+  }
+
+  .tui-theme-picker {
+    display: none; /* seletor de tema só no desktop */
   }
 
   .site-nav {
