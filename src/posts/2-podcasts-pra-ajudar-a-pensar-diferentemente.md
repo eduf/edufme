@@ -22,7 +22,7 @@ Por que é legal
 
 - Cada episódio tem cerca de 3 horas de duração e tenta descrever como era viver naquele determinado momento de transformação cultural, política e ecológica.
 
-- Trabalho monstruoso de pesquisa do jornalista Inglês, [Paul M.M. Cooper](https://www.paulmmcooper.com/), que – veja bem – é PhD em significância literária e cultural de ruínas.
+- Trabalho monstruoso de pesquisa do jornalista Inglês, [Paul M.M. Cooper](https://www.paulmmcooper.com/), que é PhD em significância literária e cultural de ruínas.
 
 - A edição de áudio e _storytelling_ também são bem interessantes. Os textos fluem no estilo de audiobooks de ficção.
 
