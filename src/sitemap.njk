@@ -1,0 +1,38 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://eduf.me/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://eduf.me/sobre/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eduf.me/monoestereo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {% for post in collections.feed %}
+  <url>
+    <loc>https://eduf.me{{ post.url }}</loc>
+    <lastmod>{{ post.date | dateISO }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
+  {% for post in collections.monoestereo %}
+  <url>
+    <loc>https://eduf.me{{ post.url }}</loc>
+    <lastmod>{{ post.date | dateISO }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+</urlset>

@@ -155,6 +155,7 @@ module.exports = function(eleventyConfig) {
 
   // Copia assets estáticos
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Slugify com suporte a português (remove acentos, espaços → hifens)
   const slugify = str => {
