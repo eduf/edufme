@@ -74,7 +74,7 @@ function findInSrc(filename) {
 
 function extractYouTubeId(str) {
   const patterns = [
-    /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/,
+    /(?:youtube(?:-nocookie)?\.com)\/embed\/([a-zA-Z0-9_-]{11})/,
     /youtube\.com\/watch\?(?:.*&)?v=([a-zA-Z0-9_-]{11})/,
     /youtu\.be\/([a-zA-Z0-9_-]{11})/,
   ];
@@ -278,9 +278,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTransform("youtube-thumbnails", async function(content) {
     if (!this.page?.outputPath?.endsWith(".html")) return content;
 
-    // Detecta iframes do YouTube e links de URL pura
-    const iframeRe = /<iframe\b[^>]*\bsrc=(["'])((?:https?:)?\/\/(?:www\.)?(?:youtube\.com\/embed|youtube-nocookie\.com\/embed)[^"']*)\1[^>]*>(?:<\/iframe>)?/gi;
-    const linkRe   = /<a\b[^>]*\bhref=(["'])((?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch|youtu\.be)[^"']*)\1[^>]*>(?:[^<]*)<\/a>/gi;
+    // Detecta iframes do YouTube e links onde o texto visível É a própria URL
+    // (evita substituir links com texto customizado como "Assista aqui" ou "Cartoonist Keyfabe")
+    const iframeRe = /<iframe\b[^>]*\bsrc=(["'])((?:https?:)?\/\/(?:www\.)?(?:youtube(?:-nocookie)?\.com\/embed|youtube-nocookie\.com\/embed)[^"']*)\1[^>]*>(?:<\/iframe>)?/gi;
+    const linkRe   = /<a\b[^>]*\bhref=(["'])((?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch|youtu\.be)[^"']*)\1[^>]*>(https?:\/\/[^<]+)<\/a>/gi;
 
     const jobs = new Map(); // videoId → watchUrl
 
