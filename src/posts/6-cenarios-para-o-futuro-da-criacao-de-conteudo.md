@@ -26,7 +26,7 @@ Como é? Agora não preciso mais de mil fãs? Caiu para 100? Isso facilita ou co
 
 Incrível.
 
-Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio. Estou apaixonado por essa economia da paixão. Pelo menos essa que aparece nos sites de marketing norte-americanos.
+Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio.
 
 E se essa tendência aumentar ainda mais? Em vez de 100 FV, precisássemos de apenas 10? Ou de 1?
 
