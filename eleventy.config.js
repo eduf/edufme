@@ -1,9 +1,10 @@
-const sharp  = require("sharp");
-const crypto = require("crypto");
-const path   = require("path");
-const fs     = require("fs");
-const https  = require("https");
-const http   = require("http");
+const sharp      = require("sharp");
+const crypto     = require("crypto");
+const path       = require("path");
+const fs         = require("fs");
+const https      = require("https");
+const http       = require("http");
+const markdownIt = require("markdown-it");
 
 // ─── Dithering ───────────────────────────────────────────────────────────────
 
@@ -152,6 +153,9 @@ function resolveImagePath(src, inputPath) {
 // ─── Eleventy config ──────────────────────────────────────────────────────────
 
 module.exports = function(eleventyConfig) {
+
+  // Markdown com linkify: URLs soltas viram links automaticamente
+  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
 
   // Copia assets estáticos
   eleventyConfig.addPassthroughCopy("src/assets");
