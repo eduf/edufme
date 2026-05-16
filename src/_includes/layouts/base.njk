@@ -8,7 +8,7 @@
   {% set pageDescription = description if description else site.description %}
   {% set pageUrl = site.url + page.url %}
 
-  <title>{% if title %}{{ title }} — {% endif %}eduf.me</title>
+  <title>{% if title and title != false %}{{ title }} — eduf.me{% else %}eduf.me — Site do jornalista e roteirista Eduardo Fernandes{% endif %}</title>
   <meta name="description" content="{{ pageDescription }}">
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ pageUrl }}">
@@ -64,33 +64,47 @@
   </script>
   {% endif %}
 
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="eduf.me" href="/feed.xml">
 </head>
 <body>
+<div class="tui-frame">
 
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="site-title">eduf.me</a>
-      <nav aria-label="navegação principal">
-        <ul class="site-nav">
-          <li><a href="/sobre">sobre</a></li>
-          <li><a href="/feed.xml">rss</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="tui-titlebar">
+    <a href="/" class="tui-site-name" aria-label="eduf.me — página inicial">eduf.me</a>
+    <span class="tui-context">jornalista · roteirista · eduardo fernandes</span>
   </header>
 
-  <main>
-    {{ content | safe }}
-  </main>
+  <div class="tui-layout">
 
-  <footer class="site-footer">
-    <div class="container">
-      <span>© {{ build.generated | dateReadable if build else "" }} Eduardo Fernandes</span>
-      <a href="https://textosobretela.com" target="_blank" rel="noopener">Texto Sobre Tela ↗</a>
+    <div class="tui-sidebar">
+      <a href="/" class="site-logo" aria-label="eduf.me — página inicial">eduf.me<span class="site-logo-cursor" aria-hidden="true">█</span></a>
+      <nav aria-label="navegação principal">
+      <ul class="site-nav">
+        <li><a href="/sobre"
+          {% if 'sobre' in page.url %}class="is-current"{% endif %}>sobre</a></li>
+        <li><a href="https://textosobretela.com" target="_blank" rel="noopener">newsletter ↗</a></li>
+        <li><a href="https://www.youtube.com/@edufme" target="_blank" rel="noopener">vídeos ↗</a></li>
+        <li><a href="/monoestereo"
+          {% if 'monoestereo' in page.url %}class="is-current"{% endif %}>áudio</a></li>
+        <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#100;&#117;&#102;&#64;&#101;&#100;&#117;&#102;&#46;&#109;&#101;">contato</a></li>
+        <li><a href="/feed.xml">rss</a></li>
+      </ul>
+      </nav>
     </div>
+
+    <main class="tui-main">
+      {{ content | safe }}
+    </main>
+
+  </div>
+
+  <footer class="tui-statusbar">
+    <span>© 2025 Eduardo Fernandes</span>
   </footer>
+
+</div>
 
 <script>
   document.querySelectorAll('a[href^="/"]').forEach(link => {

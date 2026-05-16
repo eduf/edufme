@@ -1,13 +1,36 @@
 ---
 layout: base.njk
 title: false
+pagination:
+  data: collections.feed
+  size: 15
+  alias: posts
+permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 <div class="container">
   <div class="feed">
-    {% for post in collections.feed %}
+    {% for post in posts %}
       {% set post = post %}
       {% include "partials/feed-item.njk" %}
     {% endfor %}
   </div>
+
+  {% if pagination.pages.length > 1 %}
+  <nav class="pagination" aria-label="navegação de páginas">
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="pagination-prev">← mais recentes</a>
+    {% else %}
+      <span class="pagination-prev pagination-disabled">← mais recentes</span>
+    {% endif %}
+
+    <span class="pagination-info">{{ pagination.pageNumber + 1 }} / {{ pagination.pages.length }}</span>
+
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="pagination-next">mais antigos →</a>
+    {% else %}
+      <span class="pagination-next pagination-disabled">mais antigos →</span>
+    {% endif %}
+  </nav>
+  {% endif %}
 </div>

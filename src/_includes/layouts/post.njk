@@ -14,6 +14,12 @@ layout: base.njk
       <a href="/sobre" class="post-author">{{ site.author }}</a>
     </div>
 
+    {% if coverImage %}
+      <div class="post-cover">
+        <img src="{{ coverImage }}" alt="{{ title }}">
+      </div>
+    {% endif %}
+
     <div class="post-content">
       {% if type == "quote" %}
         <blockquote>{{ quote }}</blockquote>
