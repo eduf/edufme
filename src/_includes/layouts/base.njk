@@ -93,13 +93,15 @@
         <li><a href="/feed.xml">rss</a></li>
       </ul>
       </nav>
-      <div class="tui-theme-picker" aria-label="Escolher tema de cores">
-        <div class="tui-theme-label">tema</div>
-        <button class="theme-btn" data-set-theme="gruvbox-light">gruvbox·light</button>
-        <button class="theme-btn" data-set-theme="gruvbox-dark">gruvbox·dark</button>
-        <button class="theme-btn" data-set-theme="dracula">dracula</button>
-        <button class="theme-btn" data-set-theme="solarized">solarized·dark</button>
-        <button class="theme-btn" data-set-theme="claude-code">claude·code ✦</button>
+      <div class="tui-theme-picker">
+        <label class="tui-theme-label" for="theme-select">tema</label>
+        <select id="theme-select" class="theme-select">
+          <option value="gruvbox-light">gruvbox·light</option>
+          <option value="gruvbox-dark">gruvbox·dark</option>
+          <option value="dracula">dracula</option>
+          <option value="solarized">solarized·dark</option>
+          <option value="claude-code">claude·code ✦</option>
+        </select>
       </div>
     </div>
 
@@ -125,21 +127,18 @@
   });
 
   // Seletor de tema
-  const themeButtons = document.querySelectorAll('.theme-btn');
-  const savedTheme   = localStorage.getItem('eduf-theme');
+  const themeSelect = document.getElementById('theme-select');
+  const savedTheme  = localStorage.getItem('eduf-theme');
 
-  function applyTheme(name) {
-    document.documentElement.setAttribute('data-theme', name);
-    localStorage.setItem('eduf-theme', name);
-    themeButtons.forEach(b => b.classList.toggle('is-active', b.dataset.setTheme === name));
+  if (themeSelect) {
+    if (savedTheme) themeSelect.value = savedTheme;
+
+    themeSelect.addEventListener('change', () => {
+      const name = themeSelect.value;
+      document.documentElement.setAttribute('data-theme', name);
+      localStorage.setItem('eduf-theme', name);
+    });
   }
-
-  // Marca o tema ativo ao carregar
-  if (savedTheme) {
-    themeButtons.forEach(b => b.classList.toggle('is-active', b.dataset.setTheme === savedTheme));
-  }
-
-  themeButtons.forEach(btn => btn.addEventListener('click', () => applyTheme(btn.dataset.setTheme)));
 </script>
 </body>
 </html>

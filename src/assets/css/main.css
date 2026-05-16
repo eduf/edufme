@@ -513,6 +513,10 @@ body {
 /* ─── Seletor de tema ───────────────────────────────────────── */
 .tui-theme-picker {
   border-top: 1px solid var(--border);
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .tui-theme-label {
@@ -520,37 +524,27 @@ body {
   color: var(--fg-faint);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.6rem 1.25rem 0.2rem;
+  white-space: nowrap;
   user-select: none;
 }
 
-.theme-btn {
-  display: block;
-  width: 100%;
-  padding: 0.45rem 1.25rem;
-  font-size: 0.78rem;
+.theme-select {
   font-family: var(--font-mono);
+  font-size: 0.75rem;
   color: var(--fg-muted);
-  background: none;
-  border: none;
-  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.4rem;
   cursor: pointer;
-  letter-spacing: 0.03em;
+  flex: 1;
+  min-width: 0;
 }
 
-.theme-btn:hover {
+.theme-select:hover,
+.theme-select:focus {
   color: var(--fg);
-  background: var(--bg-alt);
-}
-
-.theme-btn.is-active {
-  color: var(--fg);
-  background: var(--bg-alt);
-}
-
-.theme-btn.is-active::before {
-  content: "> ";
-  color: var(--cursor);
+  border-color: var(--fg-faint);
+  outline: none;
 }
 
 /* ─── Responsivo ────────────────────────────────────────────── */
