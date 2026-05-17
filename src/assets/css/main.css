@@ -1,29 +1,29 @@
 /* ─── iA Writer Duo ─────────────────────────────────────────── */
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoS-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/iAWriterDuoV.woff2") format("woff2");
+  font-weight: 390;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoS-Italic.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/iAWriterDuoV-Italic.woff2") format("woff2");
+  font-weight: 390;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoS-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/iAWriterDuoV.woff2") format("woff2");
+  font-weight: 900;
+  font-style: bold;
   font-display: swap;
 }
 
 /* ─── Tokens base (estrutura, sem cores) ────────────────────── */
 :root {
-  --font-mono:  "iA Writer Duo", "IBM Plex Mono", monospace;
+  --font-mono:  "iA Writer Duo", ui-monospace, system-ui, monospace;
   --size-base:  18px;
   --line:       1.75;
   --measure:    62ch;
@@ -321,7 +321,7 @@ body {
   line-height: 1.4;
 }
 
-.post-content p { margin-bottom: 1rem; }
+.post-content p { margin-bottom: 1.15rem; word-spacing: -0.25ch; }
 .post-content p:last-child { margin-bottom: 0; }
 
 /* ─── Post-type: LINK ───────────────────────────────────────── */
@@ -392,6 +392,7 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.35;
+  word-spacing: -0.2ch;
 }
 
 .post-type-post .post-title a,

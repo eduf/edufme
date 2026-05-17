@@ -18,7 +18,7 @@ _Imagem de [Sagar Dani](https://unsplash.com/@sagardani?utm_source=unsplash&utm_
 
 ## Transcrição do episódio
 
-Na newsletter Texto Sobre Tela [da semana passada](https://eduf.me/oops-voce-foi-censurado/), eu contei a história de como uma escritora chinesa teve um livro censurado direto no processador de texto on-line. Um dia ela foi revisar o material e, oops. Foi impedida. Perdeu o acesso ao arquivo.
+Na newsletter *Texto Sobre Tela* [da semana passada](https://eduf.me/oops-voce-foi-censurado/), eu contei a história de como uma escritora chinesa teve um livro censurado direto no processador de texto on-line. Um dia ela foi revisar o material e, oops. Foi impedida. Perdeu o acesso ao arquivo.
 
 Quando a gente ouve essas coisas, a primeira reação é medo. Mas a gente se esquece do quanto a manipulação e a censura já fazem parte do nosso dia a dia. São tantas técnicas trabalhando em paralelo que é de se espantar que a gente consiga se comunicar, afinal.
 
