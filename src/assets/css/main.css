@@ -549,6 +549,9 @@ body {
   outline: none;
 }
 
+/* ─── Hamburger (desktop: oculto) ───────────────────────────── */
+.nav-toggle { display: none; }
+
 /* ─── Responsivo ────────────────────────────────────────────── */
 @media (max-width: 640px) {
   :root {
@@ -556,53 +559,72 @@ body {
     --sidebar: 0px;
   }
 
+  /* Impede scroll lateral */
+  body { overflow-x: hidden; }
+
   .tui-frame {
     border-inline: none;
     max-width: 100%;
   }
 
+  /* Titlebar: nome do site à esquerda, botão hamburger à direita */
   .tui-titlebar {
     justify-content: space-between;
-    gap: 1rem;
+    padding: 0.5rem 1rem;
   }
 
-  .tui-site-name {
-    display: block; /* aparece no mobile como identificador do site */
+  .tui-site-name { display: block; }
+
+  .tui-context { display: none; } /* tagline longa demais para mobile */
+
+  /* Botão hamburger */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    color: var(--fg-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.1rem 0.3rem;
+    line-height: 1;
   }
 
-  .tui-layout {
-    grid-template-columns: 1fr;
-  }
+  .nav-toggle:hover { color: var(--fg); }
 
+  /* Sidebar escondida por padrão no mobile */
   .tui-sidebar {
+    display: none;
     position: static;
     max-height: none;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
 
-  .site-logo {
-    display: none; /* logo ASCII oculto no mobile */
-  }
+  /* Sidebar aberta pelo hamburger */
+  .tui-sidebar.is-open { display: block; }
 
-  .tui-theme-picker {
-    display: none; /* seletor de tema só no desktop */
-  }
+  .tui-layout { grid-template-columns: 1fr; }
 
-  .site-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+  /* Logo e seletor de tema ocultos no mobile */
+  .site-logo        { display: none; }
+  .tui-theme-picker { display: none; }
+
+  /* Nav vertical com touch targets maiores */
+  .site-nav { flex-direction: column; }
 
   .site-nav li {
-    border-bottom: none;
-    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-right: none;
   }
 
   .site-nav a,
   .site-nav a:visited {
-    padding: 0.45rem 0.85rem;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.9rem;
   }
 
-  .site-nav a.is-current::before { content: ""; }
+  .site-nav a.is-current::before { content: "> "; }
 }

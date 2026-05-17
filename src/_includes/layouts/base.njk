@@ -75,6 +75,7 @@
   <header class="tui-titlebar">
     <a href="/" class="tui-site-name" aria-label="eduf.me — página inicial">eduf.me</a>
     <span class="tui-context">jornalista · roteirista · eduardo fernandes</span>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">≡</button>
   </header>
 
   <div class="tui-layout">
@@ -125,6 +126,25 @@
     prefetch.href = link.href;
     document.head.appendChild(prefetch);
   });
+
+  // Hamburger menu
+  const navToggle = document.querySelector('.nav-toggle');
+  const sidebar   = document.querySelector('.tui-sidebar');
+  if (navToggle && sidebar) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.textContent = isOpen ? '✕' : '≡';
+    });
+    // Fecha ao clicar num link do menu
+    sidebar.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        sidebar.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '≡';
+      })
+    );
+  }
 
   // Seletor de tema
   const themeSelect = document.getElementById('theme-select');
