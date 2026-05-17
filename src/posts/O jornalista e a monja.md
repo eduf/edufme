@@ -8,7 +8,7 @@ description: "Comentando o podcast de Ezra Klein com a monja budista Pema Chödr
 
 https://youtu.be/MkaYDsMsZZU?si=KvGNKUgUdIGNOX7C
 
-Se tem um jornalista que está tentando melhorar o clima da internet, é o Ezra Klein, do New York Times. Isso não quer dizer que eu concorde com todas as suas ideias e com os convidados que ele traz para o podcast. Mas é perceptível que ele procura uma porta para escapar da negatividade on-line.
+Se tem um jornalista que tenta melhorar o clima da internet, é o Ezra Klein, do New York Times. Isso não quer dizer que eu concorde com todas as suas ideias e com os convidados que leva para o podcast. Mas é perceptível que ele procura uma fresta para escapar da negatividade on-line.
 
 Ao longo do tempo, desenvolvi uma relação parasocial com Klein. Então, fiquei feliz em perceber a _vibe_ dele enquanto entrevistava a monja budista Pema Chödrön. Parecia realmente encantado. Fazia tempo que não o via sorrir tanto no programa.
 
