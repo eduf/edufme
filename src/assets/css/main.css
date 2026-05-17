@@ -1,23 +1,23 @@
-/* ─── iA Writer Duo ─────────────────────────────────────────── */
+/* ─── iA Writer Duo (static) ────────────────────────────────── */
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoV.woff2") format("woff2");
-  font-weight: 390;
+  src: url("../fonts/iAWriterDuoS-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoV-Italic.woff2") format("woff2");
-  font-weight: 390;
+  src: url("../fonts/iAWriterDuoS-Italic.woff2") format("woff2");
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "iA Writer Duo";
-  src: url("../fonts/iAWriterDuoV.woff2") format("woff2");
-  font-weight: 900;
-  font-style: bold;
+  src: url("../fonts/iAWriterDuoS-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
 
