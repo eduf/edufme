@@ -31,8 +31,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": {{ title | dump }},
-    "description": {{ pageDescription | dump }},
+    "headline": {{ title | dump | safe }},
+    "description": {{ pageDescription | dump | safe }},
     "url": "{{ pageUrl }}",
     "datePublished": "{{ page.date | dateISO }}",
     "author": {
