@@ -332,18 +332,22 @@ body {
 }
 
 .post-type-link .link-title a,
-.post-type-link .link-title a:visited {
+.post-type-link .link-title a:visited,
+.post-type-link .post-title a,
+.post-type-link .post-title a:visited {
   color: var(--fg);
   text-decoration: none;
 }
 
-.post-type-link .link-title a::after {
+.post-type-link .link-title a::after,
+.post-type-link .post-title a::after {
   content: " ↗";
   color: var(--accent-link);
   font-size: 0.8em;
 }
 
-.post-type-link .link-title a:hover { color: var(--accent-link); }
+.post-type-link .link-title a:hover,
+.post-type-link .post-title a:hover { color: var(--accent-link); }
 
 .post-type-link .link-url {
   font-size: 0.75rem;

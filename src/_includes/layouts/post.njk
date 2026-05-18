@@ -6,7 +6,11 @@ layout: base.njk
   <article class="post-single post-type-{{ type }}">
 
     {% if title %}
-      <h1 class="post-title">{{ title }}</h1>
+      {% if type == "link" %}
+        <h1 class="post-title"><a href="{{ url }}" target="_blank" rel="noopener">{{ title }}</a></h1>
+      {% else %}
+        <h1 class="post-title">{{ title }}</h1>
+      {% endif %}
     {% endif %}
 
     <div class="post-meta">
@@ -26,7 +30,6 @@ layout: base.njk
         {% if source %}<p class="quote-source">{{ source }}</p>{% endif %}
         {% if content %}{{ content | safe }}{% endif %}
       {% elif type == "link" %}
-        <p class="link-title"><a href="{{ url }}" target="_blank" rel="noopener">{{ title }}</a></p>
         {% if content %}{{ content | safe }}{% endif %}
       {% else %}
         {{ content | safe }}
