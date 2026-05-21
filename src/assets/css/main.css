@@ -349,15 +349,6 @@ body {
 .post-type-link .link-title a:hover,
 .post-type-link .post-title a:hover { color: var(--accent-link); }
 
-.post-type-link .link-url {
-  font-size: 0.75rem;
-  color: var(--fg-faint);
-  margin-bottom: 0.6rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 /* ─── Post-type: QUOTE ──────────────────────────────────────── */
 .post-type-quote blockquote {
   border-left: 2px solid var(--border);
