@@ -11,6 +11,17 @@ npm run build    # production build → _site/
 
 The site deploys automatically to Cloudflare Pages on every push to the `main` branch.
 
+## Git / publishing workflow
+
+Eduardo writes posts in Obsidian (the repo lives inside the Obsidian iCloud vault) and uses the **Obsidian Git** plugin to commit and push. This is the primary publishing path — it authenticates via the macOS Keychain and works without extra configuration.
+
+When pushing from a Claude Code terminal session, use `gh auth login` first (browser-based flow). GitHub does not accept plain passwords — use a Personal Access Token or the `gh` CLI. If you get a "push declined due to email privacy restrictions" error, amend the offending commit:
+
+```bash
+git commit --amend --reset-author --no-edit
+git push
+```
+
 ## Architecture
 
 **Stack**: Eleventy 3.x (Nunjucks templates) + custom `sharp`-based image pipeline. No CSS framework, no JS bundler — all CSS is hand-written in `src/assets/css/main.css` and served as-is.

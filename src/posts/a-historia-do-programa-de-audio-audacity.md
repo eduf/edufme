@@ -10,7 +10,7 @@ tags:
 
 Acho que este é um post no estilo #gratidão. E também #apreensão.
 
-É que acabei de saber que um dos aplicativos que mais uso (e há mais tempo), o editor de áudio open-source e gratuito, [Audacity](https://www.audacityteam.org/ "Site do programa Audacity"), agora faz parte de uma nova empresa chamada [Muse Group](https://mu.se/about "Site da companhia Muse Group").
+É que acabei de saber que um dos aplicativos que mais uso (e há mais tempo), o editor de áudio open-source e gratuito [Audacity](https://www.audacityteam.org/ "Site do programa Audacity"), agora faz parte de uma nova empresa chamada [Muse Group](https://mu.se/about "Site da companhia Muse Group").
 
 Quem? Pois é, também não conheço.
 
