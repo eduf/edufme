@@ -4,7 +4,6 @@ title: "A Amazon quer reviver os mortos. Pelo menos a voz deles."
 date: "2022-06-25"
 tags: 
   - "video"
-  - "alexa"
   - "amazon"
   - "inteligência artificial"
   - "tecnologia"
