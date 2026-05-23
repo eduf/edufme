@@ -8,7 +8,7 @@ description: "Não precisamos dos objetos, apenas do desejo de obtê-los."
 
 ![](Screenshot%202026-05-23%20at%2016.31.48.png)
 
-A cultura de nicho é a novidade mais velha desse planeta. As religiões já incluíam moda, música, discursos ideológicos, jargões, locais para rituais e formação de identidade. Também suas consequências: _gatekeeping_, ansiedade da ostracização, relações parassociais com líderes, etc. Mas a versão atual, nicho pop consumista, nasceu provavelmente com o punk rock. Ainda misturamos música, moda e identidade, só que, agora, com uma atitude combativa, considerada resistência. Em vez de invisibilidade, provocação. Um punk ou mod precisava ser visto nas ruas, para contrastar com os _normies_.
+A cultura de nicho é a novidade mais velha desse planeta. As religiões já incluíam moda, música, discursos ideológicos, jargões, locais para rituais e formação de identidade. Também suas consequências: _gatekeeping_, ansiedade da ostracização, relações parassociais com líderes, etc. Mas a versão atual, nicho pop consumista, nasceu provavelmente com o punk rock. Ainda misturamos música, moda e identidade, só que, agora, com uma atitude combativa, considerada resistência. Em vez de invisibilidade, provocação. Um *punk* ou *mod* precisava ser visto nas ruas, para contrastar com os _normies_.
 
 Mas a música foi gradualmente perdendo a centralidade. Os objetos tomaram seu lugar. Por exemplo, o curioso fenômeno do _raw denim_. Basicamente, é o ato de cultuar calças jeans rígidas, grossas, que soltam tinta, caras, associadas ao trabalho artesanal japonês. Também existe um fenômeno parecido com esse em relação a botas.
 
