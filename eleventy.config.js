@@ -138,11 +138,12 @@ async function processYouTubeThumbnail(videoId) {
 }
 
 function resolveImagePath(src, inputPath) {
-  const basename = path.basename(src);
+  const decoded  = decodeURIComponent(src);
+  const basename = path.basename(decoded);
   const candidates = [
-    path.join(path.dirname(inputPath), src),       // relativo ao arquivo fonte
-    path.join("src", src.replace(/^\//, "")),       // absoluto do input dir
-    path.join("src/assets/images", basename),       // posts antigos com prefixo images/
+    path.join(path.dirname(inputPath), decoded),       // relativo ao arquivo fonte
+    path.join("src", decoded.replace(/^\//, "")),      // absoluto do input dir
+    path.join("src/assets/images", basename),          // posts antigos com prefixo images/
   ];
   const found = candidates.find(p => fs.existsSync(p));
   if (found) return found;
