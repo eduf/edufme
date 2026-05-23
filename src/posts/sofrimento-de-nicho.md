@@ -5,6 +5,7 @@ tags: [post]
 title: "Sofrimento de nicho"
 description: "Não precisamos dos objetos, apenas do desejo de obtê-los."
 ---
+
 ![](Screenshot%202026-05-23%20at%2016.31.48.png)
 
 A cultura de nicho existe desde quando a humanidade começou a surgir nesse planeta. As religiões já incluíam moda, música, discursos ideológicos, vocabulários próprios, locais para rituais de reunião e formação de identidade. E as suas consequências, como _gatekeeping_, ansiedade da ostracização, relações parassociais com líderes, etc. Mas a sua encarnação atual, nicho pop consumista, nasceu provavelmente com o punk rock. Primeiro aprendemos a misturar música, moda, identidade e atitude combativa, de ostentação como resistência. Um punk ou mod precisava ser visto nas ruas, para contrastar com os _normies_.
