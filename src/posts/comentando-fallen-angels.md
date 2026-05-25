@@ -10,9 +10,7 @@ tags:
 coverImage: "fallen1.jpg"
 ---
 
-Qual é a primeira coisa que vem à sua cabeça quando você pensa sobre os filmes de Wong Kar-wai? Na minha, são as cores.
-
-É claro: o cineasta chinês é reconhecido por suas explorações sobre as armadilhas dos relacionamentos amorosos, mas tudo é filtrado por uma [direção de arte](https://en.wikipedia.org/wiki/Christopher_Doyle "Christopher Doyle") que enfatiza sempre um uso criativo das cores para dar efeitos narrativos e ampliar significados.
+Qual é a primeira coisa que vem à sua cabeça quando você pensa sobre os filmes de Wong Kar-wai? Na minha, são as cores. É claro: o cineasta chinês é reconhecido por suas explorações sobre as armadilhas dos relacionamentos amorosos, mas tudo é filtrado por uma [direção de arte](https://en.wikipedia.org/wiki/Christopher_Doyle "Christopher Doyle") que enfatiza sempre um uso criativo das cores para dar efeitos narrativos e ampliar significados.
 
 Fallen Angels, de 1995, não é tão [vangoghiano quanto Ashes of The Time,](https://eduf.me/comentando-ashes-of-time-de-wong-kar-wai/ "Comentando Ashes of Time") mas cria um visual um tanto cyberpunk, ligeiramente embaçado e "encaixotado" para Hong Kong dos anos 90.
 

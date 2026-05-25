@@ -7,6 +7,9 @@
   {% set pageTitle = title if title else site.name %}
   {% set pageDescription = description if description else site.description %}
   {% set pageUrl = site.url + page.url %}
+  {% if image %}
+    {% set pageImage = (site.url + image) if 'http' not in image else image %}
+  {% endif %}
 
   <title>{% if title and title != false %}{{ title }} — eduf.me{% else %}eduf.me — Site do jornalista e roteirista Eduardo Fernandes{% endif %}</title>
   <meta name="description" content="{{ pageDescription }}">
@@ -19,11 +22,13 @@
   <meta property="og:title" content="{{ pageTitle }}">
   <meta property="og:description" content="{{ pageDescription }}">
   <meta property="og:url" content="{{ pageUrl }}">
+  {% if pageImage %}<meta property="og:image" content="{{ pageImage }}">{% endif %}
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{{ 'summary_large_image' if pageImage else 'summary' }}">
   <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
+  {% if pageImage %}<meta name="twitter:image" content="{{ pageImage }}">{% endif %}
 
   <!-- JSON-LD -->
   {% if type == "post" %}
@@ -34,6 +39,7 @@
     "headline": {{ title | dump | safe }},
     "description": {{ pageDescription | dump | safe }},
     "url": "{{ pageUrl }}",
+    {% if pageImage %}"image": "{{ pageImage }}",{% endif %}
     "datePublished": "{{ page.date | dateISO }}",
     "author": {
       "@type": "Person",
