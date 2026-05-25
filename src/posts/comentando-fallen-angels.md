@@ -1,6 +1,6 @@
 ---
 type: post
-title: "Comentando Fallen Angels, de Wong Kar-wai"
+title: "Comentando Fallen Angels"
 date: "2021-05-31"
 tags: 
   - "reviews"
