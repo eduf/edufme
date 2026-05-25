@@ -11,8 +11,6 @@ tags:
   - "tecnologia"
 ---
 
-_Cena de Andor, série do universo de Star Wars._
-
 Já faz algum tempo que venho desenvolvendo uma certa má-vontade com a cultura _nerd_.
 
 Joguei pouquíssimos games. Nunca fui fã de super-heróis. Até costumava gostar de _sci-fi_ [realmente](https://www.imdb.com/title/tt0118929/) _[mindfuck](https://www.imdb.com/title/tt0118929/)_. Mas não consigo mais me conectar com conteúdo pop. Não é totalmente preconceito. Meio que desencanei dele. Talvez pela onipresença do gênero.
