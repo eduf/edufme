@@ -1,4 +1,5 @@
 ---
+type: post
 title: "Você é desinteressante?"
 date: "2023-10-24"
 tags: 
