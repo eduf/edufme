@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: eduf/edufme
+  branch: main
+  base_url: https://eduf-cms-auth.eduf.workers.dev
+
+media_folder: src/assets/images
+public_folder: /assets/images
+
+locale: pt
+
+collections:
+  # ── Posts (longos, com título) ──────────────────────────────────
+  - name: post
+    label: Posts
+    label_singular: Post
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: type, name: type, widget: hidden, default: post }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [post] }
+      - { label: Descrição, name: description, widget: string, required: false, hint: "Aparece nos resultados de busca e no preview das redes sociais" }
+      - { label: "Imagem para redes sociais", name: image, widget: image, required: false, hint: "Aparece no card ao compartilhar (não é dithered)" }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  # ── Notas (curtas, sem título) ───────────────────────────────────
+  - name: note
+    label: Notas
+    label_singular: Nota
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: type, name: type, widget: hidden, default: note }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [note] }
+      - { label: Conteúdo, name: body, widget: markdown }
+
+  # ── Links ────────────────────────────────────────────────────────
+  - name: link
+    label: Links
+    label_singular: Link
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: type, name: type, widget: hidden, default: link }
+      - { label: Título, name: title, widget: string }
+      - { label: URL, name: url, widget: string }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [link] }
+      - { label: Comentário, name: body, widget: markdown, required: false }
+
+  # ── Citações ─────────────────────────────────────────────────────
+  - name: quote
+    label: Citações
+    label_singular: Citação
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: type, name: type, widget: hidden, default: quote }
+      - { label: Citação, name: quote, widget: text }
+      - { label: Fonte, name: source, widget: string, required: false }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [quote] }
+      - { label: Comentário, name: body, widget: markdown, required: false }

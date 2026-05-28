@@ -162,6 +162,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/.well-known");
+  eleventyConfig.addPassthroughCopy("src/admin");
 
   // Slugify com suporte a português (remove acentos, espaços → hifens)
   const slugify = str => {
