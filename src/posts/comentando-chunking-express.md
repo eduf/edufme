@@ -9,6 +9,8 @@ tags:
   - "wong-kar-wai"
 ---
 
+![](chungking-express.jpg)
+
 Como bem se sabe, traduzir títulos de filmes não é uma tarefa simples. “Amores Expressos”, em chinês é 重慶森林. Segundo o Dr. Google Translate, significa “Floresta de Chongking”. Em em inglês, ficou “Chungking Express”. No Brasil, uma aproximação (paulistana) seria algo como “Floresta do [Edifício Copan](https://en.wikipedia.org/wiki/Edif%C3%ADcio_Copan)”.
 
 [Chungking](https://en.wikipedia.org/wiki/Chungking_Mansions) se refere a um complexo de edifícios numa das áreas mais populosas de Hong Kong. Junta hotéis fuleiros, apartamentos minúsculos, áreas de convivência (estilo praça de alimentação), escadas rolantes e uma série de pequenos comércios, espremidos uns nos outros. O cheiro deve ser bem interessante.
@@ -46,7 +48,3 @@ A trilha sonora também segue a técnica que o cineasta usaria em praticamente t
 Enfim, o filme fala sobre muito mais assuntos do que apenas amores. E menos ainda os considera expressos: a presença de um determinado parceiro pode até durar pouco, mas todo o processo de desejo, da conquista, do medo da perda, da negação, e, por fim, da saudade e da solidão, tudo isso gasta um enorme tempo. Amores são um tanto como explosões nucleares: deixam resíduos que, de alguma forma, contaminam nossas vidas por muitos anos. Influenciam gerações (passadas e futuras) e até pessoas que nunca se conheceram.
 
 Agora, a “Floresta do Chungking”, é o centro do filme. Os personagens não sabem o que fazer consigo mesmo, mas isso não os leva à tragédia (a não ser no caso da traficante). Tudo acaba em gambiarra. Deve ser essa a tal sociabilidade do Chungking: muitas coisas acontecendo, tudo meio sujo, todo mundo se virando como dá, ajudando e atrapalhando uns aos outros, tapando os buracos da vida com fita adesiva.
-
-* * *
-
-Este post faz parte de uma [série sobre filmes de Wong Kar-Wai](https://eduf.me/wong-kar-wai/), que estou revendo e comentando aos poucos.

@@ -29,12 +29,3 @@ Provavelmente, esse é um movimento midiático sem volta. Mas, por sorte, as rel
 Se sobrevivermos relativamente bem às (possivelmente pavorosas) consequências da situação na Ucrânia, precisaremos reimaginar a web2. Não só do ponto de vista legislativo. E duvido que isso implique em usar uma abstração ainda maior, o metaverso.
 
 Talvez, o movimento seja o exato contrário: diminuir a escala e a velocidade, comunicar menos, baixar as expectativas, voltar para as ruas, usar papel, rejeitar periodicidades. Mas, como sempre, só o tempo poderá dizer.
-
-* * *
-
-## Achei interessante
-
-- [Podcast: o identitarismo branco](https://www1.folha.uol.com.br/ilustrissima/2022/03/obra-de-fanon-questiona-identitarismo-branco-afirma-pesquisador.shtml) - Entrevista com o pesquisador Daivison Faustino, sobre o escritor francês Frantz Fanon, um dos pioneiros em analisar o alcance do racismo na intelectualidade ocidental.
-- Podcast (em inglês): [Michelle Schusterman conta](https://slate.com/podcasts/working/2022/03/fiction-ghostwriter-michelle-schusterman) como é trabalhar como escritora fantasma na área de ficção. Eu mesmo tenho atuando mais ou menos nessa área, então achei a conversa bem esclarecedora.
-- Por falar nisso, [Reedsy](https://reedsy.com/) é uma plataforma para contratar escritores fantasma (em geral, produzindo em Inglês).
-- Música: [Teke::Teke](https://www.teketekeband.com/) é uma banda canadense que mistura rock de garagem, vocais em japonês, algo de surf-rock, arpejos que lembram música árabe e instrumentos como flauta e tombone. Se existe algo mais pós-moderno, eu desconheço. [Confira uma apresentação ao vivo aqui](https://www.youtube.com/watch?v=ej0LV6MCteo).

@@ -7,8 +7,6 @@ tags:
   - "comportamento"
 ---
 
-_Uma reflexão entre uma comida murcha de aeroporto e outra._
-
 Quem é que não gosta de textos do estilo “coisas que eu gostaria de ter aprendido antes”? É um gênero literário único. Vive numa espécie de limbo entre a arrogância, a humildade, a ingenuidade e a afetação. Não há como escrevê-los sem soar canastrão. Ainda assim, é um exercício interessante.
 
 Do ponto de vista do escritor, ajudam a transmutar arrependimentos e ressentimentos. Na melhor das hipóteses, em algo pragmático, como diretrizes, listas de afazeres. Na pior, levam à ingênua crença de que o autor superou algo, que passou de fase.

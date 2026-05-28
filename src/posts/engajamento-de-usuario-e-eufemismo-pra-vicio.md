@@ -21,5 +21,3 @@ Se você ainda não se cansou do assunto, aqui tem um bom resumo dos padrões ne
 De certa forma, essas coisas me lembram da Alemanha do pós-Segunda Guerra, quando as gerações futuras passaram a cobrar os pais sobre o nazismo: "você concordava com _aquilo_? Ou não chegava nem a perceber? Você trabalhava pra essa ideologia?"
 
 Tomara que o futuro não reserve algo semelhante pros atuais profissionais de web.
-
-[](https://webcomicname.com/post/633421161578053633)

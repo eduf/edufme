@@ -42,7 +42,3 @@ Note que não me refiro à autopublicação, no estilo [Ipsis](https://ipsispub.
 E, assim, teremos, nessa área também, uma espécie de batalha semelhante à dos _singles_ contra álbuns?
 
 Vejamos.
-
-* * *
-
-Publicado na semana passada na edição da newsletter Texto Sobre Tela exclusiva para pessoas apoiadoras. Quer ser uma? [Assine aqui](https://eduf.substack.com/). Ou faça um **pix recorrente** de apenas R$ 10 mensais para pix@eduf.me.

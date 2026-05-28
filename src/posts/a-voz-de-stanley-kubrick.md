@@ -6,8 +6,6 @@ tags:
   - "newsletter"
 ---
 
-Olá, espero que você esteja bem.
-
 Provavelmente, você já sabe que, em 2020, a Mostra Internacional de Cinema de SP também [migrou pra Internet](https://mostraplay.mostra.org/). É possível alugar filmes por R$ 6. E aí você tem até 3 dias pra assisti-los.
 
 Nos meus tempos de jornalista em SP, eu costumava cobrir a Mostra. Assistia a cerca de 6 filmes por dia e escrevia sobre eles à noite. Neste ano, por enquanto, só tive tempo de ver [Kubrick por Kubrick](https://mostraplay.mostra.org/film/kubrick-por-kubrick/), do diretor francês Gregory Monro.
@@ -53,73 +51,3 @@ Por outro lado, esse culto ao "realizador" (e o medo de se tornar um "não-reali
 Enfim, o mito de Kubrick não depende **só** dele. Depende de nossa repetida reconfiguração ao longo dos anos. E também das liberdades e desafios da época em que ele viveu, da raiva e do cansaço dos seus colaboradores, das condições psicológicas e pulsões de todos eles. Kubrick é um coletivo. Um Koletivo.
 
 Ainda assim, é só dizer que há uma nova biografia dele, que lá vou eu, docilmente, bovinamente, gastar meus R$ 6, buscando uma nova lição de vida. Como diria [Anthony Fantano](https://www.youtube.com/channel/UCt7fwAhXDy3oNFTAzF2o8Pw), um decente 6 pro documentário. E um 10 pra força do hábito.
-
-* * *
-
-## Ferramentas
-
-O [Vimeo lançou uma ferramenta pra gravar e enviar mensagens em vídeo](https://vimeo.com/features/screen-recorder) direto do navegador. É uma extensão pro Chrome. Hoje em dia, que todo mundo precisa mandar vídeos por aí, vale conferir.
-
-Outra: também é possível [criar lembretes no navegador e enviar pros outros](https://hapen.io/). Que perigo.
-
-A [Tokyo Dawn Labs](https://www.tokyodawn.net), minha empresa favorita de plugins gratuitos pra masterização de áudio, lançou [mais um compressor incrível](https://www.tokyodawn.net/tdr-molotok/).
-
-Finalmente, o episódio "[We Go All](https://www.nytimes.com/2020/06/04/podcasts/rabbit-hole-qanon-youtube-tiktok-virus.html)", do [Rabbit Hole](https://www.nytimes.com/column/rabbit-hole), série curta de podcasts do New York Times, é uma das melhores coisas que só descobri nessa semana.
-
-* * *
-
-## Podcast: Halloween merece um update?
-
-Os anos passam, os nossos medos mudam radicalmente, mas o Halloween continua firme na sua celebração de caveiras, fantasmas, terror retrô e filmes B. Em tempos de COVID-19, será que o Halloween ficou meio obsoleto? [Discuto isso aqui](https://eduf.me/sobreviveu-ao-halloween/).
-
-* * *
-
-É isso por hoje. Obrigado por ler.
-
-Abraço,
-
-Eduf
-
-* * *
-
-😞 [Quer sair da lista?](https://email.mg2.substack.com/c/eJxVkVuPqjAUhX8NvB3SlovwwIOjB4fJUTMTx9sLKe0Gq9AyUET89VP16SRNuru6d1ezPkY1lKod40Z12u47aDPBY4xcP0QBsnnscRz6oS26rGgBaiqqWLc92E2fV4JRLZR8TIRBEE3sUzxByHcL5HrYB5ZPgEaFP8l5SBHOTYuZMz4Z7bkAySCGK7SjkmBX8UnrprPcqUUSs4D3hdP1eacpuzhM1Uaj7OFmCi46mleQPb9juUmjOKOdtty5RQKtLiBNCeMHZmQ77kl1Sc_qtpwv8Xo-JcvZINgiuvMkao6zNFhvprfVprz9m300h_2nWJ__4vWmRKvNN17eL11aV3c2pkEq3_BBIG91PvirMe1SuTJno9dfDSOJyBfb4rjDJ7obRPHp_NTvDDMpvHnyg7zFn2sQ7d9C73r93nlHOvsazu42Re_lkChbxAQRhEISYJ_4buRgB_f5QKnXEKEsD9Ul-S8Mu41NQLTlqoBWUsnhZrrKRxzPawMnM3vdS6HHDOQjLf7ipl-knxj02EAsYegq0Bral2hgRgj7IbaNI1fmTfkwK34BCOS7Zw)
-
-## **Mais Eduf**
-
-- [Podcast Monólogo Estéreo](https://anchor.fm/MonoEstéreo)
-    
-- [Edições anteriores da Newsletter](https://eduf.substack.com/)
-    
-- [Eduf.me](https://eduf.me/)
-    
-- [Peruano Saudita](https://soundcloud.com/eduf/sets/peruano-saudita-hom-nimo)
-    
-- [Lost Mothers](https://soundcloud.com/eduf/sets/lost-mothers)
-    
-
-* * *
-
-## **Apoie**
-
-Ajude a preservar seu produtor cultural local. Qualquer contribuição me possibilita a ter mais tempo pra escrever e produzir coisas gratuitas pra internet.
-
-### **Transferência única**
-
-- [Nubank](https://nubank.com.br/pagar/1ezff9/Zqnh6gcXu8)
-    
-- [PicPay](https://picpay.me/eduardo.fernandes.silva29)
-    
-- [PagSeguro](https://pag.ae/7WpAsQ2sR)
-    
-- [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V754DZ6ZKC4PU&source=url)
-    
-- [pix@eduf.me](mailto:pix@eduf.me)
-    
-
-### **Assinatura mensal**
-
-- [Valor livre, via Mercado Pago](http://mpago.la/1RSa3aa)
-    
-- [R$10, via PagSeguro](http://pag.ae/7WpCa_xxS)
-    
-- [Planos de R$5 a R$50, via PicPay](https://picpay.me/edufeduf)

@@ -10,8 +10,6 @@ tags:
   - "viagens"
 ---
 
-_Adèle Exarchopoulos ensina os procedimentos de segurança do avião._
-
 Toda vez que preciso fazer viagens internacionais, me pergunto o que pode atrair uma pessoa a trabalhar em companhias aéreas.
 
 Que tipo de personalidade e história de vida leva alguém a querer viver em aviões, aeroportos, _dutty-free_ e seus infindáveis Toblerones? Além de enfrentar constantes mudanças de fuso-horário, escalas de trabalho, etc.?

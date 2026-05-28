@@ -10,7 +10,7 @@ tags:
   - "review"
 ---
 
-Update em 23/06/2022: A Cia das Letras anunciou que vai lançar o livro no Brasil em agosto.
+*Update em 23/06/2022: A Cia das Letras anunciou que vai lançar o livro no Brasil em agosto.*
 
 Não sei se alguma editora pretende lançar no Brasil [The Dawn of Everything: A New History of Humanity](https://www.amazon.com.br/Dawn-Everything-New-History-Humanity/dp/0374157359?_encoding=UTF8&pd_rd_w=yqoSG&pf_rd_p=717e1082-1b26-481d-94d5-2a1a46904215&pf_rd_r=80MF17ZQ46H9X4ZW1SQ5&pd_rd_r=bf4534e4-4b43-44f1-ac75-27fa5a4e3ce4&pd_rd_wg=PX8sO&linkCode=ll1&tag=eduf-20&linkId=57f4188743195ce3dbf1dea1fbb80656&language=pt_BR&ref_=as_li_ss_tl), dos Davids Graeber (foto acima) e Wengrow. Se não, deveria. Agora.
 

@@ -26,7 +26,9 @@ Assim, quando alguém se propõe a contar os sonhos e a análise, há um certo r
 
 ## O que esperar do livro
 
-![A psicanalista Betty Milan](images/betty-milan.jpg)Tudo isso para reconhecer a coragem de [Betty Milan](https://www.bettymilan.com.br/). No livro, ela não só relata vislumbres de sua análise, como ainda explica alguns dos métodos do seu analista. No caso, apenas um dos mais icônicos do século 20: [Jacques Lacan](https://pt.wikipedia.org/wiki/Jacques_Lacan).
+![A psicanalista Betty Milan](images/betty-milan.jpg)
+
+Tudo isso para reconhecer a coragem de [Betty Milan](https://www.bettymilan.com.br/). No livro, ela não só relata vislumbres de sua análise, como ainda explica alguns dos métodos do seu analista. No caso, apenas um dos mais icônicos do século 20: [Jacques Lacan](https://pt.wikipedia.org/wiki/Jacques_Lacan).
 
 De alguma forma, o texto deve ajudar estudantes de psicanálise. Porém, não deve sustentar o interesse de curiosos buscando causos sobre o controverso Jacques Lacan. Não que o livro seja técnico. Pelo contrário, é um relato muito pessoal sobre a trajetória da, então, jovem adulta Betty Milan.
 

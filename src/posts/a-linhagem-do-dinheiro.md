@@ -10,8 +10,6 @@ tags:
   - "tipografia"
 ---
 
-Bom dia.
-
 Uma das coisas que mais mudou na minha cabeça depois que virei budista foi minha visão sobre tradição. Ou melhor, algo que chamamos de _linhagem_.
 
 É um assunto muito complexo. O que tenho capacidade de dividir aqui é o seguinte: todos nós somos interconectados. Você lê estas palavras porque alguém lhe educou, outro pagou por isso, e outra pessoa educou seu professor etc etc. etc.
@@ -39,35 +37,3 @@ Será que isso seria o suficiente pra "nublar" o hábito da desconexão mental e
 Ou será que pioraria a situação? "Sou da linhagem do George Soros", até o destruidor primordial. O que, com a memória estranha da nossa época, talvez fosse parar em [Thanos](https://en.wikipedia.org/wiki/Thanos).
 
 Enfim. Eu sei. Eu sei. Estou sendo ingênuo. Mas agora já foi. Voltamos à programação normal.
-
-* * *
-
-## Veganices
-
-- Essa é fácil: p[ão de queijo sem queijo](https://youtu.be/FmEIo4P1wFM).
-- [Playlist](https://www.youtube.com/playlist?list=PLuH00Sf9_CgKkIFl_rwTSKsbshDNl2YWb&disable_polymer=true) com ideias pra café da manhã vegano.
-- Mais ideias no [Vegans & Colors](https://veganandcolors.com/index.php/pt/2018/09/18/5-ideias-de-cafe-da-manha-vegano-doce-e-salgado/).
-- Eu tenho uma preguiça danada da estética do canal do Youtube do [Avantgarde Vegan](https://www.youtube.com/channel/UCF-ACPYNN0oXD4ihS5mbbmw), mas ele sempre traz boas receitas.
-
-* * *
-
- 
-
-## Os 10 mais abandonados
-
-A rádio WFMU promove uma brincadeira interessante entre os seus ouvintes: compartilhar qual é o disco que compraram há mais tempo, mas nunca se deram ao trabalho de ouvir. Uou… Eu não saberia dizer rapidamente.
-
-Mas é possível expandir a ideia: descobrir quais são os produtos culturais que "mofam" a mais tempo nas nossas prateleiras virtuais. Os 10 mais abandonados. Os 15 mais procrastinados. Itens que salvamos ou compramos durante um desses _shots_ de dopamina e que abandonamos depois.
-
-_Maxwell, o Gato Mágico_, livro com as tiras do começo de carreira de Alan Moore, vêm à memória. Filmes do Jodorowski (quase terminei dois deles). Música de Moses Sumney – que tentei ouvir várias vezes e sempre parei: "hmm… Parece interessante. Mas depois eu ouço". Seis meses depois, repito a operação.
-
-* * *
-
-## 
-
-## De fontes seguras
-
-- [Golos UI](https://www.paratype.com/fonts/pt/golos-ui) é uma fonte livre e [uniwidth](https://uxdesign.cc/uniwidth-typefaces-for-interface-design-b6e8078dc0f7): significa que o espaço entre as letras nunca muda (nada a ver com as monospaced). Por isso, ela é especialmente útil pra design de interfaces. Por exemplo, imagine que você queira criar um botão. Ao passar o mouse nele, você muda da versão regular pra negrito. Fontes comuns fariam o layout do botão mudar de tamanho, mas isso não acontece com as uniwidths.
-- Já a [Cursive](https://www.recursive.design/), além de ser uniwidth, é variável de "5 axis", o que permite o designer **transformá-la completamente**, da versão monospaced até a casual. E tudo num só arquivo.
-- Não costumo divulgar fontes pagas por aqui. Nada contra, apenas acho que fontes livres podem ser mais imediatamente úteis pra maioria dos meus leitores (estou pressupondo que vocês sejam uns duros como eu). Porém, os sites de _foundries_ vêm ficando cada vez mais inspiradores. Olha só o da [VJ Type](https://vj-type.com/).
-- Lembra da tradicionalíssima Didone? Agora ela tem uma [versão open source](https://fonts.google.com/specimen/Bodoni+Moda). E variável.

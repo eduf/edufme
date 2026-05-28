@@ -8,8 +8,6 @@ tags:
   - "coreanos"
 ---
 
-_A protagonista do filme, So-Young._
-
 Às vezes, me espanto com o tamanho da minha ignorância. Por exemplo, nunca sequer pensei no que acontece com as prostitutas depois dos 60 anos. Simplesmente se aposentam? Recebem auxílio do governo? Obviamente, não. Dependendo do caso… continuam trabalhando.
 
 Desse jeito, no genérico, esse já seria um assunto e tanto. Mas o diretor sul-coreano, [E J-Yong](https://en.wikipedia.org/wiki/E_J-yong), faz um corte temático um pouco mais específico em [The Bacchus Lady](https://en.wikipedia.org/wiki/The_Bacchus_Lady) (2016).

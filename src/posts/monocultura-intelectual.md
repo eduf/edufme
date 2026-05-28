@@ -33,11 +33,3 @@ A monocultura é o que faz perguntas como as do editor do Manual do Usuário e o
 A existência de “undergrounds” é extremamente necessária pra preservar a diversidade cultural. Em algum lugar, precisa haver a apreciação do segredo, da conexão um a um, das piadas internas e da comunidade.
 
 Essa lógica não pode ficar nas mãos apenas da extrema-direita e de ideologias autoritárias. Underground não pode virar coisa exclusiva pra bandidos.
-
----
-
-## A Internet está mudando?
-
-- O empreendedor veterano da Internet, Anil Dash, [acredita que a diversidade está começando a voltar pra Internet](https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/). Segundo ele, já estamos virando o jogo contra as redes sociais e as mentalidades do Vale do Silício.
-- [Lutando contra os algoritmos usando RSS, Blogs e IndieWeb](https://shoptalkshow.com/599/). Podcast com os desenvolvedores Chris Coyer e Dave Rupert.
-- Se você está querendo sair do mundo dos sites dinâmicos, tipo Wordpress, não consigo imaginar um aplicativo mais simples do que o [Publii](https://getpublii.com/). Tomara que dure.

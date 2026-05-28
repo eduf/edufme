@@ -6,8 +6,6 @@ tags:
   - "newsletter"
 ---
 
-Olá, espero que você esteja bem.
-
 Hoje bateu uma saudade monstro do [Mano Negra](https://en.wikipedia.org/wiki/Mano_Negra_(band)).
 
 Formada por Manu Chao, na França, a banda misturava rockabilly com reggae, ska, punk, funk, polca e música árabe. Vi um show dela em São Paulo, no Vale do Anhangabaú, nos anos 90 (acho). Nunca mais me esqueci.

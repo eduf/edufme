@@ -28,11 +28,3 @@ Porém, esse pode ser um espectro bem camarada. Porque, como acontece na música
 Pense no sono. [Segundo especialistas](https://www.ted.com/talks/matt_walker_sleep_is_your_superpower), é um estado mental até mais ativo do que a vigília. Mas ([quase](https://en.wikipedia.org/wiki/Surrealism)) não garante status de esperteza. Ainda assim, tudo tem seu tempo: o consumo, e também o processamento e a limpeza. Sem esses últimos, que ocorrem de um jeito não linear e intuitivo (como nos sonhos), não há _exatamente_ aprendizado.
 
 O tédio só é assustador por conta do vício da ansiedade. Mas, quando desaceleramos e nos permitimos experimentar a ausência de ocupação compulsiva, abre-se um buraco de coelho. Percebemos que não há como nos entediarmos _stricto sensu_. O que chamamos de tédio é outra coisa: é síndrome de abstinência da compulsão.
-
-* * *
-
-### [MonoEstéreo](https://eduf.me/tag/MonoEstéreo/)
-
-## [Cada época tem a distorção que merece](https://eduf.me/cada-epoca-tem-a-distorcao-que-merece/)
-
-Hoje em dia, quase todas as músicas das listas de mais tocadas têm algum tipo de distorção robótica nos vocais (vocoder). O que será que isso diz sobre a nossa época?
