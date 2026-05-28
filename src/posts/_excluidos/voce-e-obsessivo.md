@@ -18,7 +18,7 @@ Por exemplo, há artistas que descobrem “seu propósito” na vida desde jovem
 
 Mas também há aqueles obcecados em procurar o propósito. Os eternamente insatisfeitos, viciados em recomeços, buscadores compulsivos. Eles constantemente se perguntam: “será que é isso que eu quero _mesmo_?” Esses seriam os **obsessivos recursivos** (OR), porque vivem se resetando e se reinstalando.
 
-Em apenas cinco minutos na Internet, você encontrará defensores e críticos de cada estilo de obsessão. E dos jeitos mais diversos. De _coachs_ a teóricos acadêmicos.
+Em apenas cinco minutos na internet, você encontrará defensores e críticos de cada estilo de obsessão. E dos jeitos mais diversos. De _coachs_ a teóricos acadêmicos.
 
 Gente como [Ryan Holiday](https://ryanholiday.net/), [Gary Vaynerchuk](https://garyvaynerchuk.com/), Steve Jobs, _tech bros_ e empresários tendem a influenciar artistas / criadores mais focados em estabelecer uma carreira na confusão do mundo digital.
 
