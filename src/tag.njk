@@ -1,0 +1,25 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagPages
+  size: 1
+  alias: tag
+permalink: "{{ tag.url }}"
+eleventyComputed:
+  title: "{{ tag.label }}"
+  description: "Arquivo de textos marcados com {{ tag.label }}."
+---
+
+<div class="container">
+  <div class="feed">
+    <div class="archive-header">
+      <h1 class="archive-title">{{ tag.label }}</h1>
+      <p class="archive-desc">{{ tag.posts.length }} texto{% if tag.posts.length != 1 %}s{% endif %} nessa tag.</p>
+    </div>
+
+    {% for post in tag.posts %}
+      {% set post = post %}
+      {% include "partials/feed-item.njk" %}
+    {% endfor %}
+  </div>
+</div>

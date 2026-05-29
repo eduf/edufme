@@ -179,6 +179,24 @@ module.exports = function(eleventyConfig) {
   };
   eleventyConfig.addFilter("slugify", slugify);
 
+  const normalizeTag = tag => slugify(tag);
+
+  const tagLabelScore = tag => {
+    const value = String(tag || "");
+    let score = 0;
+    if (/\s/.test(value)) score += 2;
+    if (/[A-ZÀ-Ý]/.test(value)) score += 1;
+    if (!/-/.test(value)) score += 1;
+    return score;
+  };
+
+  const shouldReplaceTagLabel = (current, candidate) => {
+    const currentScore = tagLabelScore(current);
+    const candidateScore = tagLabelScore(candidate);
+    if (candidateScore !== currentScore) return candidateScore > currentScore;
+    return String(candidate).length > String(current).length;
+  };
+
   // Collections por post-type
   const types = ["note", "link", "quote", "image", "post"];
   types.forEach(type => {
@@ -210,6 +228,63 @@ module.exports = function(eleventyConfig) {
       .getFilteredByGlob("src/posts/**/*.md")
       .filter(isMonoestereo)
       .reverse();
+  });
+
+  // Páginas públicas para tags, agrupando variações por slug normalizado.
+  eleventyConfig.addCollection("tagPages", function(collectionApi) {
+    const ignoredTags = new Set(types);
+    const reservedSlugs = new Set([
+      "admin",
+      "assets",
+      "feed",
+      "monoestereo",
+      "page",
+      "robots",
+      "sitemap",
+      "sobre"
+    ]);
+    const posts = collectionApi.getFilteredByGlob("src/posts/**/*.md");
+    const postSlugs = new Set(
+      posts.map(item => slugify(item.data.title || item.fileSlug)).filter(Boolean)
+    );
+    const tagMap = new Map();
+
+    posts.forEach(item => {
+      const tags = item.data.tags || [];
+      tags.forEach(tag => {
+        if (typeof tag !== "string") return;
+        const slug = normalizeTag(tag);
+        if (!slug || ignoredTags.has(slug) || reservedSlugs.has(slug)) return;
+
+        if (!tagMap.has(slug)) {
+          tagMap.set(slug, {
+            slug,
+            label: tag,
+            url: postSlugs.has(slug) ? `/tag/${slug}/` : `/${slug}/`,
+            posts: [],
+            seenUrls: new Set()
+          });
+        } else if (shouldReplaceTagLabel(tagMap.get(slug).label, tag)) {
+          tagMap.get(slug).label = tag;
+        }
+
+        const tagPage = tagMap.get(slug);
+        const itemKey = item.url || item.inputPath;
+        if (!tagPage.seenUrls.has(itemKey)) {
+          tagPage.seenUrls.add(itemKey);
+          tagPage.posts.push(item);
+        }
+      });
+    });
+
+    return [...tagMap.values()]
+      .map(tagPage => ({
+        slug: tagPage.slug,
+        label: tagPage.label,
+        url: tagPage.url,
+        posts: tagPage.posts.sort((a, b) => b.date - a.date)
+      }))
+      .sort((a, b) => a.slug.localeCompare(b.slug));
   });
 
   // Filtro para limitar itens de uma collection

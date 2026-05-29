@@ -26,9 +26,7 @@ Como é? Agora não preciso mais de mil fãs? Caiu para 100? Isso facilita ou co
 
 Incrível.
 
-Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio.
-
-E se essa tendência aumentar ainda mais? Em vez de 100 FV, precisássemos de apenas 10? Ou de 1?
+Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio. E se essa tendência aumentar ainda mais? Em vez de 100 FV, precisássemos de apenas 10? Ou de 1?
 
 Enfim, tenho zero talento para negócios. Mas preciso justificar meu pHD em futurogia, orientado por Nostradamus. Então, cheguei a vários Cenários Absurdos®:
 
