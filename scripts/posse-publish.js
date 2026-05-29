@@ -205,7 +205,12 @@ function truncate(text, maxLength) {
 
 function normalizeUrl(value) {
   if (!value) return "";
-  const trimmed = value.trim().replace(/\/+$/, "");
+  const trimmed = value
+    .trim()
+    .replace(/^[A-Z0-9_]+\s*=\s*/i, "")
+    .replace(/^["']|["']$/g, "")
+    .trim()
+    .replace(/\/+$/, "");
   if (/^https?:\/\//i.test(trimmed)) return trimmed;
   return `https://${trimmed}`;
 }
