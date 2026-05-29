@@ -1,4 +1,5 @@
 ---
+type: post
 title: "A grande oportunidade"
 date: "2022-11-23"
 tags: 

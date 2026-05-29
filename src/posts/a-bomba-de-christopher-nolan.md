@@ -1,4 +1,5 @@
 ---
+type: post
 title: "A bomba de Christopher Nolan"
 date: "2023-07-25"
 tags: 
