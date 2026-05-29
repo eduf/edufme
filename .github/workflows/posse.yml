@@ -8,6 +8,17 @@ on:
       - "src/posts/**/*.md"
       - "scripts/posse-publish.js"
       - ".github/workflows/posse.yml"
+  workflow_dispatch:
+    inputs:
+      post_file:
+        description: "Post Markdown to publish, e.g. src/posts/antropomimetica.md"
+        required: true
+        type: string
+      force:
+        description: "Publish even if the post is older than the safety window"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -35,7 +46,9 @@ jobs:
         id: changed
         shell: bash
         run: |
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            printf '%s\n' "${{ inputs.post_file }}" > /tmp/changed-posts.txt
+          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
             git diff --name-only HEAD~1 HEAD -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
           else
             git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
@@ -54,7 +67,12 @@ jobs:
           MASTODON_VISIBILITY: public
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
-        run: npm run posse:publish
+        run: |
+          if [ "${{ inputs.force || false }}" = "true" ]; then
+            npm run posse:publish -- --force
+          else
+            npm run posse:publish
+          fi
 
       - name: Commit POSSE state
         run: |
