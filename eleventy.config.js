@@ -197,11 +197,17 @@ module.exports = function(eleventyConfig) {
     return String(candidate).length > String(current).length;
   };
 
+  const newestFirst = (a, b) => {
+    const dateDiff = b.date - a.date;
+    if (dateDiff !== 0) return dateDiff;
+    return a.inputPath.localeCompare(b.inputPath);
+  };
+
   // Collections por post-type
   const types = ["note", "link", "quote", "image", "post"];
   types.forEach(type => {
     eleventyConfig.addCollection(type, function(collectionApi) {
-      return collectionApi.getFilteredByTag(type).reverse();
+      return collectionApi.getFilteredByTag(type).sort(newestFirst);
     });
   });
 
@@ -219,7 +225,7 @@ module.exports = function(eleventyConfig) {
     return collectionApi
       .getFilteredByGlob("src/posts/**/*.md")
       .filter(item => !isMonoestereo(item))
-      .reverse();
+      .sort(newestFirst);
   });
 
   // Collection MonoEstéreo
@@ -227,7 +233,7 @@ module.exports = function(eleventyConfig) {
     return collectionApi
       .getFilteredByGlob("src/posts/**/*.md")
       .filter(isMonoestereo)
-      .reverse();
+      .sort(newestFirst);
   });
 
   // Páginas públicas para tags, agrupando variações por slug normalizado.
