@@ -153,9 +153,6 @@ function getEnabledPlatforms() {
   if (process.env.MASTODON_INSTANCE && process.env.MASTODON_ACCESS_TOKEN) {
     platforms.push("mastodon");
   }
-  if (process.env.BLUESKY_IDENTIFIER && process.env.BLUESKY_APP_PASSWORD) {
-    platforms.push("bluesky");
-  }
   return platforms;
 }
 
@@ -163,7 +160,6 @@ function hasAllEnabledPlatforms(record, platforms) {
   if (!platforms.length) return false;
   return platforms.every(platform => {
     if (platform === "mastodon") return Boolean(record?.mastodonUrl);
-    if (platform === "bluesky") return Boolean(record?.blueskyUrl);
     return false;
   });
 }
@@ -251,90 +247,6 @@ async function publishMastodon(post, status, dryRun) {
   return { id: body.id, url: body.url || body.uri };
 }
 
-function utf8ByteLength(value) {
-  return Buffer.byteLength(value, "utf8");
-}
-
-function buildBlueskyFacets(text, url) {
-  const start = text.indexOf(url);
-  if (start === -1) return [];
-
-  return [{
-    index: {
-      byteStart: utf8ByteLength(text.slice(0, start)),
-      byteEnd: utf8ByteLength(text.slice(0, start + url.length))
-    },
-    features: [{
-      $type: "app.bsky.richtext.facet#link",
-      uri: url
-    }]
-  }];
-}
-
-async function publishBluesky(post, status, dryRun) {
-  const identifier = process.env.BLUESKY_IDENTIFIER;
-  const password = process.env.BLUESKY_APP_PASSWORD;
-  if (!identifier || !password) return null;
-
-  if (dryRun) {
-    return {
-      uri: "at://did:plc:dry-run/app.bsky.feed.post/dry-run",
-      cid: "dry-run",
-      url: `https://bsky.app/profile/${identifier}/post/dry-run`
-    };
-  }
-
-  const service = normalizeUrl(process.env.BLUESKY_SERVICE || "https://bsky.social");
-  const sessionResponse = await fetch(`${service}/xrpc/com.atproto.server.createSession`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ identifier, password })
-  });
-  const session = await sessionResponse.json().catch(() => ({}));
-  if (!sessionResponse.ok) {
-    throw new Error(`Bluesky login failed (${sessionResponse.status}): ${JSON.stringify(session)}`);
-  }
-
-  const record = {
-    $type: "app.bsky.feed.post",
-    text: status,
-    createdAt: new Date().toISOString(),
-    facets: buildBlueskyFacets(status, post.absoluteUrl),
-    embed: {
-      $type: "app.bsky.embed.external",
-      external: {
-        uri: post.absoluteUrl,
-        title: post.title,
-        description: post.description || "Novo texto em eduf.me"
-      }
-    }
-  };
-
-  const createResponse = await fetch(`${service}/xrpc/com.atproto.repo.createRecord`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${session.accessJwt}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      repo: session.did,
-      collection: "app.bsky.feed.post",
-      record
-    })
-  });
-  const created = await createResponse.json().catch(() => ({}));
-  if (!createResponse.ok) {
-    throw new Error(`Bluesky publish failed (${createResponse.status}): ${JSON.stringify(created)}`);
-  }
-
-  const rkey = created.uri.split("/").pop();
-  return {
-    uri: created.uri,
-    cid: created.cid,
-    url: `https://bsky.app/profile/${identifier}/post/${rkey}`
-  };
-}
-
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const site = readJson(SITE_DATA_PATH, {});
@@ -353,7 +265,6 @@ async function main() {
   }
 
   let changed = false;
-  const errors = [];
 
   for (const file of files) {
     const post = loadPost(file, site.url);
@@ -368,37 +279,16 @@ async function main() {
     console.log(`${args.dryRun ? "Would publish" : "Publishing"} ${post.absoluteUrl}`);
 
     if (!record.mastodonUrl) {
-      try {
-        const mastodon = await publishMastodon(post, status, args.dryRun);
-        if (mastodon) {
-          record.mastodonId = mastodon.id;
-          record.mastodonUrl = mastodon.url;
-          changed = true;
-          console.log(`  Mastodon: ${mastodon.url}`);
-        }
-      } catch (error) {
-        errors.push(error.message);
-        console.error(`  Mastodon error: ${error.message}`);
+      const mastodon = await publishMastodon(post, status, args.dryRun);
+      if (mastodon) {
+        record.mastodonId = mastodon.id;
+        record.mastodonUrl = mastodon.url;
+        changed = true;
+        console.log(`  Mastodon: ${mastodon.url}`);
       }
     }
 
-    if (!record.blueskyUrl) {
-      try {
-        const bluesky = await publishBluesky(post, status, args.dryRun);
-        if (bluesky) {
-          record.blueskyUri = bluesky.uri;
-          record.blueskyCid = bluesky.cid;
-          record.blueskyUrl = bluesky.url;
-          changed = true;
-          console.log(`  Bluesky: ${bluesky.url}`);
-        }
-      } catch (error) {
-        errors.push(error.message);
-        console.error(`  Bluesky error: ${error.message}`);
-      }
-    }
-
-    if (record.mastodonUrl || record.blueskyUrl) {
+    if (record.mastodonUrl) {
       record.publishedAt = args.dryRun ? "dry-run" : new Date().toISOString();
       state[post.url] = record;
     }
@@ -408,10 +298,6 @@ async function main() {
     writeJson(STATE_PATH, state);
   } else if (args.dryRun) {
     console.log("Dry run complete. State file was not changed.");
-  }
-
-  if (errors.length) {
-    console.error(`Completed with ${errors.length} publishing error(s). Successful platforms were recorded.`);
   }
 }
 

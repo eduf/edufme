@@ -45,14 +45,12 @@ Obsidian (escreve em Markdown) → Obsidian Git (commit + push) → Cloudflare P
 
 ## POSSE
 
-Posts novos podem ser publicados automaticamente no Mastodon e no Bluesky por GitHub Actions. O estado fica em `src/_data/posse.json`, separado dos arquivos Markdown, para evitar publicações duplicadas e permitir que o site mostre links para as conversas sociais.
+Posts novos podem ser publicados automaticamente no Mastodon por GitHub Actions. O estado fica em `src/_data/posse.json`, separado dos arquivos Markdown, para evitar publicações duplicadas e permitir que o site mostre links para as conversas sociais.
 
 Configure estes secrets no GitHub:
 
 - `MASTODON_INSTANCE`, exemplo: `https://mastodon.social`
 - `MASTODON_ACCESS_TOKEN`
-- `BLUESKY_IDENTIFIER`, exemplo: `eduf.me`
-- `BLUESKY_APP_PASSWORD`
 
 Por segurança, o script publica apenas posts alterados no push e ignora textos com mais de 14 dias, a menos que seja executado com `--force`.
 
