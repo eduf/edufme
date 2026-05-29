@@ -9,13 +9,6 @@ tags:
 ---
 
 ![wrecking(1).jpg](images/70385ee9-0868-405f-9e8a-0490c7e992c1.jpg)
-
-Esta é a última newsletter do ano. Imagino que você, como eu, já esteja cansado de notícias sobre política e tecnologia. Então, nesta edição, vou fazer apenas duas recomendações de filmes sobre música. Tenho evitado transformar a **Texto Sobre Tela** num "espaço de curadoria" e enfatizado a reflexão, mas já passou da hora de lhe dar um descanso do meu particular campo de distorção da realidade.
-
-Aperte os cintos.
-
-* * *
-
 ## A formação do "neoliberalismo musical"
 
 No pós-Segunda Guerra Mundial, houve uma das maiores revoluções culturais que esse planeta já hospedou. Em algumas décadas, consolidou-se todo um sistema de identidade baseado em valores como o consumismo, o sonho (norte) americano, a liberdade individualista, a validação extrema da conveniência e do entretenimento. Se você acabou de fazer as compras de Natal no supermercado e saiu cheio de sacos plásticos, comida processada, vindas de marcas monopolistas, sabe de que revolução estou falando.

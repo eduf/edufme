@@ -9,8 +9,6 @@ tags:
   - "midializacao-da-vida"
 ---
 
-_Foto de [Mike Bird, via Pexels](https://www.pexels.com/photo/elvis-presley-digital-wallpaper-114820/)._
-
 Outro dia, eu estava conversando com uma pessoa. É raro, mas acontece. E percebi que estava completamente entediado. Quer dizer, por dentro. Por fora, eu era mais simpático do que garçom de restaurante Michellin de 3 estrelas.
 
 É que a pessoa não soltava frases de efeito. Não me fazia rir. Não falava sobre filmes, música ou arte. Não contava histórias, não comentava notícias ruins, nem reclamava de trabalhar demais.
