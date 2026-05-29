@@ -353,6 +353,7 @@ async function main() {
   }
 
   let changed = false;
+  const errors = [];
 
   for (const file of files) {
     const post = loadPost(file, site.url);
@@ -366,31 +367,51 @@ async function main() {
     const status = buildStatus(post);
     console.log(`${args.dryRun ? "Would publish" : "Publishing"} ${post.absoluteUrl}`);
 
-    const mastodon = record.mastodonUrl ? null : await publishMastodon(post, status, args.dryRun);
-    if (mastodon) {
-      record.mastodonId = mastodon.id;
-      record.mastodonUrl = mastodon.url;
-      changed = true;
-      console.log(`  Mastodon: ${mastodon.url}`);
+    if (!record.mastodonUrl) {
+      try {
+        const mastodon = await publishMastodon(post, status, args.dryRun);
+        if (mastodon) {
+          record.mastodonId = mastodon.id;
+          record.mastodonUrl = mastodon.url;
+          changed = true;
+          console.log(`  Mastodon: ${mastodon.url}`);
+        }
+      } catch (error) {
+        errors.push(error.message);
+        console.error(`  Mastodon error: ${error.message}`);
+      }
     }
 
-    const bluesky = record.blueskyUrl ? null : await publishBluesky(post, status, args.dryRun);
-    if (bluesky) {
-      record.blueskyUri = bluesky.uri;
-      record.blueskyCid = bluesky.cid;
-      record.blueskyUrl = bluesky.url;
-      changed = true;
-      console.log(`  Bluesky: ${bluesky.url}`);
+    if (!record.blueskyUrl) {
+      try {
+        const bluesky = await publishBluesky(post, status, args.dryRun);
+        if (bluesky) {
+          record.blueskyUri = bluesky.uri;
+          record.blueskyCid = bluesky.cid;
+          record.blueskyUrl = bluesky.url;
+          changed = true;
+          console.log(`  Bluesky: ${bluesky.url}`);
+        }
+      } catch (error) {
+        errors.push(error.message);
+        console.error(`  Bluesky error: ${error.message}`);
+      }
     }
 
-    record.publishedAt = args.dryRun ? "dry-run" : new Date().toISOString();
-    state[post.url] = record;
+    if (record.mastodonUrl || record.blueskyUrl) {
+      record.publishedAt = args.dryRun ? "dry-run" : new Date().toISOString();
+      state[post.url] = record;
+    }
   }
 
   if (changed && !args.dryRun) {
     writeJson(STATE_PATH, state);
   } else if (args.dryRun) {
     console.log("Dry run complete. State file was not changed.");
+  }
+
+  if (errors.length) {
+    console.error(`Completed with ${errors.length} publishing error(s). Successful platforms were recorded.`);
   }
 }
 
