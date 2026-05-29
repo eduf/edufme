@@ -1,0 +1,69 @@
+name: POSSE publish
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/posts/**/*.md"
+      - "scripts/posse-publish.js"
+      - ".github/workflows/posse.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Find changed posts
+        id: changed
+        shell: bash
+        run: |
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            git diff --name-only HEAD~1 HEAD -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
+          else
+            git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
+          fi
+          {
+            echo "files<<EOF"
+            cat /tmp/changed-posts.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Publish changed posts
+        env:
+          POSSE_CHANGED_FILES: ${{ steps.changed.outputs.files }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          MASTODON_VISIBILITY: public
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: npm run posse:publish
+
+      - name: Commit POSSE state
+        run: |
+          if git diff --quiet -- src/_data/posse.json; then
+            echo "No POSSE state changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/posse.json
+          git commit -m "Record POSSE publication links"
+          git push

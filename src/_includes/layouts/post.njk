@@ -18,6 +18,18 @@ layout: base.njk
       <a href="/sobre" class="post-author">{{ site.author }}</a>
     </div>
 
+    {% set socialPost = posse[page.url] %}
+    {% if socialPost and (socialPost.mastodonUrl or socialPost.blueskyUrl) %}
+      <div class="post-social-links" aria-label="conversas sobre este texto">
+        {% if socialPost.mastodonUrl %}
+          <a href="{{ socialPost.mastodonUrl }}" target="_blank" rel="noopener">comentar no Mastodon</a>
+        {% endif %}
+        {% if socialPost.blueskyUrl %}
+          <a href="{{ socialPost.blueskyUrl }}" target="_blank" rel="noopener">ver no Bluesky</a>
+        {% endif %}
+      </div>
+    {% endif %}
+
     {% if coverImage %}
       <div class="post-cover">
         <img src="{{ coverImage }}" alt="{{ title }}">

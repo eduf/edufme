@@ -32,7 +32,7 @@ Enfim, tenho zero talento para negócios. Mas preciso justificar meu pHD em futu
 
 ## 1\. Neomecenas 1:1
 
-_Um_ aristocrata pagando _um_ criador. Familiar sustentando prole também vale. Mas será que meu pai seria meu fã? Hmm.
+_Um_ aristocrata pagando um criador. Familiar sustentando prole também vale. Mas será que meu pai seria meu fã? Hmm.
 
 ## 2\. Super patrões
 

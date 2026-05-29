@@ -424,6 +424,22 @@ body {
 
 .post-single .post-content { margin-top: 1.25rem; }
 
+.post-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+}
+
+.post-social-links a {
+  color: var(--accent-link);
+  text-decoration: none;
+}
+
+.post-social-links a:hover { text-decoration: underline; }
+
 /* ─── Cabeçalho de arquivo ──────────────────────────────────── */
 .archive-header {
   padding-bottom: 1.5rem;

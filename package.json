@@ -4,7 +4,9 @@
   "description": "eduf.me — blog pessoal",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "posse:dry-run": "node scripts/posse-publish.js --dry-run",
+    "posse:publish": "node scripts/posse-publish.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
