@@ -24,7 +24,7 @@ Por que é legal
 
 - Trabalho monstruoso de pesquisa do jornalista Inglês, [Paul M.M. Cooper](https://www.paulmmcooper.com/), que é PhD em significância literária e cultural de ruínas.
 
-- A edição de áudio e _storytelling_ também são bem interessantes. Os textos fluem no estilo de audiobooks de ficção.
+- A edição de áudio e *storytelling* também são bem interessantes. Os textos fluem no estilo de audiobooks de ficção.
 
 - Cooper também mantém um [canal de YouTube](https://www.youtube.com/channel/UCT6Y5JJPKe_JDMivpKgVXew), no qual os textos são acompanhados de imagens das ruínas das civilizações enfocadas no podcast.
 

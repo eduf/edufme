@@ -3,9 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>eduf.me — admin</title>
 </head>
 <body>
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <!--
+    Versão fixada + SRI (integrity) por segurança: o browser recusa o script
+    se um único byte mudar. Para ATUALIZAR o Sveltia CMS, troque a versão na URL
+    E o hash integrity JUNTOS — senão o admin para de carregar. Gerar novo hash:
+      V=0.165.0
+      curl -sL "https://unpkg.com/@sveltia/cms@$V/dist/sveltia-cms.js" | openssl dgst -sha384 -binary | openssl base64 -A
+  -->
+  <script
+    src="https://unpkg.com/@sveltia/cms@0.164.2/dist/sveltia-cms.js"
+    integrity="sha384-8jh4ZuqWt5C7gHKiGgd+Ywoy7eALhOiKhUKx/m6KhUXgomY4Jx6Wf+j++aBPeOhf"
+    crossorigin="anonymous"></script>
 </body>
 </html>
