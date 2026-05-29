@@ -203,8 +203,15 @@ function truncate(text, maxLength) {
   return `${text.slice(0, maxLength - 1).trim()}...`;
 }
 
+function normalizeUrl(value) {
+  if (!value) return "";
+  const trimmed = value.trim().replace(/\/+$/, "");
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
 async function publishMastodon(post, status, dryRun) {
-  const instance = process.env.MASTODON_INSTANCE;
+  const instance = normalizeUrl(process.env.MASTODON_INSTANCE);
   const token = process.env.MASTODON_ACCESS_TOKEN;
   if (!instance || !token) return null;
 
@@ -270,7 +277,7 @@ async function publishBluesky(post, status, dryRun) {
     };
   }
 
-  const service = process.env.BLUESKY_SERVICE || "https://bsky.social";
+  const service = normalizeUrl(process.env.BLUESKY_SERVICE || "https://bsky.social");
   const sessionResponse = await fetch(`${service}/xrpc/com.atproto.server.createSession`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
