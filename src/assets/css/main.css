@@ -424,6 +424,57 @@ body {
 
 .post-single .post-content { margin-top: 1.25rem; }
 
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.55rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.post-tags a,
+.tags-list a {
+  color: var(--fg-dim);
+  text-decoration: none;
+}
+
+.post-tags a::before {
+  content: "#";
+}
+
+.post-tags a:hover,
+.tags-list a:hover {
+  color: var(--accent);
+}
+
+.tags-index {
+  max-width: 46rem;
+}
+
+.tags-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.45rem 1.25rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px dotted var(--border);
+  padding-bottom: 0.35rem;
+}
+
+.tags-list span {
+  color: var(--fg-dim);
+  font-size: 0.8rem;
+}
+
 .post-social-links {
   display: flex;
   flex-wrap: wrap;

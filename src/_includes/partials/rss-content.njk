@@ -1,0 +1,42 @@
+{% if post.data.type == "link" %}
+  <p>
+    <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.title or post.data.url }}</a>
+  </p>
+  {% if post.templateContent %}
+    {{ post.templateContent | safe }}
+  {% endif %}
+
+{% elif post.data.type == "quote" %}
+  <blockquote>{{ post.data.quote | markdownInline | safe }}</blockquote>
+  {% if post.data.source %}
+    <p>{{ post.data.source | markdownInline | safe }}</p>
+  {% endif %}
+  {% if post.templateContent %}
+    {{ post.templateContent | safe }}
+  {% endif %}
+
+{% elif post.data.type == "image" %}
+  <figure>
+    <img src="{{ post.data.image }}" alt="{{ post.data.alt or post.data.title or '' }}">
+    {% if post.data.caption %}
+      <figcaption>{{ post.data.caption | markdownInline | safe }}</figcaption>
+    {% endif %}
+  </figure>
+  {% if post.templateContent %}
+    {{ post.templateContent | safe }}
+  {% endif %}
+
+{% elif post.data.type == "video" %}
+  <p>
+    <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.title or post.data.url }}</a>
+  </p>
+  {% if post.templateContent %}
+    {{ post.templateContent | safe }}
+  {% endif %}
+
+{% elif post.templateContent %}
+  {{ post.templateContent | safe }}
+
+{% elif post.data.description %}
+  <p>{{ post.data.description }}</p>
+{% endif %}

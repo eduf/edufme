@@ -76,3 +76,39 @@ collections:
       - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
       - { label: Tags, name: tags, widget: list, default: [quote] }
       - { label: Comentário, name: body, widget: markdown, required: false }
+
+  # ── Imagens ──────────────────────────────────────────────────────
+  - name: image
+    label: Imagens
+    label_singular: Imagem
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    filter: { field: type, value: image }
+    fields:
+      - { label: type, name: type, widget: hidden, default: image }
+      - { label: Título, name: title, widget: string, required: false }
+      - { label: Imagem, name: image, widget: image }
+      - { label: Texto alternativo, name: alt, widget: string, required: false }
+      - { label: Legenda, name: caption, widget: string, required: false }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [image] }
+      - { label: Comentário, name: body, widget: markdown, required: false }
+
+  # ── Vídeos ───────────────────────────────────────────────────────
+  - name: video
+    label: Vídeos
+    label_singular: Vídeo
+    folder: src/posts
+    create: true
+    extension: md
+    format: frontmatter
+    filter: { field: type, value: video }
+    fields:
+      - { label: type, name: type, widget: hidden, default: video }
+      - { label: Título, name: title, widget: string, required: false }
+      - { label: URL do vídeo, name: url, widget: string }
+      - { label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, default: "" }
+      - { label: Tags, name: tags, widget: list, default: [video] }
+      - { label: Comentário, name: body, widget: markdown, required: false }

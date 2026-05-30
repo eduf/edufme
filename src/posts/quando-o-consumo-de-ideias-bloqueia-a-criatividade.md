@@ -13,7 +13,7 @@ Semana passada, Lalai Persson, da newsletter [Espiral](https://lalai.substack.c
 
 > Talvez o nosso cansaço contínuo aconteça porque estamos o tempo todo consumindo conteúdo. Saio para dar aquela voltinha na rua? Coloco o fone de ouvido e ouço música, podcast ou até mesmo um audiobook. Vou tomar banho? Ouço um podcast enquanto isso.
 
-O que me lembrou do escritor e ativista [Cory Doctorow](https://pluralistic.net/).
+O que me lembrou o escritor e ativista [Cory Doctorow](https://pluralistic.net/).
 
 Há algum tempo, ele declarou que consome mídia o tempo todo. A ponto de usar fones de ouvido à prova d’água pra ouvir livros enquanto pratica natação. Fosse eu, acabaria me afogando na primeira virada olímpica.
 

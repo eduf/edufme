@@ -33,15 +33,28 @@ layout: base.njk
 
     <div class="post-content">
       {% if type == "quote" %}
-        <blockquote>{{ quote }}</blockquote>
-        {% if source %}<p class="quote-source">{{ source }}</p>{% endif %}
+        <blockquote>{{ quote | markdownInline | safe }}</blockquote>
+        {% if source %}<p class="quote-source">{{ source | markdownInline | safe }}</p>{% endif %}
         {% if content %}{{ content | safe }}{% endif %}
       {% elif type == "link" %}
+        {% if content %}{{ content | safe }}{% endif %}
+      {% elif type == "image" %}
+        <figure>
+          <img src="{{ image }}" alt="{{ alt if alt else title }}">
+          {% if caption %}
+            <figcaption>{{ caption | markdownInline | safe }}</figcaption>
+          {% endif %}
+        </figure>
+        {% if content %}{{ content | safe }}{% endif %}
+      {% elif type == "video" %}
+        <p><a href="{{ url }}" target="_blank" rel="noopener">{{ url }}</a></p>
         {% if content %}{{ content | safe }}{% endif %}
       {% else %}
         {{ content | safe }}
       {% endif %}
     </div>
+
+    {% include "partials/post-tags.njk" %}
 
   </article>
 </div>

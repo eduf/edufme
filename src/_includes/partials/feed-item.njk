@@ -17,9 +17,9 @@
 
   {# ── QUOTE ────────────────────────────────────────────────── #}
   {% elif post.data.type == "quote" %}
-    <blockquote>{{ post.data.quote }}</blockquote>
+    <blockquote>{{ post.data.quote | markdownInline | safe }}</blockquote>
     {% if post.data.source %}
-      <p class="quote-source">{{ post.data.source }}</p>
+      <p class="quote-source">{{ post.data.source | markdownInline | safe }}</p>
     {% endif %}
     {% if post.templateContent %}
       <div class="post-content">{{ post.templateContent | safe }}</div>
@@ -30,9 +30,21 @@
     <figure>
       <img src="{{ post.data.image }}" alt="{{ post.data.alt if post.data.alt else post.data.title }}">
       {% if post.data.caption %}
-        <figcaption>{{ post.data.caption }}</figcaption>
+        <figcaption>{{ post.data.caption | markdownInline | safe }}</figcaption>
       {% endif %}
     </figure>
+    {% if post.templateContent %}
+      <div class="post-content">{{ post.templateContent | safe }}</div>
+    {% endif %}
+
+  {# ── VIDEO ────────────────────────────────────────────────── #}
+  {% elif post.data.type == "video" %}
+    <p class="video-title">
+      <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.url }}</a>
+    </p>
+    {% if post.data.title %}
+      <p class="post-content">{{ post.data.title }}</p>
+    {% endif %}
     {% if post.templateContent %}
       <div class="post-content">{{ post.templateContent | safe }}</div>
     {% endif %}

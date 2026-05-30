@@ -1,0 +1,11 @@
+{% if tags %}
+  {% set visibleTags = tags | tagPagesForTags(collections.tagPages) %}
+
+  {% if visibleTags.length %}
+    <nav class="post-tags" aria-label="tags">
+      {% for tag in visibleTags %}
+        <a href="{{ tag.url }}">{{ tag.label }}</a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+{% endif %}

@@ -14,12 +14,15 @@ eleventyExcludeFromCollections: true
     <name>Eduardo Fernandes</name>
   </author>
   {% for post in collections.feed | head(20) %}
+  {% set entryContent %}
+    {% include "partials/rss-content.njk" %}
+  {% endset %}
   <entry>
-    <title>{% if post.data.title %}{{ post.data.title }}{% elif post.data.type == "note" %}nota — {{ post.date | dateReadable }}{% elif post.data.type == "link" %}link — {{ post.data.url }}{% elif post.data.type == "quote" %}citação{% elif post.data.type == "image" %}imagem{% endif %}</title>
+    <title>{% if post.data.title %}{{ post.data.title }}{% elif post.data.type == "note" %}nota — {{ post.date | dateReadable }}{% elif post.data.type == "link" %}link — {{ post.data.url }}{% elif post.data.type == "quote" %}citação{% elif post.data.type == "image" %}imagem{% elif post.data.type == "video" %}vídeo — {{ post.data.url }}{% endif %}</title>
     <link href="https://eduf.me{{ post.url }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>https://eduf.me{{ post.url }}</id>
-    <content type="html"><![CDATA[{{ post.templateContent | htmlToAbsoluteUrls("https://eduf.me") | safe }}]]></content>
+    <content type="html"><![CDATA[{{ entryContent | htmlToAbsoluteUrls("https://eduf.me") | safe }}]]></content>
   </entry>
   {% endfor %}
 </feed>

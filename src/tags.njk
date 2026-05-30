@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Tags
+description: "Todas as tags registradas no eduf.me."
+permalink: /tags/
+---
+
+<div class="container">
+  <section class="tags-index">
+    <header class="archive-header">
+      <h1 class="archive-title">Tags</h1>
+      <p class="archive-desc">{{ collections.tagPages.length }} tag{% if collections.tagPages.length != 1 %}s{% endif %} registrada{% if collections.tagPages.length != 1 %}s{% endif %}.</p>
+    </header>
+
+    <ul class="tags-list">
+      {% for tag in collections.tagPages %}
+        <li>
+          <a href="{{ tag.url }}">{{ tag.label }}</a>
+          <span>{{ tag.posts.length }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

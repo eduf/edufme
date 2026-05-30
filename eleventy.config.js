@@ -156,7 +156,8 @@ function resolveImagePath(src, inputPath) {
 module.exports = function(eleventyConfig) {
 
   // Markdown com linkify: URLs soltas viram links automaticamente
-  eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }));
+  const md = markdownIt({ html: true, linkify: true });
+  eleventyConfig.setLibrary("md", md);
 
   // Copia assets estáticos
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -204,7 +205,7 @@ module.exports = function(eleventyConfig) {
   };
 
   // Collections por post-type
-  const types = ["note", "link", "quote", "image", "post"];
+  const types = ["note", "link", "quote", "image", "video", "post"];
   types.forEach(type => {
     eleventyConfig.addCollection(type, function(collectionApi) {
       return collectionApi.getFilteredByTag(type).sort(newestFirst);
@@ -329,6 +330,25 @@ module.exports = function(eleventyConfig) {
     return html
       .replace(/href="\//g, `href="${base}/`)
       .replace(/src="\//g, `src="${base}/`);
+  });
+
+  eleventyConfig.addFilter("markdownInline", value => {
+    if (!value) return "";
+    return md.renderInline(String(value));
+  });
+
+  eleventyConfig.addFilter("tagPagesForTags", (tags, tagPages) => {
+    if (!Array.isArray(tags) || !Array.isArray(tagPages)) return [];
+    const pagesBySlug = new Map(tagPages.map(tagPage => [tagPage.slug, tagPage]));
+    const seen = new Set();
+
+    return tags
+      .map(tag => pagesBySlug.get(slugify(tag)))
+      .filter(tagPage => {
+        if (!tagPage || seen.has(tagPage.slug)) return false;
+        seen.add(tagPage.slug);
+        return true;
+      });
   });
 
   // ─── Transform: dithering de imagens locais ───────────────────────────────
