@@ -6,10 +6,13 @@
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "posse:dry-run": "node scripts/posse-publish.js --dry-run",
-    "posse:publish": "node scripts/posse-publish.js"
+    "posse:publish": "node scripts/posse-publish.js",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "wrangler": "^4.95.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-rss": "^3.0.0",
