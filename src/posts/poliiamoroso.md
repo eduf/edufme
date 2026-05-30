@@ -1,6 +1,8 @@
 ---
 type: note
 date: "2026-05-29T17:21:00-03:00"
-tags: [note]
+tags: 
+  - "note"
+  - "dicionario"
 ---
 Mais uma para o dicionário: poliIAmoroso — pessoa que usa vários LLMs num mesmo projeto. Exemplo: Codex, Claude Code e Gemini. Quando chega no limite de um, pula para o outro.
