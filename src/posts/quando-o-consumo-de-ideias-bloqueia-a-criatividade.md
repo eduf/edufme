@@ -15,9 +15,9 @@ Semana passada, Lalai Persson, da newsletter [Espiral](https://lalai.substack.c
 
 O que me lembrou o escritor e ativista [Cory Doctorow](https://pluralistic.net/).
 
-Há algum tempo, ele declarou que consome mídia o tempo todo. A ponto de usar fones de ouvido à prova d’água pra ouvir livros enquanto pratica natação. Fosse eu, acabaria me afogando na primeira virada olímpica.
+Há algum tempo, ele declarou que consome mídia o tempo todo. A ponto de usar fones de ouvido à prova d’água para ouvir livros enquanto pratica natação. Fosse eu, acabaria me afogando na primeira virada olímpica.
 
-Também recebi um e-mail de alguém que vendeu sua empresa pra investir no capital financeiro. Ele vive de renda e passa seus dias consumindo conteúdo. Ainda assim, estava depressivo. Porque não conseguia mais escrever.
+Também recebi um e-mail de alguém que vendeu sua empresa para investir no capital financeiro. Ele vive de renda e passa seus dias consumindo conteúdo. Ainda assim, estava depressivo. Porque não conseguia mais escrever.
 
 Será que digeriu tanta informação que estava criativamente constipado? E como pode? Sempre me prometeram que, quanto mais informação eu consumisse, mais criatividade eu teria.
 
@@ -45,15 +45,15 @@ Compare com o Método Hemingway (MH).
 
 Externamente, o observador de pescadores parece que diminui a velocidade da sua cognição. Mas, de certa forma, ele se foca, escaneia o ambiente, seguindo os ritmos dos acontecimentos. É uma atividade muito intensa, ainda que pareça (e talvez seja) relaxante.
 
-Já no consumo do livro em 2x, a atenção se fragmenta em micro-momentos de percepção: você pula da sensação da água na pele pra respiração, pro conteúdo do livro, devaneia, perde um pedaço do texto. E por aí vai.
+Já no consumo do livro em 2x, a atenção se fragmenta em micro-momentos de percepção: você pula da sensação da água na pele para respiração, para o conteúdo do livro, devaneia, perde um pedaço do texto. E por aí vai.
 
-Tudo isso parece mais ativo do que o MH. Mas, as sensações, em si, são mais passivas. Você não está propriamente se engajando nelas. Está gerenciando os saltos de atenção. E tentando se manter funcional ou evitar acidentes.
+Tudo isso parece mais ativo do que o MH. Mas as sensações, em si, são mais passivas. Você não está propriamente se engajando nelas. Está gerenciando os saltos de atenção. E tentando se manter funcional ou evitar acidentes.
 
 Desconfio que só isso já gaste mais energia mental.
 
-Mas o problema é que o desejo de consumir conteúdo rapidamente deixa um rastro de ansiedade. Digamos, é uma ansiedade basal, que fica sempre ali, no fundo, gastando mais energia.
+O problema é que o desejo de consumir conteúdo rapidamente deixa um rastro de ansiedade. Digamos, é uma ansiedade basal, que fica sempre ali, no fundo, gastando mais energia.
 
-“Não dá pra acelerar esse narrador um pouco mais? Talvez cortar os silêncios”.
+“Não dá para acelerar esse narrador um pouco mais? Talvez cortar os silêncios”.
 
 Aos poucos, a voz fica mais robótica, assume o ritmo das máquinas. Menos pausas, mais produtividade. Você está consumindo não só o conteúdo, mas o próprio estilo de vida digital.
 
@@ -69,7 +69,7 @@ O cineasta David Lynch propõe outra via: encontrar ideias no meio da meditaçã
 
 Meditadores budistas chamariam esse tipo de atividade de “sofrimento”. Porque eles não estão interessados em seguir ideias, necessariamente. Isso seria um esforço bastante desnecessário.
 
-Mas, enfim, este é um texto pra criativos.
+Mas, enfim, este é um texto para criativos.
 
 Pelo menos, a proposta de Lynch leva a outro entendimento da criatividade. Ela não surgiria pelo constante consumo de ideias, nem pelo constante ataque a si ou estrangulamento mental.
 
@@ -82,10 +82,10 @@ Obviamente, depende de duas coisas:
 - O que você quer fazer.
 - O que você _aguenta_ fazer.
 
-Mas, se eu tivesse que imaginar uma escala das atividades mais propícias pra bloqueio criativo, ela seria assim:
+Mas, se eu tivesse que imaginar uma escala das atividades mais propícias para bloqueio criativo, ela seria assim:
 
 - O Método Doctorow é o **mais cansativo** e potencialmente frustrante, por gastar muita energia com ansiedade.
-- O Método Hemingway é o **mais ativo. Porém, menos cansativo**. E deve servir muito bem pra maioria dos narradores.
+- O Método Hemingway é o **mais ativo. Porém, menos cansativo**. E deve servir muito bem para maioria dos narradores.
 - O Método Lynch é **cansativo no começo**. Isso até a pessoa se desprogramar do ritmo consumista. Depois, pode ser desafiante, porque produz resultados mais “selvagens”. Como o próprio trabalho de Lynch demonstra. Ainda assim, é preciso dizer que esse tipo de meditação é produtivista.
 
 Então, as maiores questões são:
@@ -98,4 +98,4 @@ Então, as maiores questões são:
 
 Seja lá qual for seu perfil, o descanso não deve lhe fazer mal. Talvez resolva mais problemas práticos do que se puxar até cair.
 
-Mas quem sou eu pra saber?
+Mas quem sou eu para saber?

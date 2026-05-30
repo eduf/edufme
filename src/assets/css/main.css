@@ -172,8 +172,6 @@ body {
   display: none; /* oculto no desktop — logo está no sidebar */
 }
 
-.tui-site-name:visited { color: var(--fg); }
-
 .tui-context {
   font-size: 0.7rem;
   color: var(--fg-faint);
@@ -191,12 +189,22 @@ body {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  text-decoration: none;
-  color: var(--fg);
 }
 
-.site-logo:visited { color: var(--fg); }
-.site-logo:hover   { background: var(--bg-alt); color: var(--fg); }
+.tui-site-name,
+.tui-site-name:visited,
+.site-logo,
+.site-logo:visited {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-logo:hover,
+.site-logo:focus-visible {
+  color: var(--fg);
+  background: var(--bg-alt);
+  text-decoration: none;
+}
 
 .site-logo-cursor {
   color: var(--cursor);
@@ -235,19 +243,28 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.site-nav a,
-.site-nav a:visited {
+.site-nav a {
   display: block;
   padding: 0.55rem 1.25rem;
   font-size: 0.8rem;
-  color: var(--fg-muted);
-  text-decoration: none;
   letter-spacing: 0.03em;
 }
 
-.site-nav a:hover {
+.site-nav a,
+.site-nav a:visited,
+.tags-list a,
+.tags-list a:visited {
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.tags-list a:hover,
+.tags-list a:focus-visible {
   color: var(--fg);
   background: var(--bg-alt);
+  outline: none;
   text-decoration: none;
 }
 
@@ -304,11 +321,21 @@ body {
   letter-spacing: 0.03em;
 }
 
-.post-author {
+.post-author,
+.post-social-links a,
+.pagination a {
   color: var(--accent-link);
   text-decoration: none;
 }
-.post-author:hover { text-decoration: underline; }
+
+.post-author:hover,
+.post-author:focus-visible,
+.post-social-links a:hover,
+.post-social-links a:focus-visible,
+.pagination a:hover,
+.pagination a:focus-visible {
+  text-decoration: underline;
+}
 
 /* ─── Tipografia de conteúdo ────────────────────────────────── */
 .post-content h1,
@@ -334,7 +361,9 @@ body {
 .post-type-link .link-title a,
 .post-type-link .link-title a:visited,
 .post-type-link .post-title a,
-.post-type-link .post-title a:visited {
+.post-type-link .post-title a:visited,
+.post-type-post .post-title a,
+.post-type-post .post-title a:visited {
   color: var(--fg);
   text-decoration: none;
 }
@@ -347,7 +376,13 @@ body {
 }
 
 .post-type-link .link-title a:hover,
-.post-type-link .post-title a:hover { color: var(--accent-link); }
+.post-type-link .link-title a:focus-visible,
+.post-type-link .post-title a:hover,
+.post-type-link .post-title a:focus-visible,
+.post-type-post .post-title a:hover,
+.post-type-post .post-title a:focus-visible {
+  color: var(--accent-link);
+}
 
 /* ─── Post-type: QUOTE ──────────────────────────────────────── */
 .post-type-quote blockquote {
@@ -390,14 +425,6 @@ body {
   word-spacing: -0.2ch;
 }
 
-.post-type-post .post-title a,
-.post-type-post .post-title a:visited {
-  color: var(--fg);
-  text-decoration: none;
-}
-
-.post-type-post .post-title a:hover { color: var(--accent-link); }
-
 .read-more {
   display: inline-block;
   margin-top: 0.5rem;
@@ -434,23 +461,11 @@ body {
   font-size: 0.85rem;
 }
 
-.post-tags a,
-.tags-list a {
-  color: var(--fg-dim);
-  text-decoration: none;
-}
-
-.post-tags a::before {
-  content: "#";
-}
-
-.post-tags a:hover,
-.tags-list a:hover {
-  color: var(--accent);
-}
+.post-tags a::before { content: "#"; }
 
 .tags-index {
   max-width: 46rem;
+  padding-block: 2rem;
 }
 
 .tags-list {
@@ -463,16 +478,23 @@ body {
 }
 
 .tags-list li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
   gap: 1rem;
   border-bottom: 1px dotted var(--border);
-  padding-bottom: 0.35rem;
+}
+
+.tags-list a {
+  display: block;
+  min-width: 0;
+  padding: 0.2rem 0.35rem;
 }
 
 .tags-list span {
-  color: var(--fg-dim);
+  color: var(--fg-muted);
   font-size: 0.8rem;
+  padding-block: 0.2rem;
 }
 
 .post-social-links {
@@ -483,13 +505,6 @@ body {
   font-size: 0.75rem;
   color: var(--fg-muted);
 }
-
-.post-social-links a {
-  color: var(--accent-link);
-  text-decoration: none;
-}
-
-.post-social-links a:hover { text-decoration: underline; }
 
 /* ─── Cabeçalho de arquivo ──────────────────────────────────── */
 .archive-header {
@@ -518,13 +533,6 @@ body {
   font-size: 0.8rem;
   color: var(--fg-muted);
 }
-
-.pagination a {
-  color: var(--accent-link);
-  text-decoration: none;
-}
-
-.pagination a:hover { text-decoration: underline; }
 
 .pagination-disabled { color: var(--fg-faint); }
 
