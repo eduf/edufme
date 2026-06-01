@@ -18,5 +18,13 @@
     "mastodonId": "116663545338281276",
     "mastodonUrl": "https://mastodon.social/@textosobretela/116663545338281276",
     "publishedAt": "2026-05-30T12:33:49.761Z"
+  },
+  "/encruzilhadas-invisiveis/": {
+    "mastodonId": "116675358972037658",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116675358972037658",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mnacmhfuwr2u",
+    "blueskyCid": "bafyreigppjwvubf7rgu62mfn36euqdp3pplg6dtnrczdvv6ex5yb42exgu",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mnacmhfuwr2u",
+    "publishedAt": "2026-06-01T14:38:11.780Z"
   }
 }
