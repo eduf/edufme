@@ -20,8 +20,6 @@ Graeber e Wengrow compilam (num texto bastante claro e objetivo) séculos de cr�
 
 É um trabalho bastante audacioso. Ainda mais do que o clássico [Dívida, os Primeiros 5.000 anos](https://www.estantevirtual.com.br/livros/david-graeber/divida-os-primeiros-5-000-anos/2719376416?show_suggestion=0), de Graeber (hoje em dia, vendido por uma pequena fortuna). O gigantesco esforço intelectual aqui foi o de analisar dados de pesquisas antropológicas recentes, além de reler clássicos das Ciências Sociais acadêmicas.
 
- _O arqueólogo David Wengrow._
-
 Acaba que o livro acerta bem no alvo de questões que estão particularmente quentes hoje em dia, como as consequências espirituais, intelectuais, sociais e econômicas do colonialismo.
 
 Nos primeiros capítulos, há até uma tentativa de repensar a influência que os povos nativos (americanos, asiáticos e outros) tiveram nos pensadores europeus:

@@ -8,25 +8,21 @@ tags:
   - "midia"
 ---
 
-Pelo título, parece até que essa é uma daquelas newsletters úteis. Mas, naah.
+Pelo título, parece até que essa é uma daquelas newsletters úteis. Mas, naah. É que, por algum débito cármico, ontem topei com o texto "[1,000 True Fans? Try 100](https://a16z.com/2020/02/06/100-true-fans/?utm_source=ReallyGoodEmails&utm_medium=email&utm_campaign=reallygoodemails-newsletter)", publicado no novo site da mega empresa de investimento em tecnologia, [a16z](https://a16z.com).
 
-É que, por algum débito cármico, ontem topei com o texto "[1,000 True Fans? Try 100](https://a16z.com/2020/02/06/100-true-fans/?utm_source=ReallyGoodEmails&utm_medium=email&utm_campaign=reallygoodemails-newsletter)", publicado no novo site da mega empresa de investimento em tecnologia, [a16z](https://a16z.com).
-
-Fiquei um tanto confuso.
-
-Como é? Agora não preciso mais de mil fãs? Caiu para 100? Isso facilita ou complica minha vida? Não entendo direito esse misterioso gênero de literatura, as "Estatísticas de Países Desenvolvidos".
+Fiquei um tanto confuso. Como é? Agora não preciso mais de mil fãs? Caiu para 100? Isso facilita ou complica minha vida? Não entendo direito esse misterioso gênero de literatura, as "Estatísticas de Países Desenvolvidos".
 
 ## Contextualizando
 
-1. Oi, sou Eduardo Fernandes, Máquina Espiritual 2046. Graças a um trauma de infância, sou "criador de conteúdo", desde sempre. Profissionalmente, a partir de 1995. _Aperte o sininho, deixe seu like e assine o canal._
-2. Em 2008, o escritor [Kevin Kelly propôs](https://kk.org/thetechnium/1000-true-fans/) que, com o crescimento da Internet, alguém como eu precisaria de cerca de mil _Fãs Verdadeiros_ (FV) para se sustentar superbem. E FV significa: "alguém que compra tudo o que você produz". Uou. Se você arrecadasse apenas U$ 100 por pessoa por ano, isso lhe daria U$ 100 mil. Uou!
+1. Oi, sou Eduardo Fernandes, Máquina Espiritual 2046. Graças a um trauma de infância, sou "criador de conteúdo" desde sempre. Profissionalmente, a partir de 1995. _Aperte o sininho, deixe seu like e assine o canal._
+2. Em 2008, o escritor [Kevin Kelly propôs](https://kk.org/thetechnium/1000-true-fans/) que, com o crescimento da internet, alguém como eu precisaria de cerca de mil _Fãs Verdadeiros_ (FV) para se sustentar superbem. E FV significa: "alguém que compra tudo o que você produz". Uou. Se você arrecadasse apenas U$ 100 por pessoa por ano, isso lhe daria U$ 100 mil. Uou!
 3. Parecia algo factível. Mas, antes mesmo de eu conseguir chegar lá, o cenário mudou. Li Jin, do _Future from a16z_, propõe atualizar o número:
 
-> (...) No [Patreon](https://a16z.com/2020/04/17/passion-economy-pod/), a média da mensalidade inicial [aumentou 22%](https://a16z.com/2020/04/17/passion-economy-pod/) nos dois últimos anos. Desde 2017, a parcela de novos patrocinadores pagando mais de U$ 100 mensais – ou US$ 1,200 por ano – cresceu 21%. No [Podia](http://podia.com), o número de criadores arrecadando mais de US$ 1 mil por mês vêm cresendo 20% ao mês, enquanto que a média de consumidores por criador cresce a 10%. Similarmente, no [Teachable](https://teachable.com/), o preço médio por curso vem crescendo 20% ao ano. Em 2019, cerca de 500 criadores de cursos no Teachable fizeram mais de US$ 100 mil; desses, 25 mais de US$ 1 mil por venda.
+> (...) No [Patreon](https://a16z.com/2020/04/17/passion-economy-pod/), a média da mensalidade inicial [aumentou 22%](https://a16z.com/2020/04/17/passion-economy-pod/) nos dois últimos anos. Desde 2017, a parcela de novos patrocinadores pagando mais de U$ 100 mensais – ou US$ 1,200 por ano – cresceu 21%. No [Podia](http://podia.com), o número de criadores arrecadando mais de US$ 1 mil por mês vem crescendo 20% ao mês, enquanto que a média de consumidores por criador cresce a 10%. Similarmente, no [Teachable](https://teachable.com/), o preço médio por curso vem crescendo 20% ao ano. Em 2019, cerca de 500 criadores de cursos no Teachable fizeram mais de US$ 100 mil; desses, 25 mais de US$ 1 mil por venda.
 
 Incrível.
 
-Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio. E se essa tendência aumentar ainda mais? Em vez de 100 FV, precisássemos de apenas 10? Ou de 1?
+Ainda que haja tantas plataformas, taxas e criadores concorrendo entre si, é possível chegar ao sonho do fã próprio. E se essa tendência aumentar ainda mais? Em vez de 100 FV, precisaríamos de apenas 10? Ou de 1?
 
 Enfim, tenho zero talento para negócios. Mas preciso justificar meu pHD em futurologia, orientado por Nostradamus. Então, cheguei a vários Cenários Absurdos®:
 

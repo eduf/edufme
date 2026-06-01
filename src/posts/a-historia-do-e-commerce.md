@@ -14,7 +14,7 @@ coverImage: "tim_berners.jpg"
 
 Em março de 2022, Alexandre Potascheff, do Braincast / B9, me passou o seguinte desafio: criar os roteiros para uma série de 4 episódios sobre a história do e-commerce. O projeto foi patrocinado pela Americanas S.A. e nós teríamos cerca de um mês para dar conta de tudo.
 
-Nesse período, ajudei Alexandre a pensar nos assuntos de cada episódio e em formatos. Entrevistei profissionais da área e fiz uma extensiva pesquisa, que me levou da Roma Antiga até o Metaverso.
+Nesse período, ajudei Alexandre a pensar nos assuntos de cada episódio e em formatos. Entrevistei profissionais da área e fiz uma extensa pesquisa, que me levou da Roma Antiga até o Metaverso.
 
 É que, como o tema e-commerce é extremamente técnico (ciência de dados, logística, entre outros), pensei em seguir um estilo inspirado no meu programa de TV favorito: [Connections](https://en.wikipedia.org/wiki/Connections_(British_documentary)), lançado nos anos 80.
 

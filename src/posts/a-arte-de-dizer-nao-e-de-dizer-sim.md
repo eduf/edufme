@@ -3,7 +3,7 @@ type: post
 title: "A arte de dizer não. E de dizer sim"
 date: "2020-10-07"
 tags: 
-  - "newsletter"
+  - "comportamento"
 ---
 
 Sem querer soar a autoajuda, mas já soando, hoje eu queria falar sobre a arte de dizer não.
@@ -12,7 +12,7 @@ Talvez, como eu, você também seja do tipo "people pleaser", gente que sempre t
 
 Esse hábito pode ser a receita pro desastre.
 
-1. Primeiro porque acaba nos sobrecarregando de tal forma, que produz a **síndrome da rosca espanada,** quando você tenta, tenta, mas não consegue mais atender as demandas dos outros. Você perde a responsividade. Acha que ainda entende a comunicação dos outros, mas **está muito autocentrado pra sequer assimilar o que lhe foi pedido**.
+1. Primeiro, porque acaba nos sobrecarregando de tal forma que produz a **síndrome da rosca espanada,** quando você tenta, tenta, mas não consegue mais atender às demandas dos outros. Você perde a responsividade. Acha que ainda entende a comunicação dos outros, mas **está muito autocentrado pra sequer assimilar o que lhe foi pedido**.
     
 2. Segundo, porque podemos nos tornar uma bolha de ressentimento e, então, **começamos a** _**cobrar taxas**_ **pelos nossos “sims”**. Fazemos o que a pessoa pede, mas queremos que ela perceba, que agradeça (de certa forma, se humilhe) ou até que sinta culpa por nos torturar com seus pedidos.
     
@@ -45,18 +45,18 @@ O que nos leva a arte do sim. **Que tipo de sim estamos emitindo?** Um estratég
 
 Quando pensamos sobre dizer sim e não, geralmente partimos do ponto de vista de _gerenciamento pessoal_: "_eu_ tenho tempo e energia pra mais esse compromisso"?
 
-Mas a coisa vai muito além disso: há sims egoístas e nãos altruístas. Há sims políticos, sims parasitas (que geram demanda corrosivas nos outros, ao longo do tempo), sims que são, na verdade, piores que nãos.
+Mas a coisa vai muito além disso: há sims egoístas e nãos altruístas. Há sims políticos, sims parasitas (que geram demandas corrosivas nos outros, ao longo do tempo), sims que são, na verdade, piores que nãos.
 
 Enfim, é um assunto complicado.
 
 ### Dissolvendo sim e não
 
-Na minha própria jornada em aprender a me comunicar (e obrigado por fazer parte dela), tenho percebido que, nesses **momentos de encruzilhada**, na qual sou – aparentemente – chamado a tomar decisões, tenho a **ilusão de estar no controle**.
+Na minha própria jornada em aprender a me comunicar (e obrigado por fazer parte dela), percebo que, nesses **momentos de encruzilhada**, na qual sou – aparentemente – chamado a tomar decisões, tenho a **ilusão de estar no controle**.
 
-Mas, na verdade, tenho mais **influência** do que controle. Por vezes, acho que digo sim, mas a situação toda acaba em não. Ou a palavra sim sai da minha boca e é ouvida como um não (e vice versa).
+Mas, na verdade, tenho mais **influência** do que controle. Por vezes, acho que digo sim, mas a situação toda acaba em não. Ou a palavra sim sai da minha boca e é ouvida como um não (e vice-versa).
 
 Surge um sentimento estranho de flutuar num mar de conexões, às vezes remando, às vezes seguindo a correnteza, às vezes parando pra observar o mar, sentindo seu cheiro, não tendo pressa de chegar a lugar algum, às vezes temendo a tempestade e querendo fugir.
 
-Sim e não rígidos e conspiratórios, talvez, um dia, dêem lugar a **estar aberto aos ritmos das conexões**.
+Sim e não rígidos e conspiratórios, talvez, um dia, deem lugar a **estar abertos aos ritmos das conexões**.
 
 Mas esse sou só eu querendo parecer esperto. Deixa chegar a próxima mensagem no WhatsApp.

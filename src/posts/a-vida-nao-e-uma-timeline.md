@@ -10,7 +10,7 @@ tags:
 coverImage: "deftones1.jpg"
 ---
 
-A vida não é uma _timeline_. Quer dizer, quem sou eu para saber o que é a vida? Mas agora já foi. Só sei que ela _não é_ assim — para soar como um personagem de Ariano Suassuna.
+A vida não é uma _timeline_. Quer dizer, quem sou eu para saber o que é a vida? Mas já foi. Só sei que ela _não é_ assim — para soar como um personagem de Ariano Suassuna.
 
 Não é uma sucessão linear de acontecimentos que superam os anteriores. Tecnologias e ideias de diferentes épocas convivem e transformam-se constantemente. Produtos culturais deixam múltiplos rastros e fantasmas. Coisas esquecidas voltam à moda. Ou nunca morrem para certos nichos.
 

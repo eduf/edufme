@@ -12,19 +12,19 @@ Nos meus tempos de jornalista em SP, eu costumava cobrir a Mostra. Assistia a ce
 
 O documentário traz o áudio de raríssimas entrevistas de Kubrick pro crítico [Michel Ciment](https://en.wikipedia.org/wiki/Michel_Ciment), um dos poucos jornalistas a ter acesso a ele.
 
-Tudo montado com animações de _2001 - Uma Odisséia no Espaço_, que dialogam com imagens de bastidores dos clássicos do diretor norte-americano. E, claro: há também os costumeiros depoimentos de atores sobre o estilo obsessivo, meticuloso e ditatorial de Kubrick.
+Tudo montado com animações de _2001 - Uma Odisseia no Espaço_, que dialogam com imagens de bastidores dos clássicos do diretor norte-americano. E, claro: há também os costumeiros depoimentos de atores sobre o estilo obsessivo, meticuloso e ditatorial de Kubrick.
 
 Na boa, o filme não acrescenta muito ao mito. Mas ouvir Kubrick refletindo sobre o próprio trabalho sugere uma humildade que muitas vezes é negada ao seu personagem.
 
-No documentário, pasme, Kubrick parece bem mais improvisador do que eu imaginava. Parte das suas estratégias narrativas surgiam durante as filmagens, quando todos (técnicos e atores) já estavam esgotados de repetir a mesma cena dezenas de vezes.
+No documentário, pasmem, Kubrick parece bem mais improvisador do que eu imaginava. Parte das suas estratégias narrativas surgia durante as filmagens, quando todos (técnicos e atores) já estavam esgotados de repetir a mesma cena dezenas de vezes.
 
 É o velho método [Phil Spector](https://en.wikipedia.org/wiki/Phil_Spector): quando alguém está exausto, ressentido e raivoso, com suas artimanhas de convencimento e proteção comprometidas, pode acabar "explodindo" numa performance melhor.
 
-Não sei. Eu é que não vou promover essa fórmula. Ainda que tenha que experimenta-la com frequência e que entenda seu mérito ocasional.
+Não sei. Eu é que não vou promover essa fórmula. Ainda que tenha que experimentá-la com frequência e que entenda seu mérito ocasional.
 
-Essas coisas só funcionam quando o _incitador do caos_ tem uma mente muito espaçosa e capaz de lidar com o ódio que desperta nos colaboradores. Não é pra qualquer um. No mínimo é preciso ter carisma e despertar muita devoção.
+Essas coisas só funcionam quando o _incitador do caos_ tem uma mente muito espaçosa e capaz de lidar com o ódio que desperta nos colaboradores. Não é pra qualquer um. No mínimo, é preciso ter carisma e despertar muita devoção.
 
-Um _incitador_ inseguro, egomaníaco ou simplesmente cego aos sinais do grupo e das circunstâncias, provavelmente, não terá memória RAM pra, no meio da tensão, gerenciar e, ao mesmo tempo, criar. Apenas vai acabar abandonado ou cancelado.
+Um _incitador_ inseguro, egomaníaco ou simplesmente cego aos sinais do grupo e das circunstâncias provavelmente não terá memória RAM pra, no meio da tensão, gerenciar e, ao mesmo tempo, criar. Apenas vai acabar abandonado ou cancelado.
 
 De qualquer forma, lá pelas tantas do documentário, eu me perguntava: por que assisto a essas coisas? Por que tantos documentários sobre artistas? Por que tantos podcasts sobre músicos e "realizadores"? O que eu realmente aprendo com isso?
 
@@ -44,7 +44,7 @@ Imagino que também seja pela fascinação de entrar na vida de alguém que cons
 
 Talvez pelo hábito de tentar descobrir em que “trecho” da estrada da criatividade estou. É um tanto embaraçoso admiti-lo aos 45 anos de idade. Mas hábito é fogo.
 
-Há também o treinamento Moderno de cultuar autores. Afinal, que alternativa temos? Prestar louvores à complexidade de fatores psicológicos, momentos históricos e tecnologias disponíveis em cada época? Imagine um discurso de recebimento do Oscar: "eu agradeço àquele ônibus que não me atropelou na adolescência. Muito obrigado, equipamento que falhou".
+Há também o treinamento moderno de cultuar autores. Afinal, que alternativa temos? Prestar louvores à complexidade de fatores psicológicos, momentos históricos e tecnologias disponíveis em cada época? Imagine um discurso de recebimento do Oscar: "Eu agradeço àquele ônibus que não me atropelou na adolescência. Muito obrigado, equipamento que falhou".
 
 Por outro lado, esse culto ao "realizador" (e o medo de se tornar um "não-realizador") é algo estrutural do ego. Não deve ser só coisa da Modernidade. Até mesmo os budistas tibetanos têm o [Namtar](https://en.wikipedia.org/wiki/Namtar_(biography)), que são biografias e/ou autobiografias de grandes praticantes – que precisam ser consideradas com cuidado, já que, nessa tradição, não há um ego que possa adquirir "superpoderes espirituais" e dar carteirada nos outros.
 

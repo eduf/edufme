@@ -19,9 +19,14 @@ layout: base.njk
     </div>
 
     {% set socialPost = posse[page.url] %}
-    {% if socialPost and socialPost.mastodonUrl %}
+    {% if socialPost and (socialPost.mastodonUrl or socialPost.blueskyUrl) %}
       <div class="post-social-links" aria-label="conversas sobre este texto">
-        <a href="{{ socialPost.mastodonUrl }}" target="_blank" rel="noopener">comentar no Mastodon</a>
+        {% if socialPost.mastodonUrl %}
+          <a href="{{ socialPost.mastodonUrl }}" target="_blank" rel="noopener">comentar no Mastodon</a>
+        {% endif %}
+        {% if socialPost.blueskyUrl %}
+          <a href="{{ socialPost.blueskyUrl }}" target="_blank" rel="noopener">comentar no Bluesky</a>
+        {% endif %}
       </div>
     {% endif %}
 

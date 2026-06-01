@@ -43,7 +43,7 @@ Com as redes sociais, as periodicidades ficam cada vez mais curtas, conflitantes
 
 Como nosso "bioware" é limitado, não conseguimos consumir no mesmo ritmo da tecnologia. Então, delegamos o gerenciamento de informação para algoritmos. Ou seja: **máquinas filtrando e processando conteúdo que criamos como se fôssemos máquinas**. Aliás, cada vez mais, os próprios _bots_ também assumem a produção cultural.
 
-Assim, em vez de grandes pacotes de lançamentos, vivemos num rítmo que os técnicos chamariam de "rolling release", isto é: atualizações constantes, acontecendo nos bastidores.
+Assim, em vez de grandes pacotes de lançamentos, vivemos num ritmo que os técnicos chamariam de "rolling release", isto é: atualizações constantes, acontecendo nos bastidores.
 
 Eventos como o WWDC não acontecem por causa de limitações técnicas, são rituais de marketing. Pior: muitos updates anunciados sequer estão disponíveis durante o evento. Alguns nem podem ser utilizados por todos os consumidores. A questão aqui é incitar a compra de novos devices e fortalecer a imagem da corporação.
 
@@ -77,8 +77,8 @@ Está aí um sujeito que entende de mentes viciadas, não é? Assim, que tal um 
 
 ![Typewritter do Naked Lunch](images/naked.jpg)
 
-Ou os joystics e entradas USBone do [eXistenZ](https://www.youtube.com/watch?v=W1fkINKMwHA)?
+Ou os joysticks e entradas USBone do [eXistenZ](https://www.youtube.com/watch?v=W1fkINKMwHA)?
 
-Bonus: sons de interface compostos por [Stockhausen](https://www.youtube.com/watch?v=vdIe2CrorMM).
+Bônus: sons de interface compostos por [Stockhausen](https://www.youtube.com/watch?v=vdIe2CrorMM).
 
 Alguém iria querer usá-los o tempo todo?

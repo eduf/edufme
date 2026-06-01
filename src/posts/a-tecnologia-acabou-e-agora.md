@@ -21,7 +21,7 @@ Em vez de descambar para um cenário Mad Max, a série adota um tom bem mais pro
 
 Assistimos aos primeiros anos da reconstrução dessa sociedade a partir de um ponto de vista bem particular: o de um grupo de teatro mambembe Shakespeareano, que se apresenta regularmente, circulando por um circuito mais ou menos seguro.
 
-Ou seja, tudo para agradar velhotes nostálgicos como eu: pitadas de filmes _indie_, trilha sonora com Parliament / Funkadelic, além de uma história em quadrinhos surreal, inspirando grupos fanáticos. Tudo embalado num roteiro não-linear, cheio de mistérios e frases de efeito ocasionais.
+Ou seja, tudo para agradar velhotes nostálgicos como eu: pitadas de filmes _indie_, trilha sonora com Parliament / Funkadelic, além de uma história em quadrinhos surreal, inspirando grupos fanáticos. Tudo embalado num roteiro não linear, cheio de mistérios e frases de efeito ocasionais.
 
 Perfeito para a volta do meu instinto ranheta: “Soa à distopia fabricada via pesquisas de marketing, para agradar à Geração X”. Quem disse que consegui resistir? Assisti a uns capítulos, esperando reforçar meu ceticismo. Afinal, sempre damos um jeito de continuar a ser quem achamos que somos. Logo estava engajado. É que, embora a narrativa de Station Eleven seja um tanto solta demais, definitivamente, tem pontos interessantes.
 
@@ -35,9 +35,9 @@ Felizmente, os retirantes se dão conta de que, afinal, estão num aeroporto: um
 
 É claro que a história começa a complicar. Mas nem precisaria. O que mais me interessou nela foi exatamente esse aspecto, digamos, “realista” da quebra progressiva dos nossos atuais padrões de vida. Como [alertava Buñuel](https://pt.wikipedia.org/wiki/O_Anjo_Exterminador), já em 1962, quando ficamos trancados juntos num local, tendemos a reajustar nossas sensibilidades morais.
 
-Mas, a duras penas, também surge uma nova relação com o planeta, a partir das sobras da parafernália do mundo capitalista. O que me lembrou de [um texto de Ailton Krenak](https://www.amazon.com.br/Ideias-para-adiar-fim-mundo/dp/8535932410?crid=2K6FG7PTBOO8B&keywords=ideias+para+adiar+o+fim+do+mundo+ailton+krenak&qid=1641944548&sprefix=ideias+para+adiar+o+fim+do+mundo%2Caps%2C162&sr=8-1&linkCode=ll1&tag=eduf-20&linkId=2acaae7f8268a7d1bb4a044a77e4595e&language=pt_BR&ref_=as_li_ss_tl): os índios estão acostumados a sobreviver, mas e a sociedade moderna?
+Mas, a duras penas, também surge uma nova relação com o planeta, a partir das sobras da parafernália do mundo capitalista. O que me lembrou [um texto de Ailton Krenak](https://www.amazon.com.br/Ideias-para-adiar-fim-mundo/dp/8535932410?crid=2K6FG7PTBOO8B&keywords=ideias+para+adiar+o+fim+do+mundo+ailton+krenak&qid=1641944548&sprefix=ideias+para+adiar+o+fim+do+mundo%2Caps%2C162&sr=8-1&linkCode=ll1&tag=eduf-20&linkId=2acaae7f8268a7d1bb4a044a77e4595e&language=pt_BR&ref_=as_li_ss_tl): os índios estão acostumados a sobreviver, mas e a sociedade moderna?
 
-Station Eleven faz algumas perguntas provocadoras: como lidar com o luto de uma cultura? “Sobreviver não é o suficiente“. Como superar o trauma da transição? Será que a geração descompensada que a assistiu (e também a provocou) também vai atrapalhar o futuro?
+Station Eleven faz algumas perguntas provocadoras: como lidar com o luto de uma cultura? “Sobreviver não é o suficiente“. Como superar o trauma da transição? Será que a geração descompensada que a assistiu (e também a provocou) vai atrapalhar o futuro?
 
 Não quero atrair urucubaca, mas, em breve, acho que teremos que pensar em coisas um tanto parecidas. Com ou sem ranhetismo.
 
