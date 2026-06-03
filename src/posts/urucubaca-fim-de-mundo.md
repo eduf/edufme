@@ -47,5 +47,3 @@ Não é essa a essência das teorias conspiratórias? Ajambrar discursos pra man
 Enfim, talvez, o único antídoto pra isso seja o _pé no freio_. O tédio. O não-engajamento na narrativa. E a desconstrução: desmembrar os assuntos. Não deixa-los agregarem-se pra formar histórias simplistas, de entretenimento urucubaca.
 
 Será que, um dia, ainda seremos "salvos" pelo tédio? Talvez. Mas quem sou eu pra prever essas coisas?
-
-_PS – Este texto sobre o Adam Curtis é uma preparação pra um projeto novo / velho que devo começar em breve, com um amigo meu. Já vai._
