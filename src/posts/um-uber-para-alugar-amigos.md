@@ -19,7 +19,7 @@ Para facilitar nossa comunicação, vamos chamar essa pessoa de Buddy Rich. No p
 
 Naturalmente, Rich desconfia que as pessoas passaram a gostar mais do seu dinheiro do que da sua companhia. Pior: ele não consegue se identificar com os integrantes da sua nova classe social.
 
-Até antes da pandemia, Rich estava tão focado em crescer sua fortuna que não teve tempo de sentir-se solitário. Mas a doença do _burn out_ também viralizou e, enfim, chegou até ele. Só agora, percebeu que vive sozinho num triplex no Rio de Janeiro e que os serviços de _streaming_ não fazem mais efeito.
+Até antes da pandemia, Rich estava tão focado em crescer sua fortuna que não teve tempo de sentir-se solitário. Mas a doença do burn out também viralizou e, enfim, chegou até ele. Só agora, percebeu que vive sozinho num triplex no Rio de Janeiro e que os serviços de _streaming_ não fazem mais efeito.
 
 Provavelmente, eu é que estou desinformado, mas parece que a tecnologia capitalizou um pouco melhor o sexo do que a amizade.
 

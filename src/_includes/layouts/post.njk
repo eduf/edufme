@@ -22,10 +22,10 @@ layout: base.njk
     {% if socialPost and (socialPost.mastodonUrl or socialPost.blueskyUrl) %}
       <div class="post-social-links" aria-label="conversas sobre este texto">
         {% if socialPost.mastodonUrl %}
-          <a href="{{ socialPost.mastodonUrl }}" target="_blank" rel="noopener">comentar no Mastodon</a>
+          <a href="{{ socialPost.mastodonUrl }}" target="_blank" rel="noopener">comentar no Mastodon ↗</a>
         {% endif %}
         {% if socialPost.blueskyUrl %}
-          <a href="{{ socialPost.blueskyUrl }}" target="_blank" rel="noopener">comentar no Bluesky</a>
+          <a href="{{ socialPost.blueskyUrl }}" target="_blank" rel="noopener">comentar no Bluesky ↗</a>
         {% endif %}
       </div>
     {% endif %}
