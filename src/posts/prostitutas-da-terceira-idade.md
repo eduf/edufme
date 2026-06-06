@@ -30,11 +30,7 @@ Então, o filme se divide em algumas narrativas paralelas, que se conectam apena
 
 É nesse ponto que há uma virada ao mesmo tempo gentil e cruel na história. O espectador está plenamente compadecido de So-Young. Até que ela, por uma combinação de dó com falta de perspectivas, embarca numa profissão arriscada, porém muito mais lucrativa: ajudar os seus clientes a se suicidarem. E é por isso que o título do filme, em coreano, é “A Mulher Assassina”.
 
- _Pais tentam fazer os adolescentes saírem do celular e se aproximarem do avô: "Mas ele fede!"_
-
 A Coréia do Sul tem uma das maiores taxas de suicídios de idosos do mundo. E, aos poucos, percebemos que So-Young não mata por dinheiro. De certa forma, ela se considera uma filantropa, não só por fazer a vontade dos clientes. Ela tenta oferecer algum entretenimento e dignidade às pessoas do seu círculo social — a criança, sua mãe filipina (agora presidiária) e os vizinhos de cortiço.
-
- _Um dos vários cortiços de Seoul._
 
 So-Young definitivamente compartilha do desespero de ter que lidar com a velhice e a doença. Mas parece resignada, apenas seguindo o fluxo de “oportunidades” que lhe aparecem. Tanto que, ao ser pega pela polícia, pensa que saiu no lucro. Para ela, seria apenas uma oportunidade de ter casa e comida, sem ter que vender o corpo.
 
