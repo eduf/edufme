@@ -12,7 +12,7 @@ tags:
 
 _Dzongsar Khyentse Rinpoche, ou [Khyentse Norbu](https://www.imdb.com/name/nm0634897/)._
 
-Ontem, assistindo a uma [palestra de Dzongsar Khyentse Rinpoche](https://www.youtube.com/watch?v=yaXASFZc2Kw), lembrei-me de quando jantei com ele, há alguns anos. Mas, antes de contar essa história, vamos para outro jantar. Esse com Roberto Civita o, então, dono da Editora Abril.
+Ontem, assistindo a uma [palestra de Dzongsar Khyentse Rinpoche](https://www.youtube.com/watch?v=yaXASFZc2Kw), lembrei-me de quando jantei com ele, há alguns anos. Antes de contar essa história, vamos para outro jantar. Esse com Roberto Civita o, então, dono da Editora Abril.
 
 ## Falando para relaxar
 

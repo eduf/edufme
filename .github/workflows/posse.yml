@@ -45,9 +45,11 @@ jobs:
       - name: Find changed posts
         id: changed
         shell: bash
+        env:
+          POST_FILE: ${{ inputs.post_file }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            printf '%s\n' "${{ inputs.post_file }}" > /tmp/changed-posts.txt
+            printf '%s\n' "$POST_FILE" > /tmp/changed-posts.txt
           elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
             git diff --name-only HEAD~1 HEAD -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
           else

@@ -11,7 +11,6 @@ permalink: "{% if pagination.pageNumber == 0 %}/{% else %}/page/{{ pagination.pa
 <div class="container">
   <div class="feed">
     {% for post in posts %}
-      {% set post = post %}
       {% include "partials/feed-item.njk" %}
     {% endfor %}
   </div>

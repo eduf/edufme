@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
     <link href="https://eduf.me{{ post.url }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>https://eduf.me{{ post.url }}</id>
-    <content type="html"><![CDATA[{{ entryContent | htmlToAbsoluteUrls("https://eduf.me") | safe }}]]></content>
+    <content type="html"><![CDATA[{{ entryContent | htmlToAbsoluteUrls("https://eduf.me") | replace("]]>", "]]&gt;") | safe }}]]></content>
   </entry>
   {% endfor %}
 </feed>

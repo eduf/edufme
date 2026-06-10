@@ -391,12 +391,17 @@ async function main() {
     console.log(`${args.dryRun ? "Would publish" : "Publishing"} ${post.absoluteUrl}`);
 
     if (!record.mastodonUrl) {
-      const mastodon = await publishMastodon(post, status, args.dryRun);
-      if (mastodon) {
-        record.mastodonId = mastodon.id;
-        record.mastodonUrl = mastodon.url;
-        changed = true;
-        console.log(`  Mastodon: ${mastodon.url}`);
+      try {
+        const mastodon = await publishMastodon(post, status, args.dryRun);
+        if (mastodon) {
+          record.mastodonId = mastodon.id;
+          record.mastodonUrl = mastodon.url;
+          changed = true;
+          console.log(`  Mastodon: ${mastodon.url}`);
+        }
+      } catch (error) {
+        errors.push(error);
+        console.error(`  Mastodon error: ${error.message}`);
       }
     }
 

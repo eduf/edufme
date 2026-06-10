@@ -8,10 +8,10 @@
   {% set pageDescription = description if description else site.description %}
   {% set pageUrl = site.url + page.url %}
   {% if image %}
-    {% set pageImage = (site.url + image) if 'http' not in image else image %}
+    {% set pageImage = image if image.startsWith('http') else (site.url + image) %}
   {% endif %}
 
-  <title>{% if title and title != false %}{{ title }} — eduf.me{% else %}eduf.me — Site do jornalista e roteirista Eduardo Fernandes{% endif %}</title>
+  <title>{% if title %}{{ title }} — eduf.me{% else %}eduf.me — Site do jornalista e roteirista Eduardo Fernandes{% endif %}</title>
   <meta name="description" content="{{ pageDescription }}">
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ pageUrl }}">
@@ -81,7 +81,7 @@
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-      var u="//edufmatomo.pikapod.net/";
+      var u="https://edufmatomo.pikapod.net/";
       _paq.push(['setTrackerUrl', u+'matomo.php']);
       _paq.push(['setSiteId', '1']);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -139,8 +139,11 @@
 </div>
 
 <script>
-  // Prefetch de links internos
+  // Prefetch de links internos (deduplicado)
+  const prefetched = new Set([location.href]);
   document.querySelectorAll('a[href^="/"]').forEach(link => {
+    if (prefetched.has(link.href)) return;
+    prefetched.add(link.href);
     const prefetch = document.createElement('link');
     prefetch.rel = 'prefetch';
     prefetch.href = link.href;

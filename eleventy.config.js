@@ -86,12 +86,13 @@ function extractYouTubeId(str) {
   return null;
 }
 
-function fetchUrl(url) {
+function fetchUrl(url, depth = 0) {
   return new Promise((resolve, reject) => {
+    if (depth > 5) return reject(new Error(`Redirects demais: ${url}`));
     const lib = url.startsWith("https") ? https : http;
     lib.get(url, res => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchUrl(res.headers.location).then(resolve).catch(reject);
+        return fetchUrl(res.headers.location, depth + 1).then(resolve).catch(reject);
       }
       const chunks = [];
       res.on("data", c => chunks.push(c));
@@ -165,6 +166,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/.well-known");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/_redirects");
+  eleventyConfig.addPassthroughCopy("src/_headers");
 
   // Slugify com suporte a português (remove acentos, espaços → hifens)
   const slugify = str => {
@@ -328,8 +330,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("htmlToAbsoluteUrls", (html, base) => {
     if (!html) return "";
     return html
-      .replace(/href="\//g, `href="${base}/`)
-      .replace(/src="\//g, `src="${base}/`);
+      .replace(/href="\/(?!\/)/g, `href="${base}/`)
+      .replace(/src="\/(?!\/)/g, `src="${base}/`);
   });
 
   eleventyConfig.addFilter("markdownInline", value => {
@@ -389,7 +391,7 @@ module.exports = function(eleventyConfig) {
 
     // Detecta iframes do YouTube e links onde o texto visível É a própria URL
     // (evita substituir links com texto customizado como "Assista aqui" ou "Cartoonist Keyfabe")
-    const iframeRe = /<iframe\b[^>]*\bsrc=(["'])((?:https?:)?\/\/(?:www\.)?(?:youtube(?:-nocookie)?\.com\/embed|youtube-nocookie\.com\/embed)[^"']*)\1[^>]*>(?:<\/iframe>)?/gi;
+    const iframeRe = /<iframe\b[^>]*\bsrc=(["'])((?:https?:)?\/\/(?:www\.)?youtube(?:-nocookie)?\.com\/embed[^"']*)\1[^>]*>(?:<\/iframe>)?/gi;
     const linkRe   = /<a\b[^>]*\bhref=(["'])((?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch|youtu\.be)[^"']*)\1[^>]*>(https?:\/\/[^<]+)<\/a>/gi;
 
     const jobs = new Map(); // videoId → watchUrl

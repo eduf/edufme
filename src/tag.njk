@@ -18,7 +18,6 @@ eleventyComputed:
     </div>
 
     {% for post in tag.posts %}
-      {% set post = post %}
       {% include "partials/feed-item.njk" %}
     {% endfor %}
   </div>
