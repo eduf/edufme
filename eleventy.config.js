@@ -11,7 +11,7 @@ const markdownIt = require("markdown-it");
 const DITHER_CACHE = ".cache/dithered";
 const DITHER_URL   = "/assets/images/dithered";
 const DITHER_OUT   = `_site${DITHER_URL}`;
-const MAX_WIDTH    = 1500; // 2× para retina; exibido em ≤ 750 px via CSS
+const MAX_WIDTH    = 1320; // 2× para retina; coluna de conteúdo chega a ~660 px no desktop
 const GRAY_LEVELS  = 4;   // preto, cinza escuro, cinza claro, branco
 
 function floydSteinberg(data, width, height) {
@@ -55,7 +55,8 @@ async function processImage(srcPath) {
       .toFile(cached);
   }
 
-  return { cached, filename };
+  const { width, height } = await sharp(cached).metadata();
+  return { cached, filename, width, height };
 }
 
 function findInSrc(filename) {
@@ -135,7 +136,8 @@ async function processYouTubeThumbnail(videoId) {
       .toFile(cached);
   }
 
-  return { cached, filename };
+  const { width, height } = await sharp(cached).metadata();
+  return { cached, filename, width, height };
 }
 
 function resolveImagePath(src, inputPath) {
@@ -371,18 +373,35 @@ module.exports = function(eleventyConfig) {
       const absPath = resolveImagePath(src, this.page.inputPath);
       if (!absPath) return;
       try {
-        const { cached, filename } = await processImage(absPath);
+        const { cached, filename, width, height } = await processImage(absPath);
         fs.copyFileSync(cached, path.join(DITHER_OUT, filename));
-        map.set(src, `${DITHER_URL}/${filename}`);
+        map.set(src, { url: `${DITHER_URL}/${filename}`, width, height });
       } catch (e) {
         console.warn(`[dither] erro ao processar ${absPath}: ${e.message}`);
       }
     }));
 
-    return content.replace(imgRe, (_, prefix, q, src, suffix) => {
-      const newSrc = map.get(src);
-      return newSrc ? `${prefix}${newSrc}${suffix}` : _;
+    let out = content.replace(imgRe, (_, prefix, q, src, suffix) => {
+      const hit = map.get(src);
+      if (!hit) return _;
+      // Injeta width/height para reservar espaço e evitar CLS (a menos que já existam)
+      const dims = /\b(width|height)=/.test(prefix + suffix)
+        ? ""
+        : ` width="${hit.width}" height="${hit.height}"`;
+      return `${prefix}${hit.url}${suffix.replace(/\s*\/?>$/, `${dims}$&`)}`;
     });
+
+    // A primeira imagem do conteúdo costuma ser o elemento de LCP: promove-a a
+    // alta prioridade e injeta um preload no <head> para o navegador buscá-la cedo.
+    const firstImg = out.match(/<img\b[^>]*\bsrc="(\/assets\/images\/dithered\/[^"]+)"[^>]*>/);
+    if (firstImg && !/\bfetchpriority=/.test(firstImg[0])) {
+      const promoted = firstImg[0].replace(/<img\b/, '<img fetchpriority="high" decoding="async"');
+      out = out.replace(firstImg[0], promoted);
+      const preload = `<link rel="preload" as="image" href="${firstImg[1]}" fetchpriority="high">`;
+      out = out.replace("</head>", `  ${preload}\n</head>`);
+    }
+
+    return out;
   });
 
   // ─── Transform: YouTube → thumbnail dithered ─────────────────────────────
@@ -414,9 +433,9 @@ module.exports = function(eleventyConfig) {
     const results = new Map(); // videoId → { imgSrc, watchUrl }
     await Promise.all([...jobs.entries()].map(async ([id, watchUrl]) => {
       try {
-        const { cached, filename } = await processYouTubeThumbnail(id);
+        const { cached, filename, width, height } = await processYouTubeThumbnail(id);
         fs.copyFileSync(cached, path.join(DITHER_OUT, filename));
-        results.set(id, { imgSrc: `${DITHER_URL}/${filename}`, watchUrl });
+        results.set(id, { imgSrc: `${DITHER_URL}/${filename}`, watchUrl, width, height });
       } catch (e) {
         console.warn(`[youtube] erro no vídeo ${id}: ${e.message}`);
       }
@@ -425,9 +444,9 @@ module.exports = function(eleventyConfig) {
     const replacement = (url) => {
       const id = extractYouTubeId(url);
       if (!id || !results.has(id)) return null;
-      const { imgSrc, watchUrl } = results.get(id);
+      const { imgSrc, watchUrl, width, height } = results.get(id);
       return `<a href="${watchUrl}" class="youtube-thumb" target="_blank" rel="noopener">`
-           + `<img src="${imgSrc}" alt="Ver vídeo no YouTube"></a>`;
+           + `<img src="${imgSrc}" alt="Ver vídeo no YouTube" width="${width}" height="${height}"></a>`;
     };
 
     content = content.replace(iframeRe, (full, q, url) => replacement(url) || full);

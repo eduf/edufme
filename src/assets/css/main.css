@@ -4,26 +4,26 @@
   src: url("../fonts/iAWriterDuoS-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "iA Writer Duo";
   src: url("../fonts/iAWriterDuoS-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "iA Writer Duo";
   src: url("../fonts/iAWriterDuoS-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 /* ─── Tokens base (estrutura, sem cores) ────────────────────── */
 :root {
-  --font-mono:  "iA Writer Duo", ui-monospace, system-ui, monospace;
+  --font-mono:  "iA Writer Duo", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --size-base:  18px;
   --line:       1.75;
   --measure:    62ch;
@@ -149,6 +149,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  min-height: 100dvh;
   max-width: calc(var(--sidebar) + var(--measure) + 6rem);
   margin-inline: auto;
   border-inline: 1px solid var(--border);
@@ -216,6 +217,10 @@ body {
   50%      { opacity: 0; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .site-logo-cursor { animation: none; }
+}
+
 /* ─── TUI body layout ───────────────────────────────────────── */
 .tui-layout {
   display: grid;
@@ -229,6 +234,7 @@ body {
   position: sticky;
   top: 0;
   max-height: 100vh;
+  max-height: 100dvh;
   overflow-y: auto;
   align-self: start;
 }
@@ -309,6 +315,13 @@ body {
 }
 
 .feed-item:first-child { padding-top: 0; }
+
+/* Pula a renderização de itens fora da tela (do 4º em diante, fora da dobra).
+   contain-intrinsic-size reserva altura estimada para não bagunçar o scroll. */
+.feed-item:nth-child(n+4) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 12rem;
+}
 
 /* ─── Post meta ─────────────────────────────────────────────── */
 .post-meta {
