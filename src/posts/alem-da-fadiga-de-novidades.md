@@ -81,4 +81,4 @@ Ou os joysticks e entradas USBone do [eXistenZ](https://www.youtube.com/watch?v=
 
 Bônus: sons de interface compostos por [Stockhausen](https://www.youtube.com/watch?v=vdIe2CrorMM).
 
-Alguém iria querer usá-los o tempo todo?
+Alguém iria querer utilizá-los o tempo todo?
