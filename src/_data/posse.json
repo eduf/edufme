@@ -34,5 +34,13 @@
     "blueskyCid": "bafyreigohmqu4ny44w6imo4j644xfkop4rybexvehrx7scooyokdcqpr6m",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mo5d7u4s6q2y",
     "publishedAt": "2026-06-13T03:36:15.067Z"
+  },
+  "/compaixao/": {
+    "mastodonId": "116794897303288086",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116794897303288086",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3movfe7f6ob2p",
+    "blueskyCid": "bafyreigrkthckkas7u7kkkty2p7ixe4hiidqqevey3xu7xtjjorriwenxu",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3movfe7f6ob2p",
+    "publishedAt": "2026-06-22T17:18:22.312Z"
   }
 }
