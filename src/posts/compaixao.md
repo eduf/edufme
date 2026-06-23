@@ -1,9 +1,7 @@
 ---
-type: post
+type: image
 date: "2026-06-22T10:15:00-03:00"
-tags: [post]
-title: "Compaixão"
-description: "Merece uma camiseta"
+tags: [image]
 ---
 
 ![](compaixao.png)

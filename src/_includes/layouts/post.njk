@@ -44,12 +44,14 @@ layout: base.njk
       {% elif type == "link" %}
         {% if content %}{{ content | safe }}{% endif %}
       {% elif type == "image" %}
-        <figure>
-          <img src="{{ image }}" alt="{{ alt if alt else title }}">
-          {% if caption %}
-            <figcaption>{{ caption | markdownInline | safe }}</figcaption>
-          {% endif %}
-        </figure>
+        {% if image %}
+          <figure>
+            <img src="{{ image }}" alt="{{ alt if alt else title }}">
+            {% if caption %}
+              <figcaption>{{ caption | markdownInline | safe }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
         {% if content %}{{ content | safe }}{% endif %}
       {% elif type == "video" %}
         <p><a href="{{ url }}" target="_blank" rel="noopener">{{ url }}</a></p>

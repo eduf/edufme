@@ -27,12 +27,14 @@
 
   {# ── IMAGE ────────────────────────────────────────────────── #}
   {% elif post.data.type == "image" %}
-    <figure>
-      <img src="{{ post.data.image }}" alt="{{ post.data.alt if post.data.alt else post.data.title }}">
-      {% if post.data.caption %}
-        <figcaption>{{ post.data.caption | markdownInline | safe }}</figcaption>
-      {% endif %}
-    </figure>
+    {% if post.data.image %}
+      <figure>
+        <img src="{{ post.data.image }}" alt="{{ post.data.alt if post.data.alt else post.data.title }}">
+        {% if post.data.caption %}
+          <figcaption>{{ post.data.caption | markdownInline | safe }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
     {% if post.templateContent %}
       <div class="post-content">{{ post.templateContent | safe }}</div>
     {% endif %}
