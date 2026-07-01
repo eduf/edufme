@@ -9,6 +9,9 @@
   {% set pageUrl = site.url + page.url %}
   {% if image %}
     {% set pageImage = image if image.startsWith('http') else (site.url + image) %}
+  {% elif type %}
+    {% set bodyImage = page.rawInput | firstImageUrl(page.inputPath) %}
+    {% if bodyImage %}{% set pageImage = site.url + bodyImage %}{% endif %}
   {% endif %}
 
   <title>{% if title %}{{ title }} — eduf.me{% else %}eduf.me — Site do jornalista e roteirista Eduardo Fernandes{% endif %}</title>

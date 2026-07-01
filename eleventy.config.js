@@ -341,6 +341,18 @@ module.exports = function(eleventyConfig) {
     return md.renderInline(String(value));
   });
 
+  // Fallback de og:image: primeira imagem local do corpo do post
+  eleventyConfig.addFilter("firstImageUrl", (rawInput, inputPath) => {
+    if (!rawInput) return "";
+    const match = String(rawInput).match(/!\[[^\]]*\]\(([^)\s]+)[^)]*\)/);
+    if (!match || /^https?:/i.test(match[1])) return "";
+    const found = resolveImagePath(match[1], inputPath);
+    if (!found) return "";
+    const relative = path.relative("src", found).split(path.sep).join("/");
+    if (relative.startsWith("..")) return "";
+    return `/${relative}`;
+  });
+
   eleventyConfig.addFilter("tagPagesForTags", (tags, tagPages) => {
     if (!Array.isArray(tags) || !Array.isArray(tagPages)) return [];
     const pagesBySlug = new Map(tagPages.map(tagPage => [tagPage.slug, tagPage]));
