@@ -59,6 +59,69 @@ function slugify(str) {
     .replace(/-+/g, "-");
 }
 
+function extractBody(markdown) {
+  return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "").trim();
+}
+
+function stripMarkdown(text) {
+  return text
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\(([^)]*)\)/g, "$1")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/^>\s?/gm, "")
+    .replace(/(\*\*|__)([\s\S]*?)\1/g, "$2")
+    .replace(/(\*|_)([^*_\n]+)\1/g, "$2")
+    .replace(/`([^`]*)`/g, "$1")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function firstParagraph(body) {
+  const blocks = stripMarkdown(body).split(/\n\s*\n/);
+  const prose = blocks.find(block => {
+    const trimmed = block.trim();
+    if (!trimmed) return false;
+    // Pula embeds/shortcodes/HTML e blocos que são só URL
+    if (/^[\\[<]/.test(trimmed)) return false;
+    if (/^https?:\/\/\S+$/.test(trimmed)) return false;
+    return /[a-zA-ZÀ-ÿ]/.test(trimmed);
+  });
+  return (prose || "").trim().replace(/\s+/g, " ");
+}
+
+function findFirstImage(body) {
+  const match = body.match(/!\[([^\]]*)\]\(([^)\s]+)[^)]*\)/);
+  if (!match) return null;
+  return { alt: match[1].trim(), src: match[2] };
+}
+
+function findInSrc(basename, dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      const found = findInSrc(basename, full);
+      if (found) return found;
+    } else if (entry.name === basename) {
+      return full;
+    }
+  }
+  return null;
+}
+
+// Espelha a resolução de imagens do eleventy.config.js
+function resolveImagePath(src, inputPath) {
+  const decoded = decodeURIComponent(src);
+  const basename = path.basename(decoded);
+  const candidates = [
+    path.join(path.dirname(inputPath), decoded),
+    path.join(ROOT, "src", decoded.replace(/^\//, "")),
+    path.join(ROOT, "src/assets/images", basename)
+  ];
+  const found = candidates.find(candidate => fs.existsSync(candidate));
+  if (found) return found;
+  return findInSrc(basename, path.join(ROOT, "src"));
+}
+
 function parseScalar(value) {
   const trimmed = value.trim();
   if (
@@ -137,14 +200,25 @@ function loadPost(filePath, siteUrl) {
   const url = `/${slug}/`;
   const absoluteUrl = new URL(url, siteUrl).toString();
   const date = data.date ? new Date(data.date) : null;
+  const body = extractBody(markdown);
+  const rawImage = findFirstImage(body);
+  let image = null;
+  if (rawImage && !/^https?:/i.test(rawImage.src)) {
+    const imagePath = resolveImagePath(rawImage.src, filePath);
+    if (imagePath) image = { alt: rawImage.alt, path: imagePath };
+  }
 
   return {
     filePath,
     url,
     absoluteUrl,
+    type: data.type || "post",
     title: data.title || fileSlug,
     description: data.description || "",
-    date
+    date,
+    body,
+    plainBody: stripMarkdown(body),
+    image
   };
 }
 
@@ -191,23 +265,50 @@ function shouldPublish(post, record, platforms, args) {
   return { ok: true };
 }
 
-function buildStatus(post) {
-  const parts = [post.title];
-  if (post.description) parts.push(post.description);
-  parts.push(post.absoluteUrl);
-  return truncate(parts.join("\n\n"), 500);
+// Mastodon conta qualquer URL como 23 caracteres
+function mastodonLength(text) {
+  return text.replace(/https?:\/\/\S+/g, "x".repeat(23)).length;
 }
 
-function buildBlueskyStatus(post) {
-  const parts = [post.title];
-  if (post.description) parts.push(post.description);
-  parts.push(post.absoluteUrl);
-  return truncate(parts.join("\n\n"), 300);
+function graphemes(text) {
+  return [...new Intl.Segmenter().segment(text)].map(segment => segment.segment);
 }
 
-function truncate(text, maxLength) {
-  if (text.length <= maxLength) return text;
-  return `${text.slice(0, maxLength - 1).trim()}...`;
+function truncateGraphemes(text, max) {
+  const segments = graphemes(text);
+  if (segments.length <= max) return text;
+  return `${segments.slice(0, max - 1).join("").trimEnd()}…`;
+}
+
+function truncateChars(text, max) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trimEnd()}…`;
+}
+
+function buildStatus(post, platform) {
+  const bluesky = platform === "bluesky";
+  const limit = bluesky ? 300 : 500;
+  const truncate = bluesky ? truncateGraphemes : truncateChars;
+  const url = post.absoluteUrl;
+  const urlCost = bluesky ? graphemes(url).length : 23;
+
+  if (post.type === "note") {
+    const budget = limit - urlCost - 2;
+    if (!post.plainBody) return url;
+    return `${truncate(post.plainBody, budget)}\n\n${url}`;
+  }
+
+  if (post.type === "image") {
+    return post.image && post.image.alt ? `${post.image.alt}\n\n${url}` : url;
+  }
+
+  const summary = post.description || firstParagraph(post.body);
+  const titleCost = bluesky ? graphemes(post.title).length : post.title.length;
+  const budget = limit - titleCost - urlCost - 4;
+  const parts = [post.title];
+  if (summary && budget > 20) parts.push(truncate(summary, budget));
+  parts.push(url);
+  return parts.join("\n\n");
 }
 
 function stripEnvAssignment(value) {
@@ -260,7 +361,51 @@ function buildLinkFacet(text, url) {
   }];
 }
 
-async function publishMastodon(post, status, dryRun) {
+// Bluesky limita blobs a ~976KB; mesma imagem serve para o Mastodon
+const MAX_IMAGE_BYTES = 950000;
+
+async function prepareImage(image) {
+  const sharp = require("sharp");
+  let quality = 85;
+  let buffer = await sharp(image.path)
+    .rotate()
+    .resize({ width: 1600, withoutEnlargement: true })
+    .jpeg({ quality })
+    .toBuffer();
+
+  while (buffer.length > MAX_IMAGE_BYTES && quality > 40) {
+    quality -= 15;
+    buffer = await sharp(image.path)
+      .rotate()
+      .resize({ width: 1600, withoutEnlargement: true })
+      .jpeg({ quality })
+      .toBuffer();
+  }
+
+  const meta = await sharp(buffer).metadata();
+  return { buffer, mime: "image/jpeg", width: meta.width, height: meta.height, alt: image.alt || "" };
+}
+
+async function uploadMastodonMedia(instance, token, media) {
+  const form = new FormData();
+  form.append("file", new Blob([media.buffer], { type: media.mime }), "image.jpg");
+  if (media.alt) form.append("description", media.alt);
+
+  const response = await fetch(new URL("/api/v2/media", instance), {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body: form
+  });
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(`Mastodon media failed (${response.status}): ${JSON.stringify(body)}`);
+  }
+  // 202 = ainda processando; espera antes de anexar ao status
+  if (response.status === 202) await new Promise(resolve => setTimeout(resolve, 2000));
+  return body.id;
+}
+
+async function publishMastodon(post, status, media, dryRun) {
   const instance = normalizeUrl(process.env.MASTODON_INSTANCE);
   const token = process.env.MASTODON_ACCESS_TOKEN;
   if (!instance || !token) return null;
@@ -270,6 +415,11 @@ async function publishMastodon(post, status, dryRun) {
       id: "dry-run",
       url: new URL(`/@dry-run/${slugify(post.title)}`, instance).toString()
     };
+  }
+
+  const mediaIds = [];
+  if (post.type === "image" && media) {
+    mediaIds.push(await uploadMastodonMedia(instance, token, media));
   }
 
   const endpoint = new URL("/api/v1/statuses", instance);
@@ -282,7 +432,8 @@ async function publishMastodon(post, status, dryRun) {
     },
     body: JSON.stringify({
       status,
-      visibility: process.env.MASTODON_VISIBILITY || "public"
+      visibility: process.env.MASTODON_VISIBILITY || "public",
+      ...(mediaIds.length ? { media_ids: mediaIds } : {})
     })
   });
 
@@ -294,7 +445,49 @@ async function publishMastodon(post, status, dryRun) {
   return { id: body.id, url: body.url || body.uri };
 }
 
-async function publishBluesky(post, dryRun) {
+async function uploadBlueskyBlob(session, media) {
+  const response = await fetch("https://bsky.social/xrpc/com.atproto.repo.uploadBlob", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${session.accessJwt}`,
+      "Content-Type": media.mime
+    },
+    body: media.buffer
+  });
+  const body = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(`Bluesky blob failed (${response.status}): ${JSON.stringify(body)}`);
+  }
+  return body.blob;
+}
+
+function buildBlueskyEmbed(post, blob, media) {
+  if (post.type === "image" && blob) {
+    return {
+      $type: "app.bsky.embed.images",
+      images: [{
+        image: blob,
+        alt: media.alt,
+        aspectRatio: { width: media.width, height: media.height }
+      }]
+    };
+  }
+
+  // Nota vai inteira no texto; sem card
+  if (post.type === "note" || post.type === "image") return undefined;
+
+  return {
+    $type: "app.bsky.embed.external",
+    external: {
+      uri: post.absoluteUrl,
+      title: post.title,
+      description: truncateGraphemes(post.description || firstParagraph(post.body), 300),
+      ...(blob ? { thumb: blob } : {})
+    }
+  };
+}
+
+async function publishBluesky(post, media, dryRun) {
   const identifier = getBlueskyIdentifier();
   const password = getBlueskyPassword();
   if (!identifier || !password) return null;
@@ -316,20 +509,18 @@ async function publishBluesky(post, dryRun) {
     throw new Error(`Bluesky login failed (${sessionResponse.status}): ${JSON.stringify(session)}`);
   }
 
-  const text = buildBlueskyStatus(post);
+  const blob = media && post.type !== "note"
+    ? await uploadBlueskyBlob(session, media)
+    : null;
+
+  const text = buildStatus(post, "bluesky");
+  const embed = buildBlueskyEmbed(post, blob, media);
   const record = {
     $type: "app.bsky.feed.post",
     text,
     createdAt: new Date().toISOString(),
     facets: buildLinkFacet(text, post.absoluteUrl),
-    embed: {
-      $type: "app.bsky.embed.external",
-      external: {
-        uri: post.absoluteUrl,
-        title: post.title,
-        description: post.description
-      }
-    }
+    ...(embed ? { embed } : {})
   };
 
   const createResponse = await fetch("https://bsky.social/xrpc/com.atproto.repo.createRecord", {
@@ -387,12 +578,26 @@ async function main() {
       continue;
     }
 
-    const status = buildStatus(post);
-    console.log(`${args.dryRun ? "Would publish" : "Publishing"} ${post.absoluteUrl}`);
+    const status = buildStatus(post, "mastodon");
+    console.log(`${args.dryRun ? "Would publish" : "Publishing"} ${post.absoluteUrl} (${post.type})`);
+    if (args.dryRun) {
+      console.log(`  Mastodon status:\n    ${status.split("\n").join("\n    ")}`);
+      console.log(`  Bluesky status:\n    ${buildStatus(post, "bluesky").split("\n").join("\n    ")}`);
+      if (post.image) console.log(`  Image: ${path.relative(ROOT, post.image.path)}`);
+    }
+
+    let media = null;
+    if (post.image && post.type !== "note" && !args.dryRun) {
+      try {
+        media = await prepareImage(post.image);
+      } catch (error) {
+        console.error(`  Image error: ${error.message}`);
+      }
+    }
 
     if (!record.mastodonUrl) {
       try {
-        const mastodon = await publishMastodon(post, status, args.dryRun);
+        const mastodon = await publishMastodon(post, status, media, args.dryRun);
         if (mastodon) {
           record.mastodonId = mastodon.id;
           record.mastodonUrl = mastodon.url;
@@ -407,7 +612,7 @@ async function main() {
 
     if (!record.blueskyUrl) {
       try {
-        const bluesky = await publishBluesky(post, args.dryRun);
+        const bluesky = await publishBluesky(post, media, args.dryRun);
         if (bluesky) {
           record.blueskyUri = bluesky.uri;
           record.blueskyCid = bluesky.cid;
