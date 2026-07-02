@@ -42,5 +42,13 @@
     "blueskyCid": "bafyreigrkthckkas7u7kkkty2p7ixe4hiidqqevey3xu7xtjjorriwenxu",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3movfe7f6ob2p",
     "publishedAt": "2026-06-22T17:18:22.312Z"
+  },
+  "/hermes-acha-que-tenho-hiperfoco/": {
+    "mastodonId": "116848287800985069",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116848287800985069",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mpn43g2j4p2q",
+    "blueskyCid": "bafyreibguzcrfxvne5fd6nv5gaxqd3opqzdlpsmwtntfbqchubyw3ckn2a",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mpn43g2j4p2q",
+    "publishedAt": "2026-07-02T03:36:17.827Z"
   }
 }
