@@ -87,4 +87,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/_data/posse.json
           git commit -m "Record POSSE publication links"
+          git pull --rebase origin main
           git push

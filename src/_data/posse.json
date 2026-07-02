@@ -50,5 +50,13 @@
     "blueskyCid": "bafyreibguzcrfxvne5fd6nv5gaxqd3opqzdlpsmwtntfbqchubyw3ckn2a",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mpn43g2j4p2q",
     "publishedAt": "2026-07-02T03:36:17.827Z"
+  },
+  "/o-inominavel/": {
+    "mastodonId": "116852656353796744",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116852656353796744",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mpp25y5qzv2a",
+    "blueskyCid": "bafyreialmmh6on3mcqoudpsy5w5iiajqbxqaukeg5pq5xibyp3amtffeo4",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mpp25y5qzv2a",
+    "publishedAt": "2026-07-02T22:07:15.175Z"
   }
 }
