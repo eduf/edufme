@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sadhana-dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-lc",
+        "cd '../sadhana' && npx wrangler pages dev .svelte-kit/cloudflare --local --port 8788"
+      ],
+      "port": 8788
+    }
+  ]
+}
