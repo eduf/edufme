@@ -8,8 +8,6 @@ title: "O inominável"
 description: "Qual seria a palavra correta para definir o seguinte sentimento?"
 ---
 
-Qual seria a palavra correta para definir o seguinte sentimento?
-
 Ao lembrar do seu passado cultural, dos objetos e ideias que direcionaram sua vida, surge a sensação de ter entendido tudo errado.
 
 Isso é acompanhado da percepção de que você recebeu informações enviesadas, parciais e incompletas. Em especial, porque vinham de uma língua e cultura que você não dominava a ponto de entender contextos e sutilezas a tempo de se defender.
