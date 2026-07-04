@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { slugify, resolveImagePath } = require("../lib/content");
 
 const ROOT = process.cwd();
 const POSTS_DIR = path.join(ROOT, "src/posts");
@@ -47,18 +48,6 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, `${JSON.stringify(data, null, 2)}\n`);
 }
 
-function slugify(str) {
-  if (!str) return "";
-  return String(str)
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-}
-
 function extractBody(markdown) {
   return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "").trim();
 }
@@ -93,33 +82,6 @@ function findFirstImage(body) {
   const match = body.match(/!\[([^\]]*)\]\(([^)\s]+)[^)]*\)/);
   if (!match) return null;
   return { alt: match[1].trim(), src: match[2] };
-}
-
-function findInSrc(basename, dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      const found = findInSrc(basename, full);
-      if (found) return found;
-    } else if (entry.name === basename) {
-      return full;
-    }
-  }
-  return null;
-}
-
-// Espelha a resolução de imagens do eleventy.config.js
-function resolveImagePath(src, inputPath) {
-  const decoded = decodeURIComponent(src);
-  const basename = path.basename(decoded);
-  const candidates = [
-    path.join(path.dirname(inputPath), decoded),
-    path.join(ROOT, "src", decoded.replace(/^\//, "")),
-    path.join(ROOT, "src/assets/images", basename)
-  ];
-  const found = candidates.find(candidate => fs.existsSync(candidate));
-  if (found) return found;
-  return findInSrc(basename, path.join(ROOT, "src"));
 }
 
 function parseScalar(value) {

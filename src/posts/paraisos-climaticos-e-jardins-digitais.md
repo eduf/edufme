@@ -8,7 +8,7 @@ tags:
   - "sustentabilidade"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/37342051/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-16%2F4f4f82e2-2807-5777-5c32-66211088f54a.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/37342051/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-16%2F4f4f82e2-2807-5777-5c32-66211088f54a.mp3"></audio>
 
 ## Citados no episódio
 

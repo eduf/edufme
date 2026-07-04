@@ -9,8 +9,9 @@ tags:
   - "Braincast"
   - "cooperativismo"
   - "roteiro"
-coverImage: "sistema_ocb_logo.jpg"
 ---
+
+![Coletividade em ação](sistema_ocb_logo.jpg)
 
 Mais um projeto rápido para a B9 / Braincast: uma série de 4 episódios sobre cooperativismo. A missão foi solicitada pela Organização das Cooperativas do Brasil (OCB). Foram cerca de 10 entrevistas, além das pesquisas e escrita do roteiro. Tudo realizado em 1 mês, publicando semanalmente. Aqui está o resultado.
 

@@ -9,7 +9,7 @@ tags:
   - "tsundoku"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/38062187/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-30%2F3367093b-6f62-17d1-d170-b985e635ed3f.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/38062187/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-30%2F3367093b-6f62-17d1-d170-b985e635ed3f.mp3"></audio>
 
 ## Citados no episódio
 

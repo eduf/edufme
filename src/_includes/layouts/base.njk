@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {# CSP via meta (o _headers valeria também para /admin/, que precisa de política própria).
+     O hash sha256 cobre o script inline anti-FOUC abaixo — se editar o script,
+     recalcule: printf '%s' "<conteúdo do script>" | openssl dgst -sha256 -binary | openssl base64 -A #}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-UBN+bGrOXnJJmDGqWkSGwXFn436bcNs3ZphiQf4Av+U='; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-src https://anchor.fm https://omny.fm https://open.spotify.com https://www.youtube.com https://www.youtube-nocookie.com; media-src https://anchor.fm https://d3ctxlq1ktw2nl.cloudfront.net; object-src 'none'; base-uri 'self'; form-action 'self'">
 
   {% set pageTitle = title if title else site.name %}
   {% set pageDescription = description if description else site.description %}
@@ -80,6 +84,7 @@
   <link rel="alternate" type="application/rss+xml" title="eduf.me" href="/feed.xml">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">pular para o conteúdo</a>
 <div class="tui-frame">
 
   <header class="tui-titlebar">
@@ -115,7 +120,7 @@
       </div>
     </div>
 
-    <main class="tui-main">
+    <main class="tui-main" id="conteudo">
       {{ content | safe }}
     </main>
 
@@ -127,50 +132,6 @@
 
 </div>
 
-<script>
-  // Prefetch de links internos (deduplicado)
-  const prefetched = new Set([location.href]);
-  document.querySelectorAll('a[href^="/"]').forEach(link => {
-    if (prefetched.has(link.href)) return;
-    prefetched.add(link.href);
-    const prefetch = document.createElement('link');
-    prefetch.rel = 'prefetch';
-    prefetch.href = link.href;
-    document.head.appendChild(prefetch);
-  });
-
-  // Hamburger menu
-  const navToggle = document.querySelector('.nav-toggle');
-  const sidebar   = document.querySelector('.tui-sidebar');
-  if (navToggle && sidebar) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = sidebar.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      navToggle.textContent = isOpen ? '✕' : '≡';
-    });
-    // Fecha ao clicar num link do menu
-    sidebar.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => {
-        sidebar.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.textContent = '≡';
-      })
-    );
-  }
-
-  // Seletor de tema
-  const themeSelect = document.getElementById('theme-select');
-  const savedTheme  = localStorage.getItem('eduf-theme');
-
-  if (themeSelect) {
-    if (savedTheme) themeSelect.value = savedTheme;
-
-    themeSelect.addEventListener('change', () => {
-      const name = themeSelect.value;
-      document.documentElement.setAttribute('data-theme', name);
-      localStorage.setItem('eduf-theme', name);
-    });
-  }
-</script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

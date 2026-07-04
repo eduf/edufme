@@ -7,8 +7,9 @@ tags:
   - "deftones"
   - "jornalismo"
   - "tecnologia"
-coverImage: "deftones1.jpg"
 ---
+
+![A vida não é uma timeline](deftones1.jpg)
 
 A vida não é uma _timeline_. Quer dizer, quem sou eu para saber o que é a vida? Mas já foi. Só sei que ela _não é_ assim — para soar como um personagem de Ariano Suassuna.
 

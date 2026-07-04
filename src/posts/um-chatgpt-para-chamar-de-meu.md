@@ -5,8 +5,9 @@ date: "2022-12-09"
 tags: 
   - "chatgpt"
   - "inteligência artificial"
-coverImage: "robot.jpg"
 ---
+
+![Um ChatGPT para chamar de meu](robot.jpg)
 
 Agora há pouco, lia uma popular newsletter brasileira. Como de praxe, trazia uma crônica meio melancólica, estetizando o sofrimento da pessoa autora por meio de referências cinematográficas e um tom agridoce. Como estou naquele típico mau-humor de quem dormiu pouco, impliquei o com o texto.
 

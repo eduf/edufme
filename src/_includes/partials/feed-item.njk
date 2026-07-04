@@ -1,4 +1,5 @@
-{# Renderiza um item do feed de acordo com post.data.type #}
+{# Renderiza um item do feed. O corpo por tipo vem de post-body.njk;
+   aqui fica só o chrome do feed (meta, título de post longo, permalink). #}
 
 <article class="feed-item post-type-{{ post.data.type }}">
 
@@ -6,57 +7,7 @@
     <time datetime="{{ post.date | dateISO }}">{{ post.date | dateReadable }}</time>
   </div>
 
-  {# ── LINK ─────────────────────────────────────────────────── #}
-  {% if post.data.type == "link" %}
-    <p class="link-title">
-      <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.title }}</a>
-    </p>
-    {% if post.templateContent %}
-      <div class="post-content">{{ post.templateContent | safe }}</div>
-    {% endif %}
-
-  {# ── QUOTE ────────────────────────────────────────────────── #}
-  {% elif post.data.type == "quote" %}
-    <blockquote>{{ post.data.quote | markdownInline | safe }}</blockquote>
-    {% if post.data.source %}
-      <p class="quote-source">{{ post.data.source | markdownInline | safe }}</p>
-    {% endif %}
-    {% if post.templateContent %}
-      <div class="post-content">{{ post.templateContent | safe }}</div>
-    {% endif %}
-
-  {# ── IMAGE ────────────────────────────────────────────────── #}
-  {% elif post.data.type == "image" %}
-    {% if post.data.image %}
-      <figure>
-        <img src="{{ post.data.image }}" alt="{{ post.data.alt if post.data.alt else post.data.title }}">
-        {% if post.data.caption %}
-          <figcaption>{{ post.data.caption | markdownInline | safe }}</figcaption>
-        {% endif %}
-      </figure>
-    {% endif %}
-    {% if post.templateContent %}
-      <div class="post-content">{{ post.templateContent | safe }}</div>
-    {% endif %}
-
-  {# ── VIDEO ────────────────────────────────────────────────── #}
-  {% elif post.data.type == "video" %}
-    <p class="video-title">
-      <a href="{{ post.data.url }}" target="_blank" rel="noopener">{{ post.data.url }}</a>
-    </p>
-    {% if post.data.title %}
-      <p class="post-content">{{ post.data.title }}</p>
-    {% endif %}
-    {% if post.templateContent %}
-      <div class="post-content">{{ post.templateContent | safe }}</div>
-    {% endif %}
-
-  {# ── NOTE (post curto, sem título) ────────────────────────── #}
-  {% elif post.data.type == "note" %}
-    <div class="post-content">{{ post.templateContent | safe }}</div>
-
-  {# ── POST (longo, com título e permalink) ─────────────────── #}
-  {% elif post.data.type == "post" %}
+  {% if post.data.type == "post" %}
     <h2 class="post-title">
       <a href="{{ post.url }}">{{ post.data.title }}</a>
     </h2>
@@ -64,10 +15,11 @@
       <p class="post-content">{{ post.data.description }}</p>
     {% endif %}
     <a href="{{ post.url }}" class="read-more">ler</a>
-
-  {% endif %}
-
-  {% if post.data.type != "post" %}
+  {% else %}
+    {% set pb = post.data %}
+    {% set pbContent = post.templateContent %}
+    {% set pbMode = "feed" %}
+    {% include "partials/post-body.njk" %}
     <a href="{{ post.url }}" class="post-permalink" aria-label="link permanente">#</a>
   {% endif %}
 

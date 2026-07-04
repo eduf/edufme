@@ -9,7 +9,7 @@ tags:
   - "tecnologia"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/36580561/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-2%2F070af138-71a3-9e23-7e51-6066726996cb.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/36580561/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-2%2F070af138-71a3-9e23-7e51-6066726996cb.mp3"></audio>
 
 ## Citados no episódio
 

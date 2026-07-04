@@ -50,7 +50,9 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             printf '%s\n' "$POST_FILE" > /tmp/changed-posts.txt
-          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ] \
+            || ! git cat-file -e "${{ github.event.before }}" 2>/dev/null; then
+            # Branch nova ou force-push (SHA anterior não existe mais): compara só o último commit
             git diff --name-only HEAD~1 HEAD -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt
           else
             git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- ':(glob)src/posts/**/*.md' > /tmp/changed-posts.txt

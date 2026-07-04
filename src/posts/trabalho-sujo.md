@@ -6,8 +6,9 @@ tags:
   - "trabalho"
   - "design"
   - "wordpress"
-coverImage: "trabalhosujo.jpg"
 ---
+
+![Trabalho Sujo](trabalhosujo.jpg)
 
 Em 2020, o jornalista Alexandre Matias me contratou para reestruturar e redesenhar seu tradicional site de crítica cultural.
 

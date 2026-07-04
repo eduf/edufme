@@ -6,8 +6,9 @@ tags:
   - "newsletter"
   - "fran-lebowitz"
   - "humor"
-coverImage: "640px-Christopher_Macsurak_Fran_Lebowitz1.jpg"
 ---
+
+![Tente consertar tudo, pense que tudo está quebrado](640px-Christopher_Macsurak_Fran_Lebowitz1.jpg)
 
 Outro dia, tentei assistir à série _Pretend It's a City_, que Martin Scorsese fez com [Fran Lebowitz](https://en.wikipedia.org/wiki/Fran_Lebowitz) sobre — claro — Nova Iorque. Até onde conheço, a carreira da comediante é centrada nisso mesmo: reclamar sobre os desafios de viver naquela cidade.
 

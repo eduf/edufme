@@ -9,8 +9,9 @@ tags:
   - "e-commerce"
   - "podcasts"
   - "Braincast"
-coverImage: "tim_berners.jpg"
 ---
+
+![A história do e-commerce](tim_berners.jpg)
 
 Em março de 2022, Alexandre Potascheff, do Braincast / B9, me passou o seguinte desafio: criar os roteiros para uma série de 4 episódios sobre a história do e-commerce. O projeto foi patrocinado pela Americanas S.A. e nós teríamos cerca de um mês para dar conta de tudo.
 

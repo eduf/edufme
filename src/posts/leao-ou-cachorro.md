@@ -8,7 +8,7 @@ tags:
   - "tecnologia"
 ---
 
-\[caption id="attachment\_176" align="aligncenter" width="690"\] Screenshot do site de uma importande editora norte-americana\[/caption\]
+_Screenshot do site de uma importande editora norte-americana_
 
 Interessante como o marketing de livros está cada vez mais parecido com o de música. Pelo menos o praticado pelo Spotify:
 

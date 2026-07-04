@@ -6,7 +6,7 @@ tags:
   - "diletante"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/31513271/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-3-15%2F9cb7aaad-89d5-75d2-bfaa-03e72d1597d7.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/31513271/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-3-15%2F9cb7aaad-89d5-75d2-bfaa-03e72d1597d7.mp3"></audio>
 
 Diletando sobre o significado cultural das criptomoedas e do mercado do hype, associado às [NFT](https://www.techtudo.com.br/noticias/2021/03/o-que-e-nft-entenda-como-funciona-a-tecnologia-do-token.ghtml)s.
 

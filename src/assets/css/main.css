@@ -121,6 +121,23 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 img, video, iframe { max-width: 100%; height: auto; display: block; }
 
+/* ─── Skip link (visível só com foco de teclado) ───────────── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--bg-alt);
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
 /* ─── Links globais ─────────────────────────────────────────── */
 a {
   color: var(--accent-link);
@@ -551,6 +568,12 @@ body {
 
 .pagination-info { color: var(--fg-faint); }
 
+/* ─── Player de áudio (episódios de podcast) ────────────────── */
+.post-content audio {
+  width: 100%;
+  margin-block: 1.25rem;
+}
+
 /* ─── YouTube thumbnail ─────────────────────────────────────── */
 .youtube-thumb {
   display: block;
@@ -691,9 +714,9 @@ body {
 
   .tui-layout { grid-template-columns: 1fr; }
 
-  /* Logo e seletor de tema ocultos no mobile */
-  .site-logo        { display: none; }
-  .tui-theme-picker { display: none; }
+  /* Logo oculto no mobile (o nome do site fica na titlebar);
+     o seletor de tema continua disponível dentro do menu hamburger */
+  .site-logo { display: none; }
 
   /* Nav vertical com touch targets maiores */
   .site-nav { flex-direction: column; }

@@ -8,8 +8,9 @@ tags:
   - "inteligência artificial"
   - "livros"
   - "tecnologia"
-coverImage: "jim_ed1.jpg"
 ---
+
+![Pirataria gourmet? Revolução nas editoras?](jim_ed1.jpg)
 
 Colecionadores _hardcore_ de HQs já conhecem as chamadas “Edições de Artista”. São livros luxuosos e grandes, contendo reproduções de artes originais. Como são produtos caros, voltados para superfãs e desenhistas, apenas personagens e autores famosos são publicados nesse formato.
 

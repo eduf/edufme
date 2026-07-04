@@ -7,8 +7,9 @@ tags:
   - "colonialismo"
   - "sxsw"
   - "tecnologia"
-coverImage: "sxsw2023.jpg"
 ---
+
+![SXSW e o colonialismo Tech](sxsw2023.jpg)
 
 Você, brasileiro, passou seus anos de formação consumindo cultura norte-americana. Parte dos produtos que usa diariamente ou têm nomes em inglês, ou, pelo menos, vêm escritos na língua. Até suas camisetas têm frases (meio que sem sentido) no idioma.
 

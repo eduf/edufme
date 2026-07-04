@@ -30,35 +30,11 @@ layout: base.njk
       </div>
     {% endif %}
 
-    {% if coverImage %}
-      <div class="post-cover">
-        <img src="{{ coverImage }}" alt="{{ title }}">
-      </div>
-    {% endif %}
-
     <div class="post-content">
-      {% if type == "quote" %}
-        <blockquote>{{ quote | markdownInline | safe }}</blockquote>
-        {% if source %}<p class="quote-source">{{ source | markdownInline | safe }}</p>{% endif %}
-        {% if content %}{{ content | safe }}{% endif %}
-      {% elif type == "link" %}
-        {% if content %}{{ content | safe }}{% endif %}
-      {% elif type == "image" %}
-        {% if image %}
-          <figure>
-            <img src="{{ image }}" alt="{{ alt if alt else title }}">
-            {% if caption %}
-              <figcaption>{{ caption | markdownInline | safe }}</figcaption>
-            {% endif %}
-          </figure>
-        {% endif %}
-        {% if content %}{{ content | safe }}{% endif %}
-      {% elif type == "video" %}
-        <p><a href="{{ url }}" target="_blank" rel="noopener">{{ url }}</a></p>
-        {% if content %}{{ content | safe }}{% endif %}
-      {% else %}
-        {{ content | safe }}
-      {% endif %}
+      {% set pb = { type: type, title: title, url: url, quote: quote, source: source, image: image, alt: alt, caption: caption, description: description } %}
+      {% set pbContent = content %}
+      {% set pbMode = "page" %}
+      {% include "partials/post-body.njk" %}
     </div>
 
     {% include "partials/post-tags.njk" %}

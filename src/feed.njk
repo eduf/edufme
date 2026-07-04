@@ -14,8 +14,11 @@ eleventyExcludeFromCollections: true
     <name>Eduardo Fernandes</name>
   </author>
   {% for post in collections.feed | head(20) %}
+  {% set pb = post.data %}
+  {% set pbContent = post.templateContent %}
+  {% set pbMode = "rss" %}
   {% set entryContent %}
-    {% include "partials/rss-content.njk" %}
+    {% include "partials/post-body.njk" %}
   {% endset %}
   <entry>
     <title>{% if post.data.title %}{{ post.data.title }}{% elif post.data.type == "note" %}nota — {{ post.date | dateReadable }}{% elif post.data.type == "link" %}link — {{ post.data.url }}{% elif post.data.type == "quote" %}citação{% elif post.data.type == "image" %}imagem{% elif post.data.type == "video" %}vídeo — {{ post.data.url }}{% endif %}</title>

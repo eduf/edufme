@@ -5,8 +5,9 @@ date: "2021-02-17"
 tags: 
   - "newsletter"
   - "cinema"
-coverImage: "curtis_newsletter.jpg"
 ---
+
+![Urucubaca fim de mundo](curtis_newsletter.jpg)
 
 Nova série de Adam Curtis tenta explicar o atual sucesso das teorias conspiratórias.
 

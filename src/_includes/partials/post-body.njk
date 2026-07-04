@@ -1,0 +1,63 @@
+{# ── Corpo de um post por tipo — fonte única para feed, página e RSS ──
+   Espera no contexto (via {% set %} antes do include):
+     pb        dados do post (frontmatter / post.data)
+     pbContent HTML já renderizado do corpo (content / post.templateContent)
+     pbMode    "feed" | "page" | "rss"
+   No modo "page" o título é renderizado pelo layout, não aqui.
+   No modo "feed" o conteúdo ganha wrapper .post-content (a página já tem o dela). #}
+
+{% macro contentBlock(html, mode) %}
+  {%- if html -%}
+    {%- if mode == "feed" -%}
+      <div class="post-content">{{ html | safe }}</div>
+    {%- else -%}
+      {{ html | safe }}
+    {%- endif -%}
+  {%- endif -%}
+{% endmacro %}
+
+{% if pb.type == "link" %}
+  {% if pbMode == "feed" %}
+    <p class="link-title"><a href="{{ pb.url }}" target="_blank" rel="noopener">{{ pb.title }}</a></p>
+  {% elif pbMode == "rss" %}
+    <p><a href="{{ pb.url }}" target="_blank" rel="noopener">{{ pb.title or pb.url }}</a></p>
+  {% endif %}
+  {{ contentBlock(pbContent, pbMode) }}
+
+{% elif pb.type == "quote" %}
+  <blockquote>{{ pb.quote | markdownInline | safe }}</blockquote>
+  {% if pb.source %}
+    <p{% if pbMode != "rss" %} class="quote-source"{% endif %}>{{ pb.source | markdownInline | safe }}</p>
+  {% endif %}
+  {{ contentBlock(pbContent, pbMode) }}
+
+{% elif pb.type == "image" %}
+  {% if pb.image %}
+    <figure>
+      <img src="{{ pb.image }}" alt="{{ pb.alt or pb.title or '' }}">
+      {% if pb.caption %}
+        <figcaption>{{ pb.caption | markdownInline | safe }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+  {{ contentBlock(pbContent, pbMode) }}
+
+{% elif pb.type == "video" %}
+  {% if pbMode == "feed" %}
+    <p class="video-title"><a href="{{ pb.url }}" target="_blank" rel="noopener">{{ pb.url }}</a></p>
+    {% if pb.title %}<p class="post-content">{{ pb.title }}</p>{% endif %}
+  {% elif pbMode == "rss" %}
+    <p><a href="{{ pb.url }}" target="_blank" rel="noopener">{{ pb.title or pb.url }}</a></p>
+  {% else %}
+    <p><a href="{{ pb.url }}" target="_blank" rel="noopener">{{ pb.url }}</a></p>
+  {% endif %}
+  {{ contentBlock(pbContent, pbMode) }}
+
+{% else %}
+  {# note, post e tipos sem branch próprio: só o conteúdo #}
+  {% if pbContent %}
+    {{ contentBlock(pbContent, pbMode) }}
+  {% elif pbMode == "rss" and pb.description %}
+    <p>{{ pb.description }}</p>
+  {% endif %}
+{% endif %}

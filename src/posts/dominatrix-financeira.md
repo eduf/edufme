@@ -8,7 +8,7 @@ tags:
   - "politica"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/40091888/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-8-10%2Fe4a6edc7-d750-4066-e8bd-195d74fcdf71.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/40091888/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-8-10%2Fe4a6edc7-d750-4066-e8bd-195d74fcdf71.mp3"></audio>
 
 ## Citado no episódio
 

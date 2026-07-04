@@ -9,7 +9,7 @@ tags:
   - "patrul-rinpoche"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/33490648/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-4-14%2F00463a14-cb94-1d65-50ee-51392a1d7c0e.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/33490648/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-4-14%2F00463a14-cb94-1d65-50ee-51392a1d7c0e.mp3"></audio>
 
 Semana que vem voltaremos à programação "normal".
 

@@ -7,8 +7,9 @@ tags:
   - "cinema"
   - "samurai"
   - "wong-kar-wai"
-coverImage: "ahes1.jpg"
 ---
+
+![Comentando Ashes of Time, de Wong Kar-Wai](ahes1.jpg)
 
 É costume dizer que, no começo dos anos 2000, Wong Kar-Wai criou uma trilogia clássica de filmes sobre amor. Mas, afinal, quais filmes dele não são sobre amor? Ashes of Time (Redux), de 1994, não é exceção.
 

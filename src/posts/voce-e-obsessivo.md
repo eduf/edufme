@@ -8,8 +8,9 @@ tags:
   - "tom-sachs"
   - "trabalho"
   - "van-neistat"
-coverImage: "tomsachs.jpg"
 ---
+
+![Você é obsessivo?](tomsachs.jpg)
 
 _Tom Sachs, o handyman artista (ou vice-versa)._
 

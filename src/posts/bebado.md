@@ -8,8 +8,9 @@ tags:
   - "cultura"
   - "tecnologia"
   - "thomas-vinterberg"
-coverImage: "Another-Round-2020-Mads-Mikkelsen2.jpg"
 ---
+
+![Bêbado](Another-Round-2020-Mads-Mikkelsen2.jpg)
 
 Semana passada, finalmente assisti ao [Druk](https://en.wikipedia.org/wiki/Another_Round_(film)), filme de 2020 de [Thomas Vinterberg](https://en.wikipedia.org/wiki/Thomas_Vinterberg) sobre… deixe-me pensar… tecnologia.
 

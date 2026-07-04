@@ -6,8 +6,9 @@ tags:
   - "newsletter"
   - "economia"
   - "monetizacao"
-coverImage: "monet.jpg"
 ---
+
+![Pra onde vai toda minha grana?](monet.jpg)
 
 Alô, aqui é Eduardo Fernandes, o [ultracrepidarianista](https://www.thefreedictionary.com/ultracrepidarianism) mais obstinado da internet.
 

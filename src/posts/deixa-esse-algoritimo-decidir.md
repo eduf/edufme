@@ -10,7 +10,7 @@ tags:
   - "politica"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/33957418/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-4-21%2Fdfcbb11c-a8f0-9edb-dfa1-9d8299e2321e.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/33957418/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-4-21%2Fdfcbb11c-a8f0-9edb-dfa1-9d8299e2321e.mp3"></audio>
 
 ## Citados no episódio
 

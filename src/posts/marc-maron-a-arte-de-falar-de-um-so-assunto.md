@@ -5,8 +5,9 @@ date: "2014-05-16"
 tags: 
   - "comportamento"
   - "marc-maron"
-coverImage: "maron.jpg"
 ---
+
+![Marc Maron: a arte de falar de um só assunto](maron.jpg)
 
 Acabei de assistir à estreia da nova temporada de Maron, o seriado do comediante Marc Maron. Como era de se esperar, o criador do [podcast WTF](http://wtfpod.com), mais uma vez, escolheu sustentar a imagem de que é um destruidor de relações. Na verdade, esse é o tema principal do próprio personagem Marc Maron. Pelo menos aquele que conhecemos publicamente. Haja coerência estética: parece que lhe dá um enorme trabalho sustentar / rejeitar essa narrativa.
 

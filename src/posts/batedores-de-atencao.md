@@ -6,8 +6,9 @@ tags:
   - "elon-musk"
   - "midia"
   - "tecnologia"
-coverImage: "maria_popova.jpg"
 ---
+
+![Batedores de atenção](maria_popova.jpg)
 
 _Maria Popova, a blogueira púcaro búlgara veterana, do [The Marginalian](https://www.themarginalian.org/)_.
 

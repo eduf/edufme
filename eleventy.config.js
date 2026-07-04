@@ -5,6 +5,7 @@ const fs         = require("fs");
 const https      = require("https");
 const http       = require("http");
 const markdownIt = require("markdown-it");
+const { slugify, resolveImagePath } = require("./lib/content");
 
 // ─── Dithering ───────────────────────────────────────────────────────────────
 
@@ -34,7 +35,24 @@ function floydSteinberg(data, width, height) {
   return Buffer.from(buf.map(v => Math.max(0, Math.min(255, v))));
 }
 
-async function processImage(srcPath) {
+// Memoização por build: home e páginas de tag repetem as mesmas imagens,
+// então cada uma é processada (hash + metadata + cópia) uma única vez.
+const imageJobs   = new Map(); // srcPath  → Promise<{cached, filename, width, height}>
+const youtubeJobs = new Map(); // videoId  → Promise<{cached, filename, width, height}>
+const copiedToSite = new Set(); // filenames já copiados para _site neste build
+
+function copyToSite(cached, filename) {
+  if (copiedToSite.has(filename)) return;
+  fs.copyFileSync(cached, path.join(DITHER_OUT, filename));
+  copiedToSite.add(filename);
+}
+
+function processImage(srcPath) {
+  if (!imageJobs.has(srcPath)) imageJobs.set(srcPath, processImageUncached(srcPath));
+  return imageJobs.get(srcPath);
+}
+
+async function processImageUncached(srcPath) {
   fs.mkdirSync(DITHER_CACHE, { recursive: true });
 
   const hash     = crypto.createHash("md5").update(fs.readFileSync(srcPath)).digest("hex").slice(0, 10);
@@ -59,19 +77,6 @@ async function processImage(srcPath) {
   return { cached, filename, width, height };
 }
 
-function findInSrc(filename) {
-  // Busca recursiva por nome de arquivo dentro de src/
-  function walk(dir) {
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const full = path.join(dir, entry.name);
-      if (entry.isDirectory()) { const found = walk(full); if (found) return found; }
-      else if (entry.name === filename) return full;
-    }
-    return null;
-  }
-  return walk("src");
-}
-
 // ─── YouTube ──────────────────────────────────────────────────────────────────
 
 function extractYouTubeId(str) {
@@ -91,7 +96,7 @@ function fetchUrl(url, depth = 0) {
   return new Promise((resolve, reject) => {
     if (depth > 5) return reject(new Error(`Redirects demais: ${url}`));
     const lib = url.startsWith("https") ? https : http;
-    lib.get(url, res => {
+    const req = lib.get(url, res => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         return fetchUrl(res.headers.location, depth + 1).then(resolve).catch(reject);
       }
@@ -100,10 +105,17 @@ function fetchUrl(url, depth = 0) {
       res.on("end", () => resolve(Buffer.concat(chunks)));
       res.on("error", reject);
     }).on("error", reject);
+    // Sem timeout, um host que não responde congela o build inteiro
+    req.setTimeout(10000, () => req.destroy(new Error(`Timeout: ${url}`)));
   });
 }
 
-async function processYouTubeThumbnail(videoId) {
+function processYouTubeThumbnail(videoId) {
+  if (!youtubeJobs.has(videoId)) youtubeJobs.set(videoId, processYouTubeThumbnailUncached(videoId));
+  return youtubeJobs.get(videoId);
+}
+
+async function processYouTubeThumbnailUncached(videoId) {
   fs.mkdirSync(DITHER_CACHE, { recursive: true });
 
   const cacheKey  = `yt-${videoId}`;
@@ -140,20 +152,6 @@ async function processYouTubeThumbnail(videoId) {
   return { cached, filename, width, height };
 }
 
-function resolveImagePath(src, inputPath) {
-  const decoded  = decodeURIComponent(src);
-  const basename = path.basename(decoded);
-  const candidates = [
-    path.join(path.dirname(inputPath), decoded),       // relativo ao arquivo fonte
-    path.join("src", decoded.replace(/^\//, "")),      // absoluto do input dir
-    path.join("src/assets/images", basename),          // posts antigos com prefixo images/
-  ];
-  const found = candidates.find(p => fs.existsSync(p));
-  if (found) return found;
-  // Fallback: busca recursiva pelo nome do arquivo em src/
-  return findInSrc(basename);
-}
-
 // ─── Eleventy config ──────────────────────────────────────────────────────────
 
 module.exports = function(eleventyConfig) {
@@ -170,18 +168,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/_headers");
 
-  // Slugify com suporte a português (remove acentos, espaços → hifens)
-  const slugify = str => {
-    if (!str) return "";
-    return String(str)
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[̀-ͯ]/g, "")
-      .replace(/[^a-z0-9\s-]/g, "")
-      .trim()
-      .replace(/\s+/g, "-")
-      .replace(/-+/g, "-");
-  };
+  // Caches de imagem valem por build: limpa para que edições em imagens
+  // sejam captadas nos rebuilds do --serve
+  eleventyConfig.on("eleventy.before", () => {
+    imageJobs.clear();
+    youtubeJobs.clear();
+    copiedToSite.clear();
+  });
+
   eleventyConfig.addFilter("slugify", slugify);
 
   const normalizeTag = tag => slugify(tag);
@@ -231,6 +225,23 @@ module.exports = function(eleventyConfig) {
       .getFilteredByGlob("src/posts/**/*.md")
       .filter(item => !isMonoestereo(item))
       .sort(newestFirst);
+  });
+
+  // Guarda de permalink: o permalink vem de `title | slugify`, então dois
+  // posts com o mesmo título colidiriam silenciosamente. Falha com erro claro.
+  eleventyConfig.addCollection("permalinkGuard", function(collectionApi) {
+    const seen = new Map();
+    collectionApi.getFilteredByGlob("src/posts/**/*.md").forEach(item => {
+      const slug = slugify(item.data.title || item.fileSlug);
+      if (seen.has(slug)) {
+        throw new Error(
+          `Permalink duplicado "/${slug}/": ${seen.get(slug)} e ${item.inputPath}. ` +
+          `Mude o título de um dos posts.`
+        );
+      }
+      seen.set(slug, item.inputPath);
+    });
+    return [];
   });
 
   // Collection MonoEstéreo
@@ -386,7 +397,7 @@ module.exports = function(eleventyConfig) {
       if (!absPath) return;
       try {
         const { cached, filename, width, height } = await processImage(absPath);
-        fs.copyFileSync(cached, path.join(DITHER_OUT, filename));
+        copyToSite(cached, filename);
         map.set(src, { url: `${DITHER_URL}/${filename}`, width, height });
       } catch (e) {
         console.warn(`[dither] erro ao processar ${absPath}: ${e.message}`);
@@ -446,7 +457,7 @@ module.exports = function(eleventyConfig) {
     await Promise.all([...jobs.entries()].map(async ([id, watchUrl]) => {
       try {
         const { cached, filename, width, height } = await processYouTubeThumbnail(id);
-        fs.copyFileSync(cached, path.join(DITHER_OUT, filename));
+        copyToSite(cached, filename);
         results.set(id, { imgSrc: `${DITHER_URL}/${filename}`, watchUrl, width, height });
       } catch (e) {
         console.warn(`[youtube] erro no vídeo ${id}: ${e.message}`);

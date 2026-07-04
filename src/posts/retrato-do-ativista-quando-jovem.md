@@ -10,8 +10,9 @@ tags:
   - "engels"
   - "karl-marx"
   - "politica"
-coverImage: "marx_engels.jpg"
 ---
+
+![Retrato do ativista quando jovem](marx_engels.jpg)
 
 Todo mundo tem um vício. O meu é assistir a biografias. De documentários no YouTube até mesmo filmes como [O Jovem Karl Marx](https://en.wikipedia.org/wiki/The_Young_Karl_Marx), de 2017.
 

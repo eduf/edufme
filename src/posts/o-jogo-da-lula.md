@@ -8,7 +8,7 @@ tags:
   - "series"
 ---
 
-\[audio src="https://anchor.fm/s/4e33e304/podcast/play/41835004/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-9-15%2F5b124094-88f1-70e1-e970-3e25913f1345.mp3"\]\[/audio\]
+<audio controls preload="none" src="https://anchor.fm/s/4e33e304/podcast/play/41835004/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-9-15%2F5b124094-88f1-70e1-e970-3e25913f1345.mp3"></audio>
 
 Vale ouvir também: [Vox explica como Round 6 ganhou a Netflix](https://podcasts.apple.com/us/podcast/how-squid-game-won-netflix/id1346207297?i=1000538627284). E [A Nova crítica social sul-coreana.](https://eduf.me/a-nova-critica-social-coreana/)
 
