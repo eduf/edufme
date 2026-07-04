@@ -58,5 +58,13 @@
     "blueskyCid": "bafyreialmmh6on3mcqoudpsy5w5iiajqbxqaukeg5pq5xibyp3amtffeo4",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mpp25y5qzv2a",
     "publishedAt": "2026-07-02T22:07:15.175Z"
+  },
+  "/sensacao-de-progresso/": {
+    "mastodonId": "116858846837964190",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116858846837964190",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mprs53wxek2k",
+    "blueskyCid": "bafyreifkqea4o5d7mqpf52dn2s6dlups6obbeb5fbxzq7sm22i673o63oe",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mprs53wxek2k",
+    "publishedAt": "2026-07-04T00:21:35.152Z"
   }
 }
