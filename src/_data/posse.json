@@ -66,5 +66,13 @@
     "blueskyCid": "bafyreifkqea4o5d7mqpf52dn2s6dlups6obbeb5fbxzq7sm22i673o63oe",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mprs53wxek2k",
     "publishedAt": "2026-07-04T00:21:35.152Z"
+  },
+  "/poison-oak/": {
+    "mastodonId": "116870531225267044",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116870531225267044",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mpwy6js2dg2h",
+    "blueskyCid": "bafyreicxjbdxr5kkigbijv4vdtangtvh2w235yz3l7pjlpa37zi6dxpsda",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mpwy6js2dg2h",
+    "publishedAt": "2026-07-06T01:53:04.334Z"
   }
 }
