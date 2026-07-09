@@ -101,7 +101,10 @@ export default {
 
     if (url.pathname === "/api/push/subscribe") {
       const sub = await readSubscription(request);
-      if (!sub) return json({ error: "invalid subscription" }, 400);
+      const hasKeys = sub && sub.keys &&
+        typeof sub.keys.p256dh === "string" &&
+        typeof sub.keys.auth === "string";
+      if (!hasKeys) return json({ error: "invalid subscription" }, 400);
       await env.SUBS.put("sub:" + (await hashEndpoint(sub.endpoint)), JSON.stringify(sub));
       return json({ ok: true });
     }
