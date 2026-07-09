@@ -168,6 +168,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/sw.js");
+  eleventyConfig.addPassthroughCopy("src/manifest.json");
 
   // Caches de imagem valem por build: limpa para que edições em imagens
   // sejam captadas nos rebuilds do --serve

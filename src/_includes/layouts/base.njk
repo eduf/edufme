@@ -78,6 +78,7 @@
   {% endif %}
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.json">
   <link rel="preload" href="/assets/fonts/iAWriterDuoS-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
   <script>(function(){var t=localStorage.getItem('eduf-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
@@ -106,6 +107,10 @@
         <li><a href="https://textosobretela.com/podcast/archive?sort=new">áudio ↗</a></li>
         <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#100;&#117;&#102;&#64;&#101;&#100;&#117;&#102;&#46;&#109;&#101;">contato</a></li>
         <li><a href="/feed.xml">rss</a></li>
+        <li><a href="/notificacoes"
+          {% if 'notificacoes' in page.url %}class="is-current"{% endif %}>notificações</a></li>
+        <li><a href="/tags"
+          {% if page.url == '/tags/' %}class="is-current"{% endif %}>tags</a></li>
       </ul>
       </nav>
       <div class="tui-theme-picker">
