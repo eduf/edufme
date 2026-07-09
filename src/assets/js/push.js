@@ -23,7 +23,7 @@ async function getSubscription() {
 }
 
 async function refreshUI() {
-  if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
+  if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) {
     btn.hidden = true;
     setStatus("Seu navegador não suporta notificações push.");
     return;
@@ -56,11 +56,17 @@ async function subscribe() {
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
   });
-  const res = await fetch("/api/push/subscribe", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(sub.toJSON())
-  });
+  let res;
+  try {
+    res = await fetch("/api/push/subscribe", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(sub.toJSON())
+    });
+  } catch (e) {
+    await sub.unsubscribe();
+    throw new Error("Sem conexão com o servidor.");
+  }
   if (!res.ok) {
     await sub.unsubscribe();
     throw new Error("Falha ao registrar no servidor.");
@@ -70,11 +76,15 @@ async function subscribe() {
 async function unsubscribe() {
   const sub = await getSubscription();
   if (!sub) return;
-  await fetch("/api/push/unsubscribe", {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ endpoint: sub.endpoint })
-  });
+  try {
+    await fetch("/api/push/unsubscribe", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ endpoint: sub.endpoint })
+    });
+  } catch (e) {
+    // Ignora: endpoint órfão é limpo no servidor via 410 depois.
+  }
   await sub.unsubscribe();
 }
 
@@ -95,4 +105,4 @@ btn.addEventListener("click", async () => {
   }
 });
 
-refreshUI();
+refreshUI().catch(() => setStatus("Não foi possível verificar o estado das notificações."));
