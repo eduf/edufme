@@ -734,3 +734,25 @@ body {
 
   .site-nav a.is-current::before { content: "> "; }
 }
+
+/* ─── Botão de notificações (/notificacoes/) ─────────────────── */
+#push-toggle {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+}
+
+#push-toggle:hover,
+#push-toggle:focus {
+  border-color: var(--fg-faint);
+  outline: none;
+}
+
+#push-toggle:disabled {
+  color: var(--fg-muted);
+  cursor: wait;
+}
