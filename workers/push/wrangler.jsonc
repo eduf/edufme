@@ -1,0 +1,15 @@
+{
+  "name": "eduf-push",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "eduf.me/api/push/*", "zone_name": "eduf.me" }
+  ],
+  "kv_namespaces": [
+    { "binding": "SUBS", "id": "e1254b4e86ee4b2782d19f335fe91e16" }
+  ],
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  }
+}

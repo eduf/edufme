@@ -167,6 +167,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/_headers");
+  eleventyConfig.addPassthroughCopy("src/sw.js");
+  eleventyConfig.addPassthroughCopy("src/manifest.json");
 
   // Caches de imagem valem por build: limpa para que edições em imagens
   // sejam captadas nos rebuilds do --serve
@@ -249,6 +251,16 @@ module.exports = function(eleventyConfig) {
     return collectionApi
       .getFilteredByGlob("src/posts/**/*.md")
       .filter(isMonoestereo)
+      .sort(newestFirst);
+  });
+
+  // Posts que geram notificação push: só type "post", sem MonoEstéreo.
+  // (As collections por tipo acima filtram por TAG, não pelo campo `type` —
+  //  por isso aqui o filtro é por item.data.type.)
+  eleventyConfig.addCollection("notifyPosts", function(collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/posts/**/*.md")
+      .filter(item => !isMonoestereo(item) && item.data.type === "post")
       .sort(newestFirst);
   });
 

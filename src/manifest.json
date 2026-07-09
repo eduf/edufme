@@ -1,0 +1,6 @@
+{
+  "name": "eduf.me",
+  "short_name": "eduf.me",
+  "start_url": "/",
+  "display": "standalone"
+}
