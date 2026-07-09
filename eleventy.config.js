@@ -252,6 +252,16 @@ module.exports = function(eleventyConfig) {
       .sort(newestFirst);
   });
 
+  // Posts que geram notificação push: só type "post", sem MonoEstéreo.
+  // (As collections por tipo acima filtram por TAG, não pelo campo `type` —
+  //  por isso aqui o filtro é por item.data.type.)
+  eleventyConfig.addCollection("notifyPosts", function(collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("src/posts/**/*.md")
+      .filter(item => !isMonoestereo(item) && item.data.type === "post")
+      .sort(newestFirst);
+  });
+
   // Páginas públicas para tags, agrupando variações por slug normalizado.
   eleventyConfig.addCollection("tagPages", function(collectionApi) {
     const ignoredTags = new Set(types);

@@ -1,0 +1,14 @@
+---
+permalink: /notify.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for post in collections.notifyPosts | head(5) %}
+  {
+    "title": {{ (post.data.title or "eduf.me") | dump | safe }},
+    "description": {{ (post.data.description or "") | dump | safe }},
+    "url": {{ (site.url + post.url) | dump | safe }},
+    "date": {{ post.date | dateToRfc3339 | dump | safe }}
+  }{% if not loop.last %},{% endif %}
+{%- endfor %}
+]
