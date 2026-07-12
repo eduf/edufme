@@ -82,5 +82,13 @@
     "blueskyCid": "bafyreida5cmprhorzgi3gr5tlutqvep3bmqn35hsb3o2kvbvbavq55h4cm",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mqhid7dxoo2f",
     "publishedAt": "2026-07-12T15:24:37.290Z"
+  },
+  "/purificacao/": {
+    "mastodonId": "116908836920413329",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116908836920413329",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mqhyjx7kkm2t",
+    "blueskyCid": "bafyreiharrtwwas25xgtrw4fgv4ylp6pllom4gx6vcvkzehhiczibjebkm",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mqhyjx7kkm2t",
+    "publishedAt": "2026-07-12T20:14:43.058Z"
   }
 }
