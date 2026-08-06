@@ -90,5 +90,13 @@
     "blueskyCid": "bafyreiharrtwwas25xgtrw4fgv4ylp6pllom4gx6vcvkzehhiczibjebkm",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mqhyjx7kkm2t",
     "publishedAt": "2026-07-12T20:14:43.058Z"
+  },
+  "/ferramenta-e-para-ajudar-nao-atrapalhar/": {
+    "mastodonId": "116958775207696166",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/116958775207696166",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3mr667awgds24",
+    "blueskyCid": "bafyreiaycuipjcpixd3ua6mqdaln5almv7l7i3z2vpqe7rbwgoaruq5ljy",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mr667awgds24",
+    "publishedAt": "2026-07-21T15:54:40.876Z"
   }
 }
