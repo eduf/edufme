@@ -98,5 +98,13 @@
     "blueskyCid": "bafyreiaycuipjcpixd3ua6mqdaln5almv7l7i3z2vpqe7rbwgoaruq5ljy",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3mr667awgds24",
     "publishedAt": "2026-07-21T15:54:40.876Z"
+  },
+  "/valorizando-a-ineficiencia/": {
+    "mastodonId": "117046588486982086",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/117046588486982086",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3msf6446kdo2n",
+    "blueskyCid": "bafyreicqztxibxvduxmeip7bxaxsofg3bzeuc3u7sfpuwaqvyyxswzoanq",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3msf6446kdo2n",
+    "publishedAt": "2026-08-06T04:06:45.046Z"
   }
 }
