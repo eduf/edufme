@@ -20,12 +20,12 @@ Engenheiros sabem que, ao compor *prompts*, é importante descrever não só o r
 
 [Os melhores LLMs sabem perguntar](https://github.com/DietrichGebert/ponytail). Não trabalham até que alguns pontos fundamentais estejam claros. As respostas evitam problemas, ajudam a repensar planos e "configurar" expectativas.
 ### 3. Gerenciamento de janela de contexto
-Porém, esclarecer detalhes não é para qualquer um. Nem todo mundo tem janela de contexto para isso. As pessoas tendem a "desligar" quando lhes pedimos detalhes específicos ou tentamos planejar a longo prazo. É preciso ter jogo de cintura.
+Porém, nem todo mundo tem janela de contexto para esclarecer detalhes. Algumas pessoas tendem a "desligar" quando lhes pedimos detalhes específicos ou tentamos planejar a longo prazo. É preciso ter jogo de cintura.
 
-Muita gente fica ansiosa ou irritada com planejamento abstrato. Prefere lidar apenas com aquilo que é urgente. S. E. Chagdud Tulku Rinpoche costumava dizer: "Construa o banheiro antes da diarreia." Na prática, fazemos o contrário: só construímos na hora do aperto. Sem problemas, é só me adaptar.
+Há quem fique ansioso com planejamento abstrato, que prefira lidar apenas com aquilo que é imediatamente urgente. S. E. Chagdud Tulku Rinpoche costumava dizer: "Construa o banheiro antes da diarreia." Na prática, fazemos o contrário: só construímos se estivermos apertados. Sem problemas, é só me adaptar.
 
 Minha conclusão é que, para desLLMizar minha mente, preciso focar mais na comunicação além das palavras. E pausar, esperar, entrar no ritmo do outro.
 
-Sair do caminho é uma das habilidades mais importantes que preciso desenvolver. Estar menos presente, evitar a "energia de produtividade", e não acelerar os outros. Confiar.
+Sair do caminho é uma das habilidades mais importantes que preciso desenvolver. Estar **menos** presente, evitar a "energia de produtividade", e não acelerar os outros. Confiar.
 
-É isso ou falhar no próximo teste anti-robôs. Ou sou um replicante e não me dei conta?
+É isso ou falhar no próximo teste anti-robôs. A menos que eu seja um replicante e não me dei conta.
