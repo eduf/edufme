@@ -106,5 +106,13 @@
     "blueskyCid": "bafyreicqztxibxvduxmeip7bxaxsofg3bzeuc3u7sfpuwaqvyyxswzoanq",
     "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3msf6446kdo2n",
     "publishedAt": "2026-08-06T04:06:45.046Z"
+  },
+  "/sou-um-robo/": {
+    "mastodonId": "117067164789511286",
+    "mastodonUrl": "https://mastodon.social/@textosobretela/117067164789511286",
+    "blueskyUri": "at://did:plc:agj72tr6lnmbhivq77p3knz2/app.bsky.feed.post/3msocj4u7nr2s",
+    "blueskyCid": "bafyreiahurv6mge2dsjbmyddem6hgb4n3pt5moypdqjh5sfxbavv2wuaxu",
+    "blueskyUrl": "https://bsky.app/profile/edufme.bsky.social/post/3msocj4u7nr2s",
+    "publishedAt": "2026-08-09T19:19:34.557Z"
   }
 }
