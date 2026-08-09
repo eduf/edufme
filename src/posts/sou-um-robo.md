@@ -28,4 +28,4 @@ Minha conclusão é que, para desLLMizar minha mente, preciso focar mais na comu
 
 Sair do caminho é uma das habilidades mais importantes que preciso desenvolver. Estar **menos** presente, evitar a "energia de produtividade", e não acelerar os outros. Confiar.
 
-É isso ou falhar no próximo teste anti-robôs. A menos que eu seja um replicante e não me dei conta.
+É isso ou falhar no próximo teste anti-robôs. Se é que não sou um replicante e não me dei conta.
