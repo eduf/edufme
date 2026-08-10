@@ -22,7 +22,7 @@ Engenheiros sabem que, ao compor *prompts*, é importante descrever não só o r
 ### 3. Gerenciamento de janela de contexto
 Porém, nem todo mundo tem janela de contexto para esclarecer detalhes. Algumas pessoas tendem a "desligar" quando lhes pedimos detalhes específicos ou tentamos planejar a longo prazo. É preciso ter jogo de cintura.
 
-Há quem fique ansioso com planejamento abstrato, que prefira lidar apenas com aquilo que é imediatamente urgente. S. E. Chagdud Tulku Rinpoche costumava dizer: "Construa o banheiro antes da diarreia." Na prática, fazemos o contrário: só construímos se estivermos apertados. Sem problemas, é só me adaptar.
+Há quem fique ansioso com planejamento abstrato, que prefira lidar apenas com aquilo que é imediatamente urgente. S. E. Chagdud Tulku Rinpoche costumava dizer: "Construa o banheiro antes da diarreia." Na prática, fazemos o contrário: só construímos quando apertados. Sem problemas, paciência.
 
 Minha conclusão é que, para desLLMizar minha mente, preciso focar mais na comunicação além das palavras. E pausar, esperar, entrar no ritmo do outro.
 
